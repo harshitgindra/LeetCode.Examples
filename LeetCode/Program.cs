@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using LeetCode.August;
+using LeetCode.May;
 
 namespace LeetCode
 {
@@ -8,8 +9,11 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            ExcelSheetColumnNumber excelSheetColumnNumber = new ExcelSheetColumnNumber();
-            excelSheetColumnNumber.TitleToNumber("AB");
+            FirstBadVersionTest firstBadVersionTest = new FirstBadVersionTest();
+            firstBadVersionTest.FirstBadVersion(5);
+
+            //ExcelSheetColumnNumber excelSheetColumnNumber = new ExcelSheetColumnNumber();
+            //excelSheetColumnNumber.TitleToNumber("AB");
 
             //RottingOranges rottingOranges = new RottingOranges();
             //var data = new int[3][];
