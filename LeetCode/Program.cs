@@ -9,8 +9,13 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            FirstBadVersionTest firstBadVersionTest = new FirstBadVersionTest();
-            firstBadVersionTest.FirstBadVersion(5);
+            HIndexTest hIndexTest = new HIndexTest();
+            
+            hIndexTest.HIndex(new[] { 3, 0, 6, 1, 5 });
+            hIndexTest.HIndex(new[] { 1, 2 });
+            hIndexTest.HIndex(new[] { 1, 1 });
+            //FirstBadVersionTest firstBadVersionTest = new FirstBadVersionTest();
+            //firstBadVersionTest.FirstBadVersion(5);
 
             //ExcelSheetColumnNumber excelSheetColumnNumber = new ExcelSheetColumnNumber();
             //excelSheetColumnNumber.TitleToNumber("AB");
