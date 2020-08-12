@@ -9,11 +9,16 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            HIndexTest hIndexTest = new HIndexTest();
-            
-            hIndexTest.HIndex(new[] { 3, 0, 6, 1, 5 });
-            hIndexTest.HIndex(new[] { 1, 2 });
-            hIndexTest.HIndex(new[] { 1, 1 });
+            PascalTriangleII pascalTriangleIi = new PascalTriangleII();
+            pascalTriangleIi.GetRow(0);
+            pascalTriangleIi.GetRow(3);
+
+
+            //HIndexTest hIndexTest = new HIndexTest();
+
+            //hIndexTest.HIndex(new[] { 3, 0, 6, 1, 5 });
+            //hIndexTest.HIndex(new[] { 1, 2 });
+            //hIndexTest.HIndex(new[] { 1, 1 });
             //FirstBadVersionTest firstBadVersionTest = new FirstBadVersionTest();
             //firstBadVersionTest.FirstBadVersion(5);
 
