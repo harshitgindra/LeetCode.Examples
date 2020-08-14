@@ -9,8 +9,14 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            LongestPalindromeTest longestPalindromeTest = new LongestPalindromeTest();
-            longestPalindromeTest.LongestPalindrome("ccc");
+            FirstUniqueCharacterinAString firstUniqueCharacterinAString = new FirstUniqueCharacterinAString();
+            firstUniqueCharacterinAString.FirstUniqChar("dda");
+
+            //RansomNote randNote = new RansomNote();
+            //randNote.CanConstruct("aa", "ab");
+
+            //LongestPalindromeTest longestPalindromeTest = new LongestPalindromeTest();
+            //longestPalindromeTest.LongestPalindrome("ccc");
 
 
             //IteratorForCombination iteratorForCombination = new IteratorForCombination("abc", 2);
