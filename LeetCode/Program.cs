@@ -9,9 +9,20 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            PascalTriangleII pascalTriangleIi = new PascalTriangleII();
-            pascalTriangleIi.GetRow(0);
-            pascalTriangleIi.GetRow(3);
+            LongestPalindromeTest longestPalindromeTest = new LongestPalindromeTest();
+            longestPalindromeTest.LongestPalindrome("ccc");
+
+
+            //IteratorForCombination iteratorForCombination = new IteratorForCombination("abc", 2);
+            //iteratorForCombination.Next(); // returns "ab"
+            //iteratorForCombination.HasNext(); // returns true
+            //iteratorForCombination.Next(); // returns "ac"
+            //iteratorForCombination.HasNext(); // returns true
+            //iteratorForCombination.Next(); // returns "bc"
+            //iteratorForCombination.HasNext(); // returns false
+            //PascalTriangleII pascalTriangleIi = new PascalTriangleII();
+            //pascalTriangleIi.GetRow(0);
+            //pascalTriangleIi.GetRow(3);
 
 
             //HIndexTest hIndexTest = new HIndexTest();
