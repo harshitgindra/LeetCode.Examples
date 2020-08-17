@@ -9,8 +9,22 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            FirstUniqueCharacterinAString firstUniqueCharacterinAString = new FirstUniqueCharacterinAString();
-            firstUniqueCharacterinAString.FirstUniqChar("dda");
+            ValidPerfectSquare validPerfectSquare  = new ValidPerfectSquare();
+           var respo = validPerfectSquare.IsPerfectSquare(9);
+
+            // var data = new int[3][];
+            // data[0] = new int[] {0, 0};
+            // data[1] = new int[] {0, 1};
+            // data[2] = new int[] {0, -1};
+            // CheckIfItIsAStraightLine checkIfItIsAStraightLine = new CheckIfItIsAStraightLine();
+            // checkIfItIsAStraightLine.CheckStraightLine(data);
+
+            //BestTimeToBuyAndSellStockIII bestTimeToBuyAndSellStockIii = new BestTimeToBuyAndSellStockIII();
+            //bestTimeToBuyAndSellStockIii.MaxProfit(new[] {1,2,3,4,5});
+            //bestTimeToBuyAndSellStockIii.MaxProfit(new[] {3, 3, 5, 0, 0, 3, 1, 4});
+
+            // FirstUniqueCharacterinAString firstUniqueCharacterinAString = new FirstUniqueCharacterinAString();
+            // firstUniqueCharacterinAString.FirstUniqChar("dda");
 
             //RansomNote randNote = new RansomNote();
             //randNote.CanConstruct("aa", "ab");
