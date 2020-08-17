@@ -9,8 +9,20 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            FirstUniqueCharacterinAString firstUniqueCharacterinAString = new FirstUniqueCharacterinAString();
-            firstUniqueCharacterinAString.FirstUniqChar("dda");
+            DistributeCandiestoPeople distributeCandiestoPeople = new DistributeCandiestoPeople();
+            distributeCandiestoPeople.DistributeCandies(10, 3);
+
+
+            //CousinsInBinaryTree cousinsInBinaryTree = new CousinsInBinaryTree();
+            //cousinsInBinaryTree.IsCousins(new
+            //    TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5))), 4, 5);
+
+            //cousinsInBinaryTree.IsCousins(new
+            //    TreeNode(1, new TreeNode(2, null, new TreeNode(3, null, new TreeNode(4, new TreeNode(5)))), null), 3, 4);
+
+
+            //FirstUniqueCharacterinAString firstUniqueCharacterinAString = new FirstUniqueCharacterinAString();
+            //firstUniqueCharacterinAString.FirstUniqChar("dda");
 
             //RansomNote randNote = new RansomNote();
             //randNote.CanConstruct("aa", "ab");
