@@ -9,8 +9,12 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            DistributeCandiestoPeople distributeCandiestoPeople = new DistributeCandiestoPeople();
-            distributeCandiestoPeople.DistributeCandies(10, 3);
+            Goat_Latin goatLatin = new Goat_Latin();
+            goatLatin.ToGoatLatin("I speak Goat Latin");
+
+
+            //DistributeCandiestoPeople distributeCandiestoPeople = new DistributeCandiestoPeople();
+            //distributeCandiestoPeople.DistributeCandies(10, 3);
 
 
             //CousinsInBinaryTree cousinsInBinaryTree = new CousinsInBinaryTree();
