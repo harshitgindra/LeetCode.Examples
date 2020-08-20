@@ -9,8 +9,12 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            ValidPerfectSquare validPerfectSquare  = new ValidPerfectSquare();
-           var respo = validPerfectSquare.IsPerfectSquare(9);
+            Reorder_List reorderList= new Reorder_List();
+            reorderList.ReorderList(new August.ListNode(1, new August.ListNode(2, new August.ListNode(3, new August.ListNode(4, new August.ListNode(5))))));
+            reorderList.ReorderList(new August.ListNode(1, new August.ListNode(2, new August.ListNode(3, new August.ListNode(4)))));
+
+            // ValidPerfectSquare validPerfectSquare  = new ValidPerfectSquare();
+            //var respo = validPerfectSquare.IsPerfectSquare(9);
 
             // var data = new int[3][];
             // data[0] = new int[] {0, 0};
