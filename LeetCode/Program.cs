@@ -9,9 +9,15 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Reorder_List reorderList= new Reorder_List();
-            reorderList.ReorderList(new August.ListNode(1, new August.ListNode(2, new August.ListNode(3, new August.ListNode(4, new August.ListNode(5))))));
-            reorderList.ReorderList(new August.ListNode(1, new August.ListNode(2, new August.ListNode(3, new August.ListNode(4)))));
+            Sum_of_Left_Leaves sumOfLeftLeaves = new Sum_of_Left_Leaves();
+            sumOfLeftLeaves.SumOfLeftLeaves(new TreeNode(3, new TreeNode(9),
+                new TreeNode(20, new TreeNode(15), new TreeNode(7))));
+
+
+
+            //Reorder_List reorderList= new Reorder_List();
+            //reorderList.ReorderList(new August.ListNode(1, new August.ListNode(2, new August.ListNode(3, new August.ListNode(4, new August.ListNode(5))))));
+            //reorderList.ReorderList(new August.ListNode(1, new August.ListNode(2, new August.ListNode(3, new August.ListNode(4)))));
 
             // ValidPerfectSquare validPerfectSquare  = new ValidPerfectSquare();
             //var respo = validPerfectSquare.IsPerfectSquare(9);
