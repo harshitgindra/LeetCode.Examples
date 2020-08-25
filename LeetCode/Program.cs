@@ -9,9 +9,14 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Sum_of_Left_Leaves sumOfLeftLeaves = new Sum_of_Left_Leaves();
-            sumOfLeftLeaves.SumOfLeftLeaves(new TreeNode(3, new TreeNode(9),
-                new TreeNode(20, new TreeNode(15), new TreeNode(7))));
+            Minimum_Cost_For_Tickets minimumCostForTickets = new Minimum_Cost_For_Tickets();
+            minimumCostForTickets.MincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 31 },
+                new int[] { 2, 7, 15 });
+
+
+            //Sum_of_Left_Leaves sumOfLeftLeaves = new Sum_of_Left_Leaves();
+            //sumOfLeftLeaves.SumOfLeftLeaves(new TreeNode(3, new TreeNode(9),
+            //    new TreeNode(20, new TreeNode(15), new TreeNode(7))));
 
 
 
