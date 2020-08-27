@@ -9,9 +9,23 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Minimum_Cost_For_Tickets minimumCostForTickets = new Minimum_Cost_For_Tickets();
-            minimumCostForTickets.MincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 31 },
-                new int[] { 2, 7, 15 });
+            var data = new int[6][];
+            data[0] = new int[] { 1, 12 };
+            data[1] = new int[] { 2, 9 };
+            data[2] = new int[] { 3, 10 };
+            data[3] = new int[] { 13, 14 };
+            data[4] = new int[] { 15, 16 };
+            data[5] = new int[] { 16, 17 };
+            //data[1] = new int[] { 0, 1 };
+            //data[2] = new int[] { 0, -1 };
+            FindRightIntervalTest findRightIntervalTest = new FindRightIntervalTest();
+            findRightIntervalTest.FindRightInterval(data);
+
+
+
+            //Minimum_Cost_For_Tickets minimumCostForTickets = new Minimum_Cost_For_Tickets();
+            //minimumCostForTickets.MincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 31 },
+            //    new int[] { 2, 7, 15 });
 
 
             //Sum_of_Left_Leaves sumOfLeftLeaves = new Sum_of_Left_Leaves();
