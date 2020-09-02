@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="April\" />
+    <Folder Include="Medium\" />
   </ItemGroup>
 
 </Project>

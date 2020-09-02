@@ -1,4 +1,5 @@
 ﻿using LeetCode.August;
+using LeetCode.Medium;
 
 namespace LeetCode
 {
@@ -6,10 +7,9 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-
-            Rotate_Array rotate_Array = new Rotate_Array();
-            rotate_Array.Rotate(new int[] { -2 }, 3);
-            rotate_Array.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
+            //Rotate_Array rotate_Array = new Rotate_Array();
+            //rotate_Array.Rotate(new int[] { -2 }, 3);
+            //rotate_Array.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
             //BinaryTreeMaximumPathSum binaryTreeMaximumPathSum = new BinaryTreeMaximumPathSum();
             //binaryTreeMaximumPathSum.MaxPathSum(new TreeNode(1, new TreeNode(2), new TreeNode(3)));
 
