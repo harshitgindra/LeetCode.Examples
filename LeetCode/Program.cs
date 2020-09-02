@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using LeetCode.August;
-using LeetCode.May;
+﻿using LeetCode.August;
 
 namespace LeetCode
 {
@@ -9,17 +6,25 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var data = new int[6][];
-            data[0] = new int[] { 1, 12 };
-            data[1] = new int[] { 2, 9 };
-            data[2] = new int[] { 3, 10 };
-            data[3] = new int[] { 13, 14 };
-            data[4] = new int[] { 15, 16 };
-            data[5] = new int[] { 16, 17 };
+
+            Rotate_Array rotate_Array = new Rotate_Array();
+            rotate_Array.Rotate(new int[] { -2 }, 3);
+            rotate_Array.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
+            //BinaryTreeMaximumPathSum binaryTreeMaximumPathSum = new BinaryTreeMaximumPathSum();
+            //binaryTreeMaximumPathSum.MaxPathSum(new TreeNode(1, new TreeNode(2), new TreeNode(3)));
+
+
+            //var data = new int[6][];
+            //data[0] = new int[] { 1, 12 };
+            //data[1] = new int[] { 2, 9 };
+            //data[2] = new int[] { 3, 10 };
+            //data[3] = new int[] { 13, 14 };
+            //data[4] = new int[] { 15, 16 };
+            //data[5] = new int[] { 16, 17 };
             //data[1] = new int[] { 0, 1 };
             //data[2] = new int[] { 0, -1 };
-            FindRightIntervalTest findRightIntervalTest = new FindRightIntervalTest();
-            findRightIntervalTest.FindRightInterval(data);
+            //FindRightIntervalTest findRightIntervalTest = new FindRightIntervalTest();
+            //findRightIntervalTest.FindRightInterval(data);
 
 
 
