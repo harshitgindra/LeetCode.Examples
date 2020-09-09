@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using LeetCode.August;
 using LeetCode.May;
+using LeetCode.Medium;
 
 namespace LeetCode
 {
@@ -9,9 +10,11 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Minimum_Cost_For_Tickets minimumCostForTickets = new Minimum_Cost_For_Tickets();
-            minimumCostForTickets.MincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 31 },
-                new int[] { 2, 7, 15 });
+            LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
+            longestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring("abcabcbb");
+            //Minimum_Cost_For_Tickets minimumCostForTickets = new Minimum_Cost_For_Tickets();
+            //minimumCostForTickets.MincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 31 },
+            //    new int[] { 2, 7, 15 });
 
 
             //Sum_of_Left_Leaves sumOfLeftLeaves = new Sum_of_Left_Leaves();
