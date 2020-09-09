@@ -14,12 +14,13 @@ namespace LeetCode.Medium
 
         public IList<IList<int>> ThreeSumTest(int[] nums)
         {
+            List<IList<int>> returnValue = new List<IList<int>>();
 
-            IList<IList<int>> returnValue = new List<IList<int>>();
-            HashSet<(int, int, int)> uniqueKeys = new HashSet<(int, int, int)>();
             if (nums != null && nums.Length > 2)
             {
                 Array.Sort(nums);
+                HashSet<(int, int, int)> uniqueKeys = new HashSet<(int, int, int)>();
+                HashSet<int> uniqueNums = nums.ToHashSet();
                 for (int i = 0; i < nums.Length - 2; i++)
                 {
                     int firstNum = nums[i];
@@ -27,22 +28,25 @@ namespace LeetCode.Medium
                     {
                         int secondNum = nums[j];
 
-                        for (int k = j + 1; k < nums.Length; k++)
+                        var remainder = (secondNum + firstNum) * -1;
+
+                        if (uniqueNums.Contains(remainder))
                         {
-                            int thirdNum = nums[k];
-                            if (thirdNum + firstNum + secondNum == 0)
+                            for (int k = j + 1; k < nums.Length; k++)
                             {
-                                if (uniqueKeys.Add((firstNum, secondNum, thirdNum)))
+                                int thirdNum = nums[k];
+                                if (thirdNum == remainder)
                                 {
-                                    returnValue.Add(new List<int>() { firstNum, secondNum, thirdNum });
+                                    uniqueKeys.Add((firstNum, secondNum, thirdNum));
+                                    break;
                                 }
-                                break;
                             }
                         }
                     }
                 }
-            }
 
+                returnValue.AddRange(uniqueKeys.Select(x => new List<int>() { x.Item1, x.Item2, x.Item3 }));
+            }
 
             return returnValue;
         }
