@@ -6,56 +6,38 @@ namespace LeetCode.Medium
 {
     public class Maximum_Product_Subar
     {
-        public int MaxProduct2(int[] nums)
-        {
-            //int maxNum = nums[0];
-            int allMultiply = 1;
-
-            for (int i = 0; i < nums.Length; i++)
-            {
-                allMultiply = allMultiply * nums[i];
-            }
-
-            for (int i = 0; i < nums.Length; i++)
-            {
-                int tempValue = allMultiply / nums[i];
-                if (tempValue > allMultiply)
-                {
-                    allMultiply = tempValue;
-                    break;
-                }
-            }
-
-            return allMultiply;
-        }
-
         public int MaxProduct(int[] nums)
         {
-            int maxNum = nums[0];
+            int returnValue = nums[0];
 
-
-            for (int i = 1; i < nums.Length; i++)
+            int currentValue = 1;
+            for (int i = 0; i < nums.Length; i++)
             {
-                int innerCounter = i;
-                int multiple = 1;
-                while (innerCounter < nums.Length)
+                currentValue *= nums[i];
+                if (currentValue > returnValue)
                 {
-                    multiple *= nums[innerCounter];
-                    maxNum = Math.Max(multiple, maxNum);
-                    innerCounter++;
+                    returnValue = currentValue;
                 }
-
-                if(maxNum > maxNum * nums[i])
+                if (currentValue == 0)
                 {
-
-                }
-                else
-                {
-
+                    currentValue = 1;
                 }
             }
 
-            return maxNum;
+            currentValue = 1;
+            for (int i = nums.Length - 1; i >= 0; i--)
+            {
+                currentValue *= nums[i];
+                if (currentValue > returnValue)
+                {
+                    returnValue = currentValue;
+                }
+                if (currentValue == 0)
+                {
+                    currentValue = 1;
+                }
+            }
+            return returnValue;
         }
     }
 }
