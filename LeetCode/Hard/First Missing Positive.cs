@@ -16,16 +16,14 @@ namespace LeetCode.Hard
             }
             else
             {
-                int missingNum = Math.Abs(nums.Max());
-
-                for (int i = 1; i <= missingNum; i++)
+                for (int i = 1; i <= Int32.MaxValue; i++)
                 {
                     if (!nums.Contains(i))
                     {
                         return i;
                     }
                 }
-                return missingNum + 1;
+                return Int32.MaxValue;
             }
         }
 
