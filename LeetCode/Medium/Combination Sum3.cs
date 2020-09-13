@@ -24,7 +24,7 @@ namespace LeetCode.Medium
             }
             else if (k > 0 && n > 0)
             {
-                for (int i = start; i <= n; i++)
+                for (int i = start; i <= 9; i++)
                 {
                     comb.Add(i);
                     result = CombinationSum3(k - 1, n - i, i + 1, comb, result);
