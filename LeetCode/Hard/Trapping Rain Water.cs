@@ -9,7 +9,73 @@ namespace LeetCode.Hard
 {
     class Trapping_Rain_Water
     {
+
         public int Trap(int[] height)
+        {
+            int total = 0;
+
+            if (height != null && height.Length > 1)
+            {
+                (int Position, int Height) firstElement = default;
+                int index = 0;
+                do
+                {
+                    if (firstElement == default)
+                    {
+                        int nextIndex = Math.Min(index + 1, height.Length - 1);
+                        if (height[index] != 0 && height[index] > height[nextIndex])
+                        {
+                            firstElement.Position = index;
+                            firstElement.Height = height[index];
+                            index = height.Length;
+
+                            int maxHeightDiff = firstElement.Height;
+                            for (int i = firstElement.Position + 2; i < height.Length; i++)
+                            {
+                                if (firstElement.Height <= height[i])
+                                {
+                                    index = i;
+                                    break;
+                                }
+                                else if (firstElement.Height - height[i] < maxHeightDiff)
+                                {
+                                    index = i;
+                                    maxHeightDiff = firstElement.Height - height[i];
+                                }
+                            }
+                        }
+                        else
+                        {
+                            index++;
+                        }
+                    }
+                    else
+                    {
+                        if (height[index] > 0)
+                        {
+                            int minHeight = Math.Min(firstElement.Height, height[index]);
+
+                            for (int i = firstElement.Position + 1; i < index; i++)
+                            {
+                                int tempTotal = Math.Max(minHeight - height[i], 0);
+                                total += tempTotal;
+                            }
+
+                            firstElement = default;
+                        }
+                        else
+                        {
+                            index++;
+                        }
+                    }
+
+                } while (index < height.Length);
+            }
+
+            return total;
+        }
+
+        public int Trap1(int[] height)
         {
             IDictionary<int, int> blocks = new Dictionary<int, int>();
             for (int i = 0; i < height.Length; i++)
@@ -71,6 +137,9 @@ namespace LeetCode.Hard
                 return new List<(int Output, int[] Input)>()
                 {
 
+                    (1, new int[] {4,9,4,5,3,2}),
+                    (14, new int[] {5,2,1,2,1,5}),
+                    (1, new int[] {5,4,1,2}),
                     (1, new int[] {4,2,3}),
                     (6, new int[] {0,1,0,2,1,0,1,3,2,1,2,1}),
                 };
