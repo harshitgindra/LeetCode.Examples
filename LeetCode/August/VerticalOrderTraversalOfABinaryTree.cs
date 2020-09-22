@@ -75,5 +75,10 @@ namespace LeetCode
             this.left = left;
             this.right = right;
         }
+
+        public override string ToString()
+        {
+            return $"{this.val}";
+        }
     }
 }
