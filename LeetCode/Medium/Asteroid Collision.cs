@@ -56,10 +56,10 @@ namespace LeetCode.Medium
                     }
 
 
-                    for (int j = i + 1; j < asteroids.Length; j++)
-                    {
+                    //for (int j = i + 1; j < asteroids.Length; j++)
+                    //{
 
-                    }
+                    //}
                 }
             }
 
