@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace LeetCode.Easy
@@ -9,13 +10,10 @@ namespace LeetCode.Easy
     {
         public TreeNode IncreasingBST(TreeNode root)
         {
-            //var result = Discover(root, new List<int>());
-            //TreeNode node = new TreeNode(result[0]);
-            //node = Add(result, 1, node);
-
-
-            var r = Discover2(root, default);
-            return null;
+            var result = Discover(root, new List<int>());
+            TreeNode node = new TreeNode(result[0]);
+            node = Add(result, 1, node);
+            return node;
         }
 
         private TreeNode Add(List<int> nums, int index, TreeNode node)
@@ -39,27 +37,6 @@ namespace LeetCode.Easy
             }
 
             return nums;
-        }
-
-        private TreeNode Discover2(TreeNode node, TreeNode result)
-        {
-            if (node != null)
-            {
-                result = Discover2(node.left, result);
-
-                if (result == null)
-                {
-                    result = new TreeNode(node.val);
-                }
-                else
-                {
-                    result.right = new TreeNode(node.val);
-                }
-                //nums.Add(node.val);
-                result.right = Discover2(node.right, result.right);
-            }
-
-            return result;
         }
 
         [Test(Description = "https://leetcode.com/problems/increasing-order-search-tree/")]
