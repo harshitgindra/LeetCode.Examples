@@ -1,40 +1,45 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Internal.Commands;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LeetCode.Easy
 {
     class Best_Time_to_Buy_and_Sell_Stock_II
     {
-        public int MaxProfit(int[] prices)
+        public int[] PlusOne(int[] digits)
         {
-            int sum = 0;
-            for (int i = 1; i < prices.Length; i++)
+            var nums = digits.ToList();
+
+            if (nums.Last() == 9)
             {
-                int diff = prices[i] - prices[i - 1];
-                if (diff > 0)
-                {
-                    sum += diff;
-                }
+                nums[digits.Length - 1] = 1;
+                nums.Add(0);
+            }
+            else
+            {
+                nums[digits.Length - 1]++;
             }
 
-            return sum;
+            return nums.ToArray();
         }
 
-        public int MaxProfit2(int[] prices)
+
+        public int MaxProfit(int[] prices)
         {
             int result = 0;
             for (int i = 0; i < prices.Length - 1; i++)
             {
-                result = Math.Max(result, Check(prices, prices[i], i + 1, 0, 0, true));
+                result = Math.Max(result, Check(prices, prices[i], i + 1, 0, 0, 0, true));
             }
             return result;
         }
 
-        private int Check(int[] prices, int buyPrice, int day, int tempProfit, int maxProfit, bool isPurchased)
+        private int Check(int[] prices, int buyPrice, int day, int transactionCount, int tempProfit, int maxProfit, bool isPurchased)
         {
-            if (day >= prices.Length)
+            if (transactionCount == 2 || day >= prices.Length)
             {
                 return Math.Max(tempProfit, maxProfit);
             }
@@ -45,19 +50,20 @@ namespace LeetCode.Easy
                     int dayPrice = prices[i];
                     if (isPurchased)
                     {
+
                         if (buyPrice < dayPrice)
                         {
                             int p = dayPrice - buyPrice;
                             tempProfit += p;
 
-                            maxProfit = Check(prices, dayPrice, i + 1, tempProfit, maxProfit, false);
+                            maxProfit = Check(prices, dayPrice, i + 1, transactionCount + 1, tempProfit, maxProfit, false);
 
                             tempProfit -= p;
                         }
                     }
                     else
                     {
-                        maxProfit = Check(prices, dayPrice, i + 1, tempProfit, maxProfit, true);
+                        maxProfit = Check(prices, prices[i], i + 1, transactionCount, tempProfit, maxProfit, true);
                     }
                 }
                 return maxProfit;
