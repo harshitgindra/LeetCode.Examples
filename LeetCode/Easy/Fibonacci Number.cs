@@ -42,7 +42,7 @@ namespace LeetCode.Easy
         }
 
         [Test(Description = "https://leetcode.com/problems/fibonacci-number/")]
-        [Category("Medium")]
+        [Category("Easy")]
         [Category("Leetcode")]
         [Category("Fibonacci Number")]
         [TestCaseSource("Input")]
