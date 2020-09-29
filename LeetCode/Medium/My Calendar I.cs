@@ -41,7 +41,6 @@ namespace LeetCode.Medium
         [TestCaseSource("Input")]
         public void Test1((bool Output, (int, int) Input) item)
         {
-            //MyCalendar cal = new MyCalendar();
             var response = this.Book(item.Input.Item1, item.Input.Item2);
             Assert.AreEqual(item.Output, response);
         }
