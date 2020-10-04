@@ -9,14 +9,7 @@ namespace LeetCode.Medium
     {
         public int MinFlipsMonoIncr(string S)
         {
-            bool secondLoop = false;
-            foreach (var item in S)
-            {
-
-            }
-
-            char[] a = new char[1];
-            string.Join("",a);
+            return 0;
         }
 
 
