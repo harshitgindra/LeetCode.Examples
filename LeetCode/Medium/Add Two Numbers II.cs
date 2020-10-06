@@ -43,7 +43,7 @@ namespace LeetCode.Medium
                 currNode = new ListNode(currSum, prevNode);
             }
 
-            if(cof == 1)
+            if (cof == 1)
             {
                 prevNode = currNode;
                 currNode = new ListNode(1, prevNode);
