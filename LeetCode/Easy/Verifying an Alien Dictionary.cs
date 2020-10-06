@@ -22,7 +22,7 @@ namespace LeetCode.Easy
 
             }
 
-            return null;
+            return false;;
         }
 
         [Test(Description = "https://leetcode.com/problems/verifying-an-alien-dictionary/")]
