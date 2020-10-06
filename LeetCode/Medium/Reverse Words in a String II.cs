@@ -44,7 +44,7 @@ namespace LeetCode.Medium
         [TestCaseSource("Input")]
         public void Test1((char[] Output, char[] Input) item)
         {
-            LargestNumber(item.Input);
+            ReverseWords(item.Input);
             Assert.AreEqual(item.Output, item.Input);
         }
 
