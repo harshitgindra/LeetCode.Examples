@@ -10,13 +10,6 @@ namespace LeetCode.Medium
         public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
         {
             var result = Fetch(root, 0, new Dictionary<int, IList<int>>());
-            foreach (var item in result)
-            {
-                if (item.Key % 2 != 0)
-                {
-                    item.Value.Reverse();
-                }
-            }
             return result.Values.ToList();
         }
 
@@ -28,7 +21,14 @@ namespace LeetCode.Medium
                 {
                     result.Add(level, new List<int>());
                 }
-                result[level].Add(node.val);
+                if (level % 2 == 0)
+                {
+                    result[level].Add(node.val);
+                }
+                else
+                {
+                    result[level].Insert(0, node.val);
+                }
 
                 result = Fetch(node.left, level + 1, result);
                 result = Fetch(node.right, level + 1, result);
