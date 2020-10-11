@@ -14,7 +14,7 @@ namespace LeetCode.Medium
             for (int i = 0; i < height.Length - 1; i++)
             {
                 int firstLineHeight = height[i];
-                for (int j = i + 1; j < height.Length; j++)
+                for (int j = i+1 ; j < height.Length; j++)
                 {
                     int secondLineHeight = height[j];
 
