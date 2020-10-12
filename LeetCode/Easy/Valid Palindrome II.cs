@@ -111,7 +111,7 @@ namespace LeetCode.Easy
             {
                 return new List<(bool Output, string Input)>()
                 {
-                    //(true, "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"),
+                    (true, "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"),
                     (true, "eeccccbebaeeabebccceea"),
                 };
             }
