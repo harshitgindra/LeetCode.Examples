@@ -6,38 +6,52 @@ using System.Text;
 
 namespace LeetCode.Easy
 {
-    class ReverseWordsStringIII
+    class ReverseOnlyLettersTest
     {
-        public string ReverseWords(string s)
+        public string ReverseOnlyLetters(string S)
         {
-            var arry = s.Split(" ");
-            for (int i = 0; i < arry.Length; i++)
+            if (string.IsNullOrEmpty(S))
             {
-                var word = arry[i].ToCharArray();
-
-                int startIndex = 0;
-                int endIndex = word.Length - 1;
-                while (startIndex < endIndex)
+                return string.Empty;
+            }
+            else
+            {
+                var arry = S.ToCharArray();
+                int sIndex = 0;
+                int eIndex = S.Length - 1;
+                while (sIndex < eIndex)
                 {
-                    var temp = word[startIndex];
-                    word[startIndex++] = word[endIndex];
-                    word[endIndex--] = temp;
+                    if (char.IsLetter(arry[sIndex]))
+                    {
+                        if (char.IsLetter(arry[eIndex]))
+                        {
+                            var temp = arry[eIndex];
+                            arry[eIndex--] = arry[sIndex];
+                            arry[sIndex++] = temp;
+                        }
+                        else
+                        {
+                            eIndex--;
+                        }
+                    }
+                    else
+                    {
+                        sIndex++;
+                    }
                 }
 
-                arry[i] = new string(word);
+                return string.Join("", arry);
             }
-
-            return string.Join(" ", arry);
         }
 
-        [Test(Description = "https://leetcode.com/problems/reverse-words-in-a-string-iii/")]
+        [Test(Description = "https://leetcode.com/problems/reverse-only-letters/")]
         [Category("Easy")]
         [Category("Leetcode")]
-        [Category("Reverse Words in a String III")]
+        [Category("Reverse Only Letters")]
         [TestCaseSource("Input")]
         public void Test1((string Output, string Input) item)
         {
-            var response = ReverseWords(item.Input);
+            var response = ReverseOnlyLetters(item.Input);
             Assert.AreEqual(item.Output, response);
         }
 
@@ -47,7 +61,7 @@ namespace LeetCode.Easy
             {
                 return new List<(string Output, string Input)>()
                 {
-                    ("s'teL ekat edoCteeL tsetnoc", "Let's take LeetCode contest"),
+                    ("Qedo1ct-eeLg=ntse-T!", "Test1ng-Leet=code-Q!"),
                 };
             }
         }
