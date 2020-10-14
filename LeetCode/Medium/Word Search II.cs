@@ -43,6 +43,8 @@ namespace LeetCode.Medium
                     }
                 }
             }
+
+            return null;
         }
 
         [Test(Description = "https://leetcode.com/problems/word-search-ii/")]
