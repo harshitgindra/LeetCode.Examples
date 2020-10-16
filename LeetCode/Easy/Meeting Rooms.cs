@@ -28,26 +28,26 @@ namespace LeetCode.Easy
             return true;
         }
 
-        [Test(Description = "https://leetcode.com/problems/meeting-rooms/")]
-        [Category("Easy")]
-        [Category("Leetcode")]
-        [Category("Find the Town Judge")]
-        [TestCaseSource("Input")]
-        public void Test1((int Output, int[][] Input) item)
-        {
-            var response = CanAttendMeetings(item.Input);
-            Assert.AreEqual(item.Output, response);
-        }
+        //[Test(Description = "https://leetcode.com/problems/meeting-rooms/")]
+        //[Category("Easy")]
+        //[Category("Leetcode")]
+        //[Category("Find the Town Judge")]
+        //[TestCaseSource("Input")]
+        //public void Test1((int Output, int[][] Input) item)
+        //{
+        //    var response = CanAttendMeetings(item.Input);
+        //    Assert.AreEqual(item.Output, response);
+        //}
 
-        public static IEnumerable<(int Output, int[][] Input)> Input
-        {
-            get
-            {
-                return new List<(int Output, (int, int[][]) Input)>()
-                {
-                    (3, new int[][] { new int[]{ 1,3}, new int[]{ 2,3} }),
-                };
-            }
-        }
+        //public static IEnumerable<(int Output, int[][] Input)> Input
+        //{
+        //    get
+        //    {
+        //        return new List<(int Output, (int, int[][]) Input)>()
+        //        {
+        //            (null, (null, null))
+        //        };
+        //    }
+        //}
     }
 }
