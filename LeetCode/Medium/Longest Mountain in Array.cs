@@ -68,7 +68,7 @@ namespace LeetCode.Medium
         }
 
         [Test(Description = "https://leetcode.com/problems/longest-mountain-in-array/")]
-        [Category("Easy")]
+        [Category("Medium")]
         [Category("Leetcode")]
         [Category("Longest Mountain in Array")]
         [TestCaseSource("Input")]
