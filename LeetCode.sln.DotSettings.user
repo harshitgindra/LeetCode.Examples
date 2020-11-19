@@ -4,5 +4,6 @@
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.Coin_Change.Test1&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.LRUCache.Test1&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.Test.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Hard.Word_Break_II.Test1&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
