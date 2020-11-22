@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NUnit.Framework;
+using NUnit.Framework.Api;
 
 namespace LeetCode.Medium
 {
@@ -9,44 +11,49 @@ namespace LeetCode.Medium
     {
         public int CoinChange(int[] coins, int amount)
         {
-            if (coins != null && coins.Any() && amount != 0)
-            {
-                //Array.Sort(coins);
-                //Array.Reverse(coins);
-                Array.Sort<int>(coins, new Comparison<int>(
-                 (i1, i2) => i2.CompareTo(i1)));
-                var ret = Min(coins, amount, 0, 0, Int32.MaxValue);
-                if (ret == Int32.MaxValue)
-                {
-                    return -1;
-                }
-                else
-                {
-                    return ret;
-                }
-            }
-            else
-            {
+            if (coins == null || coins.Length == 0)
                 return 0;
+            // this array each position indicates we are trying for that amount
+            int[] dp = new int[amount + 1];
+            // fill the array with max value 
+            Array.Fill(dp, amount + 1);
+            //no of coins required to make $0 
+            dp[0] = 0;
+
+            for (int i = 0; i < dp.Length; i++)
+            {
+                for (int j = 0; j < coins.Length; j++)
+                {
+                    if (i >= coins[j])
+                    {
+                        dp[i] = Math.Min(dp[i], dp[i - coins[j]] + 1);
+                    }
+                }
             }
+
+            return ((dp[amount] > amount) ? -1 : dp[amount]);
         }
 
-        private int Min(int[] coins, int remainingAmt, int coinsUsed, int currIndex, int minCoins)
+        [Test(Description = "https://leetcode.com/problems/coin-change/")]
+        [Category("Medium")]
+        [Category("Leetcode")]
+        [Category("Coin Change")]
+        [TestCaseSource("Input")]
+        public void Test1((int Output, (int[], int) Input) item)
         {
-            for (int i = currIndex; i < coins.Length; i++)
+            var response = CoinChange(item.Input.Item1, item.Input.Item2);
+            Assert.AreEqual(item.Output, response);
+        }
+
+        public static IEnumerable<(int Output, (int[], int) Input)> Input
+        {
+            get
             {
-                var tempRemainingAmt = remainingAmt - coins[i];
-                if (tempRemainingAmt == 0)
+                return new List<(int Output, (int[], int) Input)>()
                 {
-                    return Math.Min(coinsUsed+1, minCoins);
-                    //return coinsUsed + 1;
-                }
-                if (tempRemainingAmt >= 0)
-                {
-                    minCoins = Min(coins, tempRemainingAmt, coinsUsed + 1, i, minCoins);
-                }
+                    (3,(new int[] {1,2,5}, 11)),
+                };
             }
-            return minCoins;
         }
     }
 }
