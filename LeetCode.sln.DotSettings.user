@@ -1,5 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=82bbb413_002Dc9c5_002D41c9_002D9e43_002Ddfc5e0789088/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=82bbb413_002Dc9c5_002D41c9_002D9e43_002Ddfc5e0789088/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.Coin_Change.Test1&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.LRUCache.Test1&lt;/TestId&gt;
@@ -11,8 +11,10 @@
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::[0-1108]LeetCode.Medium.Basic_Calculator_II.Test1((7, (System.String[], 3+2*2)))&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.Basic_Calculator_II&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.Longest_Substring_with_At_Most_Two_Distinct_Characters.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.Max_Consecutive_Ones_III.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::2F6424A5-A186-4B75-AA90-DB8F97963765::.NETCoreApp,Version=v3.1::LeetCode.Medium.SmallestNumberDivisbleByN.Test1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=caeeed78_002D018b_002D4708_002Da702_002D21a8f99afab3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=caeeed78_002D018b_002D4708_002Da702_002D21a8f99afab3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
