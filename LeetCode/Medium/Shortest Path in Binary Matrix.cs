@@ -10,50 +10,66 @@ namespace LeetCode.Medium
         public int ShortestPathBinaryMatrix(int[][] grid)
         {
             int iMax = grid.Length;
-            int jMax = grid.GetLength(0);
-            int ret = 1;
+            int jMax = grid[0].Length;
 
-            int i = 0;
-            int j = 0;
-            while (i < iMax && j < jMax)
+            List<(int, int)> list = new List<(int, int)>
             {
+                (1, 1),
+                (1, -1),
 
-                //**
-                //** Diagonal
-                //**
-                if (i + 1 < iMax && j + 1 < jMax)
-                {
-                    if (grid[i + 1][j + 1] == 0)
-                    {
-                        i++;
-                        j++;
-                        continue;
-                    }
-                }
+                (-1, -1),
+                (-1, 1),
+                (0, 1),
+                (0, -1),
+                (1, 0),
+                (-1, 0),
+            };
+            var response = Next(grid, iMax, jMax, 0, 0, 1, Int32.MaxValue, list);
 
-                //**
-                //** Right
-                //**
-                if (i < iMax && j + 1 < jMax)
-                {
-                    if (grid[i + 1][j + 1] == 0)
-                    {
-                        i++;
-                        j++;
-                        continue;
-                    }
-                }
+            if (response.Item2)
+            {
+                return response.Item1;
             }
-
-            return 0;
+            else
+            {
+                return -1;
+            }
         }
 
-        //private (int, bool) Next(int[][] grid, int iMax, int jMax, int i, int j, )
-        //{
+        private (int, bool) Next(int[][] grid, int iMax, int jMax, int i, int j, int steps, int minSteps,
+            List<(int, int)> list)
+        {
+            if (i < 0 || j < 0 || i >= iMax || j >= jMax || grid[i][j] != 0)
+            {
+                return (steps, false);
+            }
+            else if (i == iMax - 1 && j == jMax - 1)
+            {
+                return (Math.Min(steps, minSteps), true);
+            }
+            else
+            {
+                grid[i][j] = -1;
+                bool found = false;
+                int tempSteps = minSteps;
+                foreach (var item in list)
+                {
+                    var newI = i + item.Item1;
+                    var newJ = j + item.Item2;
 
-        //}
+                    var response = Next(grid, iMax, jMax, newI, newJ, steps + 1, tempSteps, list);
+                    if (response.Item2)
+                    {
+                        found = true;
+                        tempSteps = response.Item1;
+                    }
+                }
 
-        [Test(Description = "https://leetcode.com/problems/course-schedule-ii/")]
+                return (tempSteps, found);
+            }
+        }
+
+        [Test(Description = "https://leetcode.com/problems/shortest-path-in-binary-matrix/")]
         [Category("Hard")]
         [Category("Leetcode")]
         [Category("Course Schedule II")]
@@ -72,9 +88,9 @@ namespace LeetCode.Medium
                 {
                     (4, new int[][]
                     {
-                        new int[]{0,0,0},
-                        new int[]{1,1,0},
-                        new int[]{1,1,0},
+                        new int[] {0, 0, 0},
+                        new int[] {1, 1, 0},
+                        new int[] {1, 1, 0},
                     }),
                 };
             }
