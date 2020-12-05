@@ -13,69 +13,7 @@ namespace LeetCode.Hard
 
         public int MinDifficulty(int[] jobDifficulty, int d)
         {
-            int ret = -1;
-            if (jobDifficulty != null && jobDifficulty.Length >= d)
-            {
-                if (jobDifficulty.Length == d)
-                {
-                    ret = jobDifficulty.Sum();
-                }
-                else
-                {
-                    _max = new Dictionary<int, int>();
-                    ret = Find(jobDifficulty, d, 0, 0, int.MaxValue);
-                }
-            }
-
-            return ret;
-        }
-
-        private int Find(int[] nums, int remainingDays, int currIndex, int calcComplexity, int minComplexity)
-        {
-            if (remainingDays == 1)
-            {
-                int remainingMax = 0;
-                if (_max.ContainsKey(currIndex))
-                {
-                    remainingMax = _max[currIndex];
-                }
-                else
-                {
-                    for (int i = currIndex; i < nums.Length; i++)
-                    {
-                        if (nums[i] > remainingMax)
-                        {
-                            remainingMax = nums[i];
-                        }
-                    }
-                    _max.Add(currIndex, remainingMax);
-                }
-
-                minComplexity = Math.Min(minComplexity, calcComplexity + remainingMax);
-            }
-            else
-            {
-                var tempCalcComplexity = 0;
-
-                for (var i = currIndex; i <= nums.Length - remainingDays; i++)
-                {
-                    if (nums[i] > tempCalcComplexity)
-                    {
-                        if (calcComplexity + nums[i] > minComplexity)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            tempCalcComplexity = nums[i];
-                        }
-                    }
-
-                    minComplexity = Find(nums, remainingDays - 1, i + 1, calcComplexity + tempCalcComplexity, minComplexity);
-                }
-            }
-
-            return minComplexity;
+            return 0;
         }
 
 
@@ -96,12 +34,11 @@ namespace LeetCode.Hard
             {
                 return new List<(int Output, (int[], int) Input)>()
                 {
-
-                    (-1, (new int[] {1,1,1}, 4)),
-                    (3, (new int[] {1,1,1}, 3)),
-                    (7, (new int[] {6,5,4,3,2, 1}, 2)),
-                    (6, (new int[] {1,5,3,2,4}, 2)),
-                    (10, (new int[] {1,5,3,2,4}, 3)),
+                    (-1, (new int[] {1, 1, 1}, 4)),
+                    (3, (new int[] {1, 1, 1}, 3)),
+                    (7, (new int[] {6, 5, 4, 3, 2, 1}, 2)),
+                    (6, (new int[] {1, 5, 3, 2, 4}, 2)),
+                    (10, (new int[] {1, 5, 3, 2, 4}, 3)),
                 };
             }
         }

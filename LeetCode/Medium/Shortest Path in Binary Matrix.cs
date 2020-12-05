@@ -7,6 +7,7 @@ namespace LeetCode.Medium
 {
     class Shortest_Path_in_Binary_Matrix
     {
+        int min = Int32.MaxValue;
         public int ShortestPathBinaryMatrix(int[][] grid)
         {
             int iMax = grid.Length;
@@ -28,7 +29,7 @@ namespace LeetCode.Medium
 
             if (response.Item2)
             {
-                return response.Item1;
+                return min;
             }
             else
             {
@@ -45,6 +46,7 @@ namespace LeetCode.Medium
             }
             else if (i == iMax - 1 && j == jMax - 1)
             {
+                min = Math.Min(steps, min);
                 return (Math.Min(steps, minSteps), true);
             }
             else

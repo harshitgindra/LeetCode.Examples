@@ -9,43 +9,33 @@ namespace LeetCode.Medium
     {
         public string LongestPalindrome(string s)
         {
-            if (string.IsNullOrEmpty(s))
+            if (s == null || s.Length < 1) return "";
+            int start = 0, end = 0;
+            for (int i = 0; i < s.Length; i++)
             {
-                return default;
-            }
-            if(s.Length == 1)
-            {
-                return s;
-            }
-            else
-            {
-                var arry = s.ToCharArray();
-                Array.Reverse(arry);
-                string sReverse = new string(arry);
-                string returnValue = $"{s[0]}";
-
-                for (int sIndex = 0; sIndex < s.Length - returnValue.Length; sIndex++)
+                int len1 = expandAroundCenter(s, i, i);
+                int len2 = expandAroundCenter(s, i, i + 1);
+                int len = Math.Max(len1, len2);
+                if (len > end - start)
                 {
-                    for (int length = s.Length - sIndex; length > returnValue.Length; length--)
-                    {
-                        var subStr = s.Substring(sIndex, length);
-                        if (sReverse.Contains(subStr) && IsPalindrome(subStr))
-                        {
-                            returnValue = subStr;
-                            break;
-                        }
-                    }
+                    start = i - (len - 1) / 2;
+                    end = i + len / 2;
                 }
-
-                return returnValue;
             }
+
+            return s.Substring(start, end - start + 1);
         }
 
-
-        public bool IsPalindrome(string str)
+        private int expandAroundCenter(string s, int left, int right)
         {
-            if (str.Length == 1 || str.Length == 0) return true;
-            return str[0] == str[^1] && IsPalindrome(str.Substring(1, str.Length - 2));
+            int L = left, R = right;
+            while (L >= 0 && R < s.Length && s[L] == s[R])
+            {
+                L--;
+                R++;
+            }
+
+            return R - L - 1;
         }
 
         [Test(Description = "https://leetcode.com/problems/longest-palindromic-substring/")]
@@ -65,8 +55,8 @@ namespace LeetCode.Medium
             {
                 return new List<(string Output, string Input)>()
                 {
-                    ("bab",                    "babad"),
-                    ("bb",                    "cbbd")
+                    ("bab", "babad"),
+                    ("bb", "cbbd")
                 };
             }
         }
