@@ -1,0 +1,23 @@
+name: Main workflow
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    env:
+      Prerelease: ci
+
+    steps:
+    - name: Print GITHUB_RUN_NUMBER
+      run: |
+        echo "GITHUB_RUN_NUMBER is ${env:GITHUB_RUN_NUMBER}"
+          
+    - uses: actions/checkout@v1
+      
+    - name: Build Projects
+      run: |
+        dotnet build ./Problems/Problems.csproj -c Release
+        
