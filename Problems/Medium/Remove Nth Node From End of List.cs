@@ -1,39 +1,46 @@
-﻿using NUnit.Framework;
-using System;
+﻿using Leetcode.Problems.Common;
+using NUnit.Framework;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Medium
 {
     class Delete_Node_in_a_Linked_List
     {
-        public ListNode RemoveNthFromEnd(ListNode head, int n, int currentNode = 1)
+        private int _maxNodes = 0;
+        public ListNode RemoveNthFromEnd(ListNode head, int n)
         {
-            var response = Process(head, n, 0);
-            return response.Item1;
+            return Process(head, n, 0);
         }
 
-        private (ListNode, int) Process(ListNode head, int n, int currentNode)
+        private ListNode Process(ListNode node, int n, int position)
         {
-            if (head == null)
+            //***
+            //*** if node is null, we are at the end of the chain
+            //*** set the position as maximum nodes in the chain
+            //***
+            if (node == null)
             {
-                return (head, currentNode);
+                _maxNodes = position;
             }
             else
             {
-                var response = Process(head.next, n, currentNode + 1);
-                if (response.Item2 - n == currentNode)
+                //***
+                //*** Read through the next node and increment the position
+                //***
+                node.next = Process(node.next, n, position + 1);
+                //***
+                //*** Replacing the node by the next in chain if
+                //*** current position + n is equals to maximum nodes in the chain
+                //***
+                if (position + n == _maxNodes)
                 {
-                    head = head.next;
+                    node = node.next;
                 }
-                else
-                {
-                    head.next = response.Item1;
-                }
-
-                return (head, response.Item2);
             }
+
+            return node;
         }
+
 
         [Test(Description = "https://leetcode.com/problems/remove-nth-node-from-end-of-list/")]
         [Category("Medium")]
@@ -43,7 +50,7 @@ namespace LeetCode.Medium
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = RemoveNthFromEnd(item.Input.Item1, item.Input.Item2);
-            //Assert.AreEqual(item.Output, response);
+            AssertExtensions.AreListnodesEqual(item.Output, response);
         }
 
         public static IEnumerable<(ListNode Output, (ListNode, int) Input)> Input

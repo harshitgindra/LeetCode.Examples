@@ -1,10 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=82bbb413_002Dc9c5_002D41c9_002D9e43_002Ddfc5e0789088/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=82bbb413_002Dc9c5_002D41c9_002D9e43_002Ddfc5e0789088/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6B0C287E-055E-460D-B9CE-C6851870192A::net5.0::Leetcode.Problems._2021.March.Single_Row_Keyboard.Test1&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6B0C287E-055E-460D-B9CE-C6851870192A::net5.0::Leetcode.Problems._2021.March.Check_if_One_String_Swap_Can_Make_Strings_Equal.Test1&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6B0C287E-055E-460D-B9CE-C6851870192A::net5.0::Leetcode.Problems._2021.March.UndergroundSystem.Test1&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6B0C287E-055E-460D-B9CE-C6851870192A::net5.0::Leetcode.Problems._2021.March.Russian_Doll_Envelopes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B0C287E-055E-460D-B9CE-C6851870192A::net5.0::Leetcode.Problems._2021.April.Longest_Valid_Parentheses.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B0C287E-055E-460D-B9CE-C6851870192A::net5.0::LeetCode.Medium.Delete_Node_in_a_Linked_List.Test1&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=caeeed78_002D018b_002D4708_002Da702_002D21a8f99afab3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
