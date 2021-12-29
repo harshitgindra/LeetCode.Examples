@@ -9,16 +9,42 @@ namespace LeetCode.Medium
     /// </summary>
     public class Populating_Next_Right_Pointers_in_Each_Node_II
     {
-        private Dictionary<int, List<Node>> _dict;
-
         public Node Connect(Node root)
         {
-            _dict = new Dictionary<int, List<Node>>();
-            Read(root, 1);
+            Read(root);
             return root;
         }
 
-        private void Read(Node node, int level)
+        public void Read(Node node)
+        {
+            if (node != null)
+            {
+                if (node.left != null)
+                {
+                    node.left.next = node.right;
+                }
+
+                if (node.right != null && node.next != null)
+                {
+                    node.right.next = node.next.left;
+                }
+
+                Read(node.left);
+                Read(node.right);
+            }
+        }
+        
+        
+        private Dictionary<int, List<Node>> _dict;
+
+        public Node Connect2(Node root)
+        {
+            _dict = new Dictionary<int, List<Node>>();
+            Helper(root, 1);
+            return root;
+        }
+
+        private void Helper(Node node, int level)
         {
             if (node != null)
             {
@@ -33,8 +59,8 @@ namespace LeetCode.Medium
                     _dict.Add(level, new List<Node>() {node});
                 }
 
-                Read(node.left, level + 1);
-                Read(node.right, level + 1);
+                Helper(node.left, level + 1);
+                Helper(node.right, level + 1);
             }
         }
 
