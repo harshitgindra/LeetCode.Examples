@@ -9,9 +9,19 @@ namespace LeetCode.Easy
             // when putting in an item, pair it with all the items put in before
             foreach (var t in time)
             {
-                int seconds = t % 60;
-                sum += mod[(60 - seconds) % 60];
-                mod[seconds]++;
+                //***
+                //*** Get the remainder
+                //***
+                int remainder = t % 60;
+                //***
+                //*** Check if the 60-remainder exists in the array
+                //*** If exists, we can build that many pairs with total 60, hence increement sum
+                //***
+                sum += mod[(60 - remainder) % 60];
+                //***
+                //*** Increment the current remainder for remaining calculations/songs
+                //***
+                mod[remainder]++;
             }
             return sum;
         }
