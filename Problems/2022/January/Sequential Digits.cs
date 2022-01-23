@@ -19,7 +19,7 @@ namespace Leetcode.Problems._2022.January
             //***
             for (int i = lowLength; i <= highLength; i++)
             {
-                for (int j = 0; j < sample.Length -i; j++)
+                for (int j = 0; j <= sample.Length -i; j++)
                 {
                     var num = Convert.ToInt32(sample.Substring(j, i));
                     if (num >= low && num <= high)
