@@ -5,8 +5,12 @@ using System.Text;
 
 namespace LeetCode.Easy
 {
+    /// <summary>
+    /// https://leetcode.com/problems/valid-mountain-array/
+    /// </summary>
     class Valid_Mountain_Array
     {
+    
         public bool ValidMountainArray(int[] A)
         {
             int highestIndex = 0;
@@ -26,7 +30,7 @@ namespace LeetCode.Easy
                 }
             }
 
-            if (highestIndex == 0)
+            if (highestIndex == 0 || highestIndex == A.Length -1)
             {
                 return false;
             }
@@ -48,6 +52,7 @@ namespace LeetCode.Easy
         [Category("Easy")]
         [Category("Leetcode")]
         [Category("Valid Mountain Array")]
+        [Category("Jan-2022")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, int[] Input) item)
         {
