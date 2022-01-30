@@ -9,6 +9,39 @@ namespace LeetCode.Medium
     {
         public void Rotate(int[] nums, int k)
         {
+            if (nums != null && nums.Length > 0 && k > 0)
+            {
+                k = k % nums.Length;
+
+                //***
+                //*** Reverse the entire array
+                //***
+                Array.Reverse(nums);
+                //***
+                //*** Reverse the array from  0 to k
+                //***
+                Helper(nums, 0, k - 1);
+                //***
+                //*** Reverse the array from  k to the end of array
+                //***
+                Helper(nums, k, nums.Length - 1);
+            }
+        }
+
+        private void Helper(int[] arry, int start, int end)
+        {
+            while (start < end)
+            {
+                int temp = arry[start];
+                arry[start] = arry[end];
+                arry[end] = temp;
+                start++;
+                end--;
+            }
+        }
+
+        public void Rotate2(int[] nums, int k)
+        {
             IDictionary<int, int> calc = new Dictionary<int, int>();
             int nLength = nums.Length;
             for (int i = 0; i < nLength; i++)
@@ -45,8 +78,7 @@ namespace LeetCode.Medium
             {
                 return new List<(int[] Output, (int[], int) Input)>()
                 {
-
-                    (new int[]{ 5,6,7,1,2,3,4}, (new int[]{ 1,2,3,4,5,6,7}, 3)),
+                    (new int[] {5, 6, 7, 1, 2, 3, 4}, (new int[] {1, 2, 3, 4, 5, 6, 7}, 3)),
                 };
             }
         }
