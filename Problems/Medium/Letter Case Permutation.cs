@@ -53,7 +53,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/letter-case-permutation/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Letter Case Permutation")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

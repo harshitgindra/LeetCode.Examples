@@ -44,7 +44,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/longest-palindromic-substring/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Palindrome")]
         [TestCaseSource("Input")]
         public void Test1((string Output, string Input) item)

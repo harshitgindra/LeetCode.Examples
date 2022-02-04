@@ -17,7 +17,7 @@ namespace LeetCode.Easy
         
         [Test(Description = "https://leetcode.com/problems/unique-email-addresses/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Unique Email Addresses")]
         public void Test1()
         {

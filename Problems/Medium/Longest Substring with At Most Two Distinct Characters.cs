@@ -35,7 +35,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Substring with At Most Two Distinct Characters")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

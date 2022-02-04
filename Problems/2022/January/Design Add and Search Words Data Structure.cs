@@ -99,7 +99,7 @@ namespace Leetcode.Problems._2022.January
     {
         [Test(Description = "https://leetcode.com/problems/design-add-and-search-words-data-structure/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Design Add and Search Words Data Structure")]
         public void Test1()
         {

@@ -101,7 +101,7 @@ namespace LeetCode.Hard
     {
         [Test(Description = "https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Minimum Difficulty of a Job Schedule")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

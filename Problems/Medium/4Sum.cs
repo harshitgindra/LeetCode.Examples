@@ -61,7 +61,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/4sum/submissions/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("4Sum")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

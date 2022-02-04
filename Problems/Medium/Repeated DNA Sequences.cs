@@ -40,7 +40,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/repeated-dna-sequences/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Repeated DNA Sequences")]
         [TestCaseSource("Input")]
         public void Test1((List<string> Output, string Input) item)

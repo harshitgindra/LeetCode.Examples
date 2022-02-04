@@ -30,7 +30,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/check-if-n-and-its-double-exist/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Check If N and Its Double Exist")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, int[] Input) item)

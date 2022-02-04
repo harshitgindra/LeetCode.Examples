@@ -48,7 +48,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/reverse-nodes-in-k-group/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Reverse Nodes in k-Group")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, (ListNode, int) Input) item)

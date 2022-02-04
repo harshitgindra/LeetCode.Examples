@@ -32,7 +32,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/reverse-words-in-a-string-iii/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Reverse Words in a String III")]
         [TestCaseSource("Input")]
         public void Test1((string Output, string Input) item)

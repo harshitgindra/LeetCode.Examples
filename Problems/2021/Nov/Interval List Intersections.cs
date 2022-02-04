@@ -52,7 +52,7 @@ namespace Leetcode.Problems._2021.Nov
         [Test(Description =
             "https://leetcode.com/problems/interval-list-intersections/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Interval List Intersections")]
         [TestCaseSource("Input")]
         public void Test1((int[][] Output, (int[][] firstList, int[][] secondList) Input) item)

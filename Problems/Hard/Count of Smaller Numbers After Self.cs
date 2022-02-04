@@ -35,7 +35,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/count-of-smaller-numbers-after-self/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Count of Smaller Numbers After Self")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

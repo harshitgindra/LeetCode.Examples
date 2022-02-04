@@ -73,7 +73,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/shortest-path-in-binary-matrix/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Course Schedule II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[][] Input) item)

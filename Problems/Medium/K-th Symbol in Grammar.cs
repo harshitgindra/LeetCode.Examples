@@ -24,7 +24,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/k-th-symbol-in-grammar/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("K-th Symbol in Grammar")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int, int) Input) item)

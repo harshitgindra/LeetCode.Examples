@@ -65,7 +65,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/find-k-closest-elements/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find K Closest Elements")]
         [TestCaseSource("Input")]
         public void Test1((IList<int> Output, (int[], int, int) Input) item)

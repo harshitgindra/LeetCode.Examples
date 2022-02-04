@@ -43,7 +43,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/fibonacci-number/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Fibonacci Number")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int Input) item)

@@ -41,7 +41,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/increasing-order-search-tree/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Increasing Order Search Tree")]
         [TestCaseSource("Input")]
         public void Test1((TreeNode Output, TreeNode Input) item)

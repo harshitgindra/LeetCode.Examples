@@ -57,7 +57,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/merge-intervals/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Merge Intervals")]
         [TestCaseSource("Input")]
         public void Test1((int[][] Output, int[][] Input) item)

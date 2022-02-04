@@ -64,7 +64,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/my-calendar-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("My Calendar 2")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (int, int) Input) item)

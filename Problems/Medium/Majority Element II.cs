@@ -47,7 +47,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/majority-element-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Majority Element II")]
         [TestCaseSource("Input")]
         public void Test1((IList<int> Output, int[] Input) item)

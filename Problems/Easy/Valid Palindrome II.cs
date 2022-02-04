@@ -96,7 +96,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/valid-palindrome-ii/submissions/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Valid Palindrome II")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, string Input) item)

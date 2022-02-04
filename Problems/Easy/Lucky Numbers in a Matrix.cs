@@ -41,7 +41,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/lucky-numbers-in-a-matrix/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Lucky Numbers in a Matrix")]
         [TestCaseSource("Input")]
         public void Test1((IList<int> Output, int[][] Input) item)

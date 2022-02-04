@@ -71,7 +71,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Substring with At Least K Repeating Characters")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string, int) Input) item)

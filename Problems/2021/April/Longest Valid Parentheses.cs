@@ -60,7 +60,7 @@ namespace Leetcode.Problems._2021.April
 
         [Test(Description = "https://leetcode.com/problems/longest-valid-parentheses/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Valid Parentheses")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

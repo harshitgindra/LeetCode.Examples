@@ -79,7 +79,7 @@ namespace Leetcode.Problems._2021.August
 
         [Test(Description = "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Maximum Product of Splitted Binary Tree")]
         [TestCaseSource("Input")]
         public void Test1((int Output, TreeNode Input) item)

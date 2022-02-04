@@ -69,7 +69,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/longest-mountain-in-array/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Mountain in Array")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

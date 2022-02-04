@@ -131,7 +131,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/integer-to-english-words/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Integer to English Words")]
         [TestCaseSource("Input")]
         public void Test1((string Output, int Input) item)

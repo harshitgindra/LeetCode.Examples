@@ -36,7 +36,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/insert-into-a-binary-search-tree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Insert into a Binary Search Tree")]
         [TestCaseSource("Input")]
         public void Test1((TreeNode Output, (TreeNode, int) Input) item)

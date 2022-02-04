@@ -64,7 +64,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/meeting-scheduler/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Meeting Scheduler")]
         [TestCaseSource("Input")]
         public void Test1((List<int> Output, (ListNode list1, int a, int b, ListNode list2) Input) item)

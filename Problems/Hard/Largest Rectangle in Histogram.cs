@@ -58,7 +58,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/largest-rectangle-in-histogram/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Largest Rectangle in Histogram")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

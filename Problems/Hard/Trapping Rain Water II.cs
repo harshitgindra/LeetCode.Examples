@@ -160,7 +160,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/trapping-rain-water-ii/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Trapping Rain Water II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[][] Input) item)

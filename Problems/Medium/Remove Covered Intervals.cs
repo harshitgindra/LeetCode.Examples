@@ -50,7 +50,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/remove-covered-intervals/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Remove Covered Intervals")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[][] Input) item)

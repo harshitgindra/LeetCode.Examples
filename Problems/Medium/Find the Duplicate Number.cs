@@ -41,7 +41,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/find-the-duplicate-number/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find the Duplicate Number")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

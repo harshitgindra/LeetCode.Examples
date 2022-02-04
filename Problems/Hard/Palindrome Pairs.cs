@@ -58,7 +58,7 @@ namespace Leetcode.Problems.Hard
 
         [Test(Description = "https://leetcode.com/problems/palindrome-pairs/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Palindrome Pairs")]
         [TestCaseSource("Input")]
         public void Test1((IList<IList<int>> Output, string[] Input) item)

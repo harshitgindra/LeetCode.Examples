@@ -28,7 +28,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/binary-tree-preorder-traversal/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Binary Tree Preorder Traversal")]
         [TestCaseSource("Input")]
         public void Test1((IList<int> Output, TreeNode Input) item)

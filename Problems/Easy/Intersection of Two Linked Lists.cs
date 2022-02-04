@@ -56,7 +56,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/intersection-of-two-linked-lists/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Intersection of Two Linked Lists")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, (ListNode, ListNode) Input) item)

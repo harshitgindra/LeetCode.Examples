@@ -34,7 +34,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/swap-nodes-in-pairs/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Swap Nodes in Pairs")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, ListNode Input) item)

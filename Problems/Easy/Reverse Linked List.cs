@@ -30,7 +30,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/reverse-linked-list/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Reverse Linked List")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, ListNode Input) item)

@@ -15,7 +15,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/flip-string-to-monotone-increasing/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Flip String to Monotone Increasing")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

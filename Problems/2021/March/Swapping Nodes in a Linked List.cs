@@ -47,7 +47,7 @@ namespace Leetcode.Problems._2021.March
 
         [Test(Description = "https://leetcode.com/problems/swapping-nodes-in-a-linked-list/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Swapping Nodes in a Linked List")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, (ListNode, int) Input) item)

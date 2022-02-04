@@ -46,7 +46,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/reverse-only-letters/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Reverse Only Letters")]
         [TestCaseSource("Input")]
         public void Test1((string Output, string Input) item)

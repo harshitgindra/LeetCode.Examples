@@ -72,7 +72,7 @@ namespace Leetcode.Problems._2021.August
 
         [Test(Description = "https://leetcode.com/problems/decode-ways/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Decode Ways")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

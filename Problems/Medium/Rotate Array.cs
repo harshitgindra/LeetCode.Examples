@@ -63,7 +63,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/rotate-array/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Rotate Array")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, (int[], int) Input) item)

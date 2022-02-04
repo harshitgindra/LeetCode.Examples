@@ -111,7 +111,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find Winner on a Tic Tac Toe Game")]
         [TestCaseSource("Input")]
         public void Test1((string Output, int[][] Input) item)

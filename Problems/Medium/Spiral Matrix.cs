@@ -83,7 +83,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/spiral-matrix/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Palindromic Substring")]
         [TestCaseSource("Input")]
         public void Test1((List<int> Output, int[][] Input) item)

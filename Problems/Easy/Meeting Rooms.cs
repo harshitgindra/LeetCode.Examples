@@ -30,7 +30,7 @@ namespace LeetCode.Easy
 
         //[Test(Description = "https://leetcode.com/problems/meeting-rooms/")]
         //[Category("Easy")]
-        //[Category("Leetcode")]
+        //[Category("LeetCode")]
         //[Category("Find the Town Judge")]
         //[TestCaseSource("Input")]
         //public void Test1((int Output, int[][] Input) item)

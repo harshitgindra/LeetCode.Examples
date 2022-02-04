@@ -50,7 +50,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/valid-mountain-array/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Valid Mountain Array")]
         [Category("Jan-2022")]
         [TestCaseSource("Input")]

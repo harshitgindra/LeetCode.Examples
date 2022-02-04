@@ -77,7 +77,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/evaluate-division/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Evaluate Division")]
         [TestCaseSource("Input")]
         public void Test1((double[] Output, (IList<IList<string>>, double[], IList<IList<string>>) Input) item)

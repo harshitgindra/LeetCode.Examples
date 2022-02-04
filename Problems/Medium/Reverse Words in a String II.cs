@@ -39,7 +39,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/reverse-words-in-a-string-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Reverse Words in a String II")]
         [TestCaseSource("Input")]
         public void Test1((char[] Output, char[] Input) item)

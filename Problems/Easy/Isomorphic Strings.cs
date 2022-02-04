@@ -53,7 +53,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/isomorphic-strings/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Isomorphic Strings")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (string, string) Input) item)

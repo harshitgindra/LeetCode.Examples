@@ -30,7 +30,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/find-the-difference/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find the Difference")]
         [TestCaseSource("Input")]
         public void Test1((char Output, (string, string) Input) item)

@@ -49,7 +49,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/word-search-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Word Search II")]
         [TestCaseSource("Input")]
         public void Test1((IList<string> Output, (char[][], string[]) Input) item)

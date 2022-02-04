@@ -46,7 +46,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/longest-consecutive-sequence/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Consecutive Sequence")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

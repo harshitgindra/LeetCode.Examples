@@ -46,7 +46,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/k-diff-pairs-in-an-array/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("K-diff Pairs in an Array")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

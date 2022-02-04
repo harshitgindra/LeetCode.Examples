@@ -53,7 +53,7 @@ namespace Leetcode.Problems._2021.August
 
         [Test(Description = "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find Minimum in Rotated Sorted Array")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

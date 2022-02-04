@@ -37,7 +37,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find Numbers with Even Number of Digits")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

@@ -46,7 +46,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Replace All ?'s to Avoid Consecutive Repeating Characters")]
         [TestCaseSource("Input")]
         public void Test1((string Output, string Input) item)

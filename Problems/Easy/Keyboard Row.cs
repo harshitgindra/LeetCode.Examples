@@ -61,7 +61,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/keyboard-row/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Keyboard Row")]
         [TestCaseSource("Input")]
         public void Test1((string[] Output, string[] Input) item)

@@ -39,7 +39,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Best Time to Buy and Sell Stock IV")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int, int[]) Input) item)

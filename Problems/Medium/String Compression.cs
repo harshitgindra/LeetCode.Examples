@@ -62,7 +62,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/string-compression/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("String Compression")]
         [TestCaseSource("Input")]
         public void Test1((int Output, char[] Input) item)

@@ -72,7 +72,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Best Time to Buy and Sell Stock II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

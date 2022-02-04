@@ -107,7 +107,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/cut-off-trees-for-golf-event/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("maximal rectangle")]
         [TestCaseSource("Input")]
         public void Test1((int Output, IList<IList<int>> Input) item)

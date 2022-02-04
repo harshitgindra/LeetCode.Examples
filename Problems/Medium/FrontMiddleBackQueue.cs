@@ -104,7 +104,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/super-palindromes/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Super Palindromes")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string, string) Input) item)

@@ -30,7 +30,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/find-peak-element/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find Peak Element")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

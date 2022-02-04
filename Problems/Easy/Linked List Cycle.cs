@@ -27,7 +27,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/linked-list-cycle/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Linked List Cycle")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, ListNode Input) item)

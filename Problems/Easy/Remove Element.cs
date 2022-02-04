@@ -33,7 +33,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/remove-element/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Remove Element")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

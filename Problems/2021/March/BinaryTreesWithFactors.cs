@@ -58,7 +58,7 @@ namespace LeetCode.March
 
         [Test(Description = "https://leetcode.com/problems/binary-trees-with-factors/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Binary Trees With Factors")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

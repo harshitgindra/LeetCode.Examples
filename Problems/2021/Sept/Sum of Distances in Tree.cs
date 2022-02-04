@@ -66,7 +66,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/sum-of-distances-in-tree/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Sum of Distances in Tree")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int, int[][]) Input) item)

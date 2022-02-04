@@ -27,7 +27,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/verifying-an-alien-dictionary/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Verifying an Alien Dictionary")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (string[], string) Input) item)

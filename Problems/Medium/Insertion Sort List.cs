@@ -39,7 +39,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/insertion-sort-list/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Insertion Sort List")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, ListNode Input) item)

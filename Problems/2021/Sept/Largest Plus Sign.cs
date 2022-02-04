@@ -157,7 +157,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/largest-plus-sign/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Largest plus sign")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int n, int[][] mines) Input) item)

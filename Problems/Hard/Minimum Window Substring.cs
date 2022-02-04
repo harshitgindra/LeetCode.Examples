@@ -61,7 +61,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/minimum-window-substring/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Best Time to Buy and Sell Stock IV")]
         [TestCaseSource("Input")]
         public void Test1((string Output, (string, string) Input) item)

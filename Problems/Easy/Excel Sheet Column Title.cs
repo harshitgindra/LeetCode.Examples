@@ -20,7 +20,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/excel-sheet-column-title/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Excel Sheet Column Title")]
         [TestCaseSource("Input")]
         public void Test1((string Output, int Input) item)

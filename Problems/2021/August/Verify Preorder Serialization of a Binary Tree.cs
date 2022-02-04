@@ -45,7 +45,7 @@ namespace Leetcode.Problems._2021.August
 
         [Test(Description = "https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Verify Preorder Serialization of a Binary Tree")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, string Input) item)

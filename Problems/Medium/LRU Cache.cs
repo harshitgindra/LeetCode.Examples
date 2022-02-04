@@ -59,7 +59,7 @@ namespace LeetCode.Medium
     {
         [Test(Description = "https://leetcode.com/problems/3sum-closest/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("3Sum Closest")]
         public void Test1()
         {

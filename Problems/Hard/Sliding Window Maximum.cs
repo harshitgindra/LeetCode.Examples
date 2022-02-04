@@ -52,7 +52,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/sliding-window-maximum/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Sliding Window Maximum")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

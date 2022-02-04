@@ -24,7 +24,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Replace Elements with Greatest Element on Right Side")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

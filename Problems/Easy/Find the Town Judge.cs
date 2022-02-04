@@ -31,7 +31,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/find-the-town-judge/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find the Town Judge")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int, int[][]) Input) item)

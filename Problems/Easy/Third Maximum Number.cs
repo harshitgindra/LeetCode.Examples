@@ -24,7 +24,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/third-maximum-number/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Third Maximum Number")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

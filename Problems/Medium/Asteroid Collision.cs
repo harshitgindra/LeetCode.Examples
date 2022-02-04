@@ -69,7 +69,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/asteroid-collision/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Asteroid Collision")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

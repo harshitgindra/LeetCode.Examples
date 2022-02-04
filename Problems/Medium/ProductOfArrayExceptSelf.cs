@@ -30,7 +30,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/product-of-array-except-self/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Product of Array Except Self")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

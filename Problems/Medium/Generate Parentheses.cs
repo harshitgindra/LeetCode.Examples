@@ -39,7 +39,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/generate-parentheses/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Generate Parentheses")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int Input) item)

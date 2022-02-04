@@ -29,7 +29,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/climbing-stairs/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Climbing Stairs")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int Input) item)

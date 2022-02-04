@@ -84,7 +84,7 @@ namespace Leetcode.Problems._2021.August
 
         [Test(Description = "https://leetcode.com/problems/palindrome-partitioning-ii/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Palindrome Partitioning II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

@@ -46,7 +46,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/odd-even-linked-list/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Odd Even Linked List")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, ListNode Input) item)

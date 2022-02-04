@@ -23,7 +23,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/largest-number/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Largest Number")]
         [TestCaseSource("Input")]
         public void Test1((string Output, int[] Input) item)

@@ -48,7 +48,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/maximum-number-of-balloons/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Maximum Number of Balloons")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

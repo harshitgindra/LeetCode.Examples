@@ -74,7 +74,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/maximal-rectangle/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("maximal rectangle")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string beginWord, string endWord, IList<string> wordList) Input) item)

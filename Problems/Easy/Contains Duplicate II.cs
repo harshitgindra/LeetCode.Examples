@@ -21,7 +21,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/contains-duplicate-ii/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Contains Duplicate II")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (int[], int) Input) item)

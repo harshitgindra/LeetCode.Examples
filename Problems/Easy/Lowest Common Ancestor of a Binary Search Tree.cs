@@ -50,7 +50,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Lowest Common Ancestor of a Binary Search Tree")]
         [TestCaseSource("Input")]
         public void Test1((TreeNode Output, (TreeNode, TreeNode, TreeNode) Input) item)

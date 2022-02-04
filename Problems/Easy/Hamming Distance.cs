@@ -29,7 +29,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/hamming-distance/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Hamming Distance")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int, int) Input) item)

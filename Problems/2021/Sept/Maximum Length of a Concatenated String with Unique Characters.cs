@@ -79,7 +79,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description ="https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Maximum Length of a Concatenated String with Unique Characters")]
         [TestCaseSource("Input")]
         public void Test1((int Output, IList<string> Input) item)

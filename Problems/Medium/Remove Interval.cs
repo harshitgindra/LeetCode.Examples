@@ -42,7 +42,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/remove-interval/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Remove Interval")]
         [TestCaseSource("Input")]
         public void Test1((IList<IList<int>> Output, (int[][], int[]) Input) item)

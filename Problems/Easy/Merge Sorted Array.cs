@@ -22,7 +22,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/merge-sorted-array/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Merge Sorted Array")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, (int[], int, int[], int) Input) item)

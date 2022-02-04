@@ -50,7 +50,7 @@ namespace Leetcode.Problems._2021.August
 
         [Test(Description = "https://leetcode.com/problems/paint-fence/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Paint Fence")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int n, int k) Input) item)

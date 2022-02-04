@@ -50,7 +50,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/binary-watch/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Binary Watch")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int Input) item)

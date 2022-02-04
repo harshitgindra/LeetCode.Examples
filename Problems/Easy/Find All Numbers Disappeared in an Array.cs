@@ -18,7 +18,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Find All Numbers Disappeared in an Array")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

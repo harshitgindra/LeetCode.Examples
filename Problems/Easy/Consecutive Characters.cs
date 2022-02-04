@@ -41,7 +41,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/consecutive-characters/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Consecutive Characters")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

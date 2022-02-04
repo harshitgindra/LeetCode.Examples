@@ -88,7 +88,7 @@ namespace Leetcode.Problems._2021.March
 
         [Test(Description = "https://leetcode.com/problems/construct-binary-tree-from-string/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Construct Binary Tree from String")]
         [TestCaseSource("Input")]
         public void Test1((TreeNode Output, string Input) item)

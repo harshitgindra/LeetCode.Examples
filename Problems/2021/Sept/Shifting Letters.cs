@@ -29,7 +29,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/shifting-letters/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Shifting Letters")]
         [TestCaseSource("Input")]
         public void Test1((string Output, (string s, int[] shifts) Input) item)

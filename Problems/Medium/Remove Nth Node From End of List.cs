@@ -44,7 +44,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/remove-nth-node-from-end-of-list/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Remove Nth Node From End of List")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, (ListNode, int) Input) item)

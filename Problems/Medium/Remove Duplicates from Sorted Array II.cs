@@ -33,7 +33,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Remove Duplicates from Sorted Array II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

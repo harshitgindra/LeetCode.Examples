@@ -80,7 +80,7 @@ namespace Leetcode.Problems._2021.March
 
         [Test(Description = "https://leetcode.com/problems/design-underground-system/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Design Underground System")]
         public void Test1()
         {

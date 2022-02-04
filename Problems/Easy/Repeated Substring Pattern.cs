@@ -45,7 +45,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/repeated-substring-pattern/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Repeated Substring Pattern")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, string Input) item)

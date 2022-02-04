@@ -27,7 +27,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/height-checker/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Height Cracker")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

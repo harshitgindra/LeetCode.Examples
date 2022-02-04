@@ -43,7 +43,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/minimum-size-subarray-sum/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Minimum Size Subarray Sum")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int, int[]) Input) item)

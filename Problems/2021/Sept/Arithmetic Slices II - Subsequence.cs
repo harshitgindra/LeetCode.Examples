@@ -52,7 +52,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/arithmetic-slices-ii-subsequence/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Arithmetic Slices II - Subsequence")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

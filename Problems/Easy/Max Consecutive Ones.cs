@@ -34,7 +34,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/max-consecutive-ones/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Max Consecutive Ones")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

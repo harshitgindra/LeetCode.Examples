@@ -70,7 +70,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("All Nodes Distance K in Binary Tree")]
         [TestCaseSource("Input")]
         public void Test1((List<int> Output, (TreeNode, TreeNode, int) Input) item)

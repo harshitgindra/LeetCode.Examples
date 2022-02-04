@@ -42,7 +42,7 @@ namespace LeetCode.Mock.Microsoft
 
         [Test(Description = "https://leetcode.com/problems/combination-sum/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Mock Test")]
         [Category("Combination Sum")]
         [TestCaseSource("Input")]

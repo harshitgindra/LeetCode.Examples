@@ -22,7 +22,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Maximum XOR of Two Numbers in an Array")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

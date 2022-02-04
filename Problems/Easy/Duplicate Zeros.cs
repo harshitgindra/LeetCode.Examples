@@ -30,7 +30,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/duplicate-zeros/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Duplicate Zeros")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

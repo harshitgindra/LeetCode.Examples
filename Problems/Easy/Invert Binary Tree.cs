@@ -30,7 +30,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/invert-binary-tree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Invert Binary Tree")]
         [TestCaseSource("Input")]
         public void Test1((TreeNode Output, TreeNode Input) item)

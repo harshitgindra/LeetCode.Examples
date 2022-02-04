@@ -33,7 +33,7 @@ namespace Leetcode.Problems._2021.March
 
         [Test(Description = "https://leetcode.com/problems/single-row-keyboard/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Single-Row Keyboard")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string, string) Input) item)

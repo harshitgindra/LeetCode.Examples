@@ -99,7 +99,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/basic-calculator-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Basic Calculator II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string[], string) Input) item)

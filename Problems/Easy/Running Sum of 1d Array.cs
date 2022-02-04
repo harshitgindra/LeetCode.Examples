@@ -19,7 +19,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/running-sum-of-1d-array/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Running Sum of 1d Array")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

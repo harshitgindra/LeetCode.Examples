@@ -14,7 +14,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/subarray-product-less-than-k/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Subarray Product Less Than K")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

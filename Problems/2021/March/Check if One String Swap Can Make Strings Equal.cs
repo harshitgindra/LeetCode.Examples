@@ -70,7 +70,7 @@ namespace Leetcode.Problems._2021.March
 
         [Test(Description = "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Check if One String Swap Can Make Strings Equal")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (string, string) Input) item)

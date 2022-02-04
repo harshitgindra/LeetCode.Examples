@@ -35,7 +35,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/maximum-average-subtree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Maximum Average Subtree")]
         [TestCaseSource("Input")]
         public void Test1((double Output, TreeNode Input) item)

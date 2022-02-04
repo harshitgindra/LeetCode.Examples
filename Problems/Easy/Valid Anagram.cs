@@ -14,7 +14,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/valid-anagram/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Valid Anagram")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (string, string) Input) item)

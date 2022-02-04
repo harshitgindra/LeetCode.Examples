@@ -76,7 +76,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/course-schedule-ii/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Course Schedule II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int numCourses, int[][] prerequisites) Input) item)

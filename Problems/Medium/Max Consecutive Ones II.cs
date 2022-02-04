@@ -73,7 +73,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/max-consecutive-ones-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Max Consecutive Ones II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

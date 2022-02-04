@@ -56,7 +56,7 @@ namespace Leetcode.Problems.Hard
 
         [Test(Description = "https://leetcode.com/problems/minimum-number-of-refueling-stops/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Minimum Number of Refueling Stops")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int target, int startFuel, int[][] stations) Input) item)

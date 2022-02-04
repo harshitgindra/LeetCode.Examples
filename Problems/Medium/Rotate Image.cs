@@ -40,7 +40,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/rotate-image/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Rotate Image")]
         [TestCaseSource("Input")]
         public void Test1((int[][] Output, int[][] Input) item)

@@ -50,7 +50,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/subsets-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Subsets II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

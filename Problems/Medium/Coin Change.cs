@@ -36,7 +36,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/coin-change/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Coin Change")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (int[], int) Input) item)

@@ -64,7 +64,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/add-two-numbers-ii/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Add Two Numbers II")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, (ListNode, ListNode) Input) item)

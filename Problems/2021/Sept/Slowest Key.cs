@@ -42,7 +42,7 @@ namespace Leetcode.Problems._2021.Sept
 
         [Test(Description = "https://leetcode.com/problems/slowest-key/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Sloweest Key")]
         [TestCaseSource("Input")]
         public void Test1((char Output, (int[] releaseTimes, string keysPressed) Input) item)

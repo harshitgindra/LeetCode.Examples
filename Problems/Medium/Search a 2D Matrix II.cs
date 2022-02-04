@@ -80,7 +80,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/search-a-2d-matrix-ii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Search a 2D Matrix II")]
         [TestCaseSource("Input")]
         public void Test1((List<int> Output, int[,] Input) item)

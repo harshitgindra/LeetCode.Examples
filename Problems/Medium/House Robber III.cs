@@ -25,7 +25,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/house-robber-iii/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("House Robber 3")]
         public void Test1()
         {

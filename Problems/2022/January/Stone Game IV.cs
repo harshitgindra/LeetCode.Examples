@@ -53,7 +53,7 @@ namespace Leetcode.Problems._2022.January
         
         [Test(Description = "https://leetcode.com/problems/stone-game-iv/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Stone Game II")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, int Input) item)

@@ -58,7 +58,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/word-break-ii/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Word Break II")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string, IList<string>) Input) item)

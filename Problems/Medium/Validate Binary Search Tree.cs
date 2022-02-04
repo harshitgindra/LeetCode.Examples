@@ -52,7 +52,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/validate-binary-search-tree/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Validate Binary Search Tree")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, TreeNode Input) item)

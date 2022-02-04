@@ -64,7 +64,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Longest Substring with At Most K Distinct Characters")]
         [TestCaseSource("Input")]
         public void Test1((int Output, (string, int) Input) item)

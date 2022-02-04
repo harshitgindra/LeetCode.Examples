@@ -47,7 +47,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/unique-email-addresses/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Unique Email Addresses")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string[] Input) item)

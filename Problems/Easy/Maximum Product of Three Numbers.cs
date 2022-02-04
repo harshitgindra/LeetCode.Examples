@@ -40,7 +40,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/maximum-product-of-three-numbers/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Maximum Product of Three Numbers")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

@@ -29,7 +29,7 @@ namespace LeetCode.Easy
 
         [Test(Description = "https://leetcode.com/problems/rank-transform-of-an-array/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Rank Transform of an Array")]
         [TestCaseSource("Input")]
         public void Test1((int[] Output, int[] Input) item)

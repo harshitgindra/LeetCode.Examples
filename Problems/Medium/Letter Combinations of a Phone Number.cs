@@ -51,7 +51,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/letter-combinations-of-a-phone-number/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Letter Combinations of a Phone Number")]
         [TestCaseSource("Input")]
         public void Test1((int Output, string Input) item)

@@ -29,7 +29,7 @@ namespace LeetCode.Hard
 
         [Test(Description = "https://leetcode.com/problems/first-missing-positive/")]
         [Category("Hard")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("First Missing Positive")]
         [TestCaseSource("Input")]
         public void Test1((int Output, int[] Input) item)

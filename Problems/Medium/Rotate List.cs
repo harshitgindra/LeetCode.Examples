@@ -33,7 +33,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/rotate-list/")]
         [Category("Easy")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Rotate List")]
         [TestCaseSource("Input")]
         public void Test1((ListNode Output, (ListNode, int) Input) item)

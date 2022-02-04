@@ -49,7 +49,7 @@ namespace LeetCode.Medium
 
         [Test(Description = "https://leetcode.com/problems/3sum/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("maximal square")]
         [TestCaseSource("Input")]
         public void Test1((int Output, char[][] Input) item)

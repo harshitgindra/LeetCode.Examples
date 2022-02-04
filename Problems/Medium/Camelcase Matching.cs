@@ -56,7 +56,7 @@ namespace LeetCode.Medium
         
         [Test(Description = "https://leetcode.com/problems/car-pooling/")]
         [Category("Medium")]
-        [Category("Leetcode")]
+        [Category("LeetCode")]
         [Category("Car Pooling")]
         [TestCaseSource("Input")]
         public void Test1((bool Output, (string[], string) Input) item)
