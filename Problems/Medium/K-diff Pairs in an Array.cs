@@ -7,42 +7,38 @@ namespace LeetCode.Medium
 {
     class K_diff_Pairs_in_an_Array
     {
-
         public int FindPairs(int[] nums, int k)
         {
             if (nums != null && nums.Length > 1)
             {
                 Array.Sort(nums);
-                HashSet<(int, int)> combo = new HashSet<(int, int)>();
 
-                for (int i = 0; i < nums.Length - 1; i++)
+                IDictionary<int, int> dictionary = new Dictionary<int, int>();
+                foreach (var item in nums)
                 {
-                    int tempIndex = i + 1;
+                    dictionary.TryAdd(item, 0);
+                    dictionary[item]++;
+                }
 
-                    while (tempIndex < nums.Length)
+                int result = 0;
+                foreach (var item in dictionary)
+                {
+                    dictionary[item.Key]--;
+
+                    int valueRequired = item.Key + k;
+
+                    if (dictionary.ContainsKey(valueRequired)
+                        && dictionary[valueRequired] > 0)
                     {
-                        int diff = nums[tempIndex] - nums[i];
-
-                        if (diff == k)
-                        {
-                            combo.Add((nums[tempIndex], nums[i]));
-                        }
-                        else if (diff > k)
-                        {
-                            break;
-                        }
-                        tempIndex++;
+                        result++;
                     }
                 }
 
-                return combo.Count;
+                return result;
             }
-            else
-            {
-                return 0;
-            }
-        }
 
+            return 0;
+        }
 
         [Test(Description = "https://leetcode.com/problems/k-diff-pairs-in-an-array/")]
         [Category("Medium")]
@@ -61,9 +57,8 @@ namespace LeetCode.Medium
             {
                 return new List<(int Output, (int[], int) Input)>()
                 {
-
-                    (2, (new int[]{ 3,1,4,1,5}, 2)),
-                    (4, (new int[]{ 1,2,3,4,5}, 1)),
+                    (2, (new int[] {3, 1, 4, 1, 5}, 2)),
+                    (4, (new int[] {1, 2, 3, 4, 5}, 1)),
                 };
             }
         }
