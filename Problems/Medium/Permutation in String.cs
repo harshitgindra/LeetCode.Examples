@@ -58,6 +58,10 @@ namespace Leetcode.Problems.Medium
             foreach (var item in d1)
             {
                 returnValue &= d2.ContainsKey(item.Key) && d2[item.Key] == item.Value;
+                if (!returnValue)
+                {
+                    break;
+                }
             }
 
             return returnValue;
