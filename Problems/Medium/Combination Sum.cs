@@ -6,43 +6,50 @@ using System.Text;
 
 namespace LeetCode.Medium
 {
+    /// <summary>
+    /// https://leetcode.com/problems/combination-sum/
+    /// </summary>
     class Combination_Sum
     {
         public IList<IList<int>> CombinationSum(int[] candidates, int target)
         {
             Array.Sort(candidates);
-            IDictionary<string, IList<int>> records = new Dictionary<string, IList<int>>();
+            IList<IList<int>> result = new List<IList<int>>();
 
-            IList<int> combo = new List<int>();
-            Combine(0, target, candidates, combo, records);
-
-            return records.Values.ToList();
+            Helper(candidates, 0, 0, new List<int>(), result, target);
+            return result;
         }
 
 
-        private void Combine(int startIndex, int target, int[] candidates,
-            IList<int> combo
-            , IDictionary<string, IList<int>> records)
+        private void Helper(int[] candidates, int index, int sum, IList<int> nums, IList<IList<int>> result, int target)
         {
-            if (target == 0)
+            if (index < candidates.Length)
             {
-                var tempCombo = combo.ToArray();
-                var key = string.Join("", tempCombo);
-                if (!records.ContainsKey(key))
+                int temp = candidates[index] + sum;
+                if (temp > target)
                 {
-                    records.Add(key, tempCombo);
+                    // sum greater than target
+                    // break the loop as we all the remaining candidates will also be higher
                 }
-            }
-            else
-            {
-                for (int i = startIndex; i < candidates.Length; i++)
+                else if (temp == target)
                 {
-                    if (target >= candidates[i])
-                    {
-                        combo.Add(candidates[i]);
-                        Combine(i, target - candidates[i], candidates, combo, records);
-                        combo.RemoveAt(combo.Count - 1);
-                    }
+                    // Combination found
+                    // Add to result
+                    nums.Add(candidates[index]);
+                    result.Add(nums.ToList());
+                    nums.RemoveAt(nums.Count - 1);
+                    // break the loop as all numbers after this will be higher
+                }
+                else
+                {
+                    // split the flow
+                    // Flow 1: add the current number 
+                    nums.Add(candidates[index]);
+                    Helper(candidates, index, temp, nums, result, target);
+                    nums.RemoveAt(nums.Count - 1);
+
+                    // Flow 2: Do not add the current number, skip to next number
+                    Helper(candidates, index + 1, sum, nums, result, target);
                 }
             }
         }
@@ -64,9 +71,8 @@ namespace LeetCode.Medium
             {
                 return new List<(int Output, (int[], int) Input)>()
                 {
-
-                    (2, (new int[] {2,3,6,7}, 7)),
-                    (3, (new int[] {2,3,5}, 8)),
+                    (2, (new int[] {2, 3, 6, 7}, 7)),
+                    (3, (new int[] {2, 3, 5}, 8)),
                 };
             }
         }
