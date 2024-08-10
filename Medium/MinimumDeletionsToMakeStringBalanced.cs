@@ -22,7 +22,6 @@ public class MinimumDeletionsToMakeStringBalanced
         
         for (int i = 0; i < s.Length; i++)
         {
-            var ch = s[i];
             if (s[i] == 'a')
             {
                 bCounter--;
