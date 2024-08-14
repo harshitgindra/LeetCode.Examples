@@ -11,36 +11,35 @@ namespace LeetCode.Medium
         public IList<IList<int>> CombinationSum2(int[] candidates, int target)
         {
             Array.Sort(candidates);
-            IDictionary<string, IList<int>> records = new Dictionary<string, IList<int>>();
+            IList<IList<int>> records = new List<IList<int>>();
 
-            IList<int> combo = new List<int>();
-            Combine(0, target, candidates, combo, records);
-
-            return records.Values.ToList();
+            _Helper(0, target, candidates, new List<int>(), records);
+            return records;
         }
 
 
-        private void Combine(int startIndex, int target, int[] candidates,
-            IList<int> combo
-            , IDictionary<string, IList<int>> records)
+        private void _Helper(int startIndex, int target, int[] candidates,
+            IList<int> combo, IList<IList<int>> records)
         {
             if (target == 0)
             {
-                var tempCombo = combo.ToArray();
-                var key = string.Join("", tempCombo);
-                if (!records.ContainsKey(key))
-                {
-                    records.Add(key, tempCombo);
-                }
+                records.Add(combo);
             }
             else
             {
+                int lastValue = 0;
                 for (int i = startIndex; i < candidates.Length; i++)
                 {
-                    if (target >= candidates[i])
+                    if (candidates[i] > target)
                     {
-                        combo.Add(candidates[i]);
-                        Combine(i + 1, target - candidates[i], candidates, combo, records);
+                        break;
+                    }
+
+                    if (candidates[i] != lastValue)
+                    {
+                        lastValue = candidates[i];
+                        combo.Add(lastValue);
+                        _Helper(i + 1, target - lastValue, candidates, combo.ToList(), records);
                         combo.RemoveAt(combo.Count - 1);
                     }
                 }
@@ -55,7 +54,7 @@ namespace LeetCode.Medium
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = CombinationSum2(item.Input.Item1, item.Input.Item2);
-             Assert.AreEqual(item.Output, response.Count);
+            Assert.AreEqual(item.Output, response.Count);
         }
 
         public static IEnumerable<(int Output, (int[], int) Input)> Input
@@ -64,9 +63,8 @@ namespace LeetCode.Medium
             {
                 return new List<(int Output, (int[], int) Input)>()
                 {
-
-                    (4, (new int[] {10,1,2,7,6,1,5}, 8)),
-                    (2, (new int[] {2,5,2,1,2}, 5)),
+                    (4, (new int[] { 10, 1, 2, 7, 6, 1, 5 }, 8)),
+                    (2, (new int[] { 2, 5, 2, 1, 2 }, 5)),
                 };
             }
         }
