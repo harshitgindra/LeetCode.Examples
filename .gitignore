@@ -8,3 +8,8 @@
 /Problems/bin/Debug/netcoreapp3.1
 /Problems/obj
 /Problems/bin/Debug/net5.0
+*.user
+bin
+obj
+.idea
+.DS_Store
