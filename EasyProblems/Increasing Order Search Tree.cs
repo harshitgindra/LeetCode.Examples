@@ -1,11 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 using NUnit.Framework.Legacy;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Increasing_Order_Search_Tree
     {

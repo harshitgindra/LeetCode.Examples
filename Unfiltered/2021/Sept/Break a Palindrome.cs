@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.Sept
+namespace LeetCode.Problems._2021.Sept
 {
     public class Break_a_Palindrome
     {

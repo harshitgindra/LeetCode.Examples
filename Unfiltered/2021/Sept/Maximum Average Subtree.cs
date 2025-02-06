@@ -1,10 +1,7 @@
-﻿using LeetCode;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using LeetCode.SharedUtils;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.Sept
+namespace LeetCode.Problems._2021.Sept
 {
     class Maximum_Average_Subtree
     {

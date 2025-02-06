@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class PowerOfFour
     {

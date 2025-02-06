@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LeetCode;
-using NUnit.Framework;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.March
+namespace LeetCode.EasyProblems
 {
     class Check_if_One_String_Swap_Can_Make_Strings_Equal
     {

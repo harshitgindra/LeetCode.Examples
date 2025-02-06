@@ -1,11 +1,6 @@
-﻿using LeetCode;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LeetCode.SharedUtils;
 
-namespace Leetcode.Problems._2021.August
+namespace LeetCode.Problems._2021.August
 {
     /// <summary>
     /// https://leetcode.com/problems/count-good-nodes-in-binary-tree/

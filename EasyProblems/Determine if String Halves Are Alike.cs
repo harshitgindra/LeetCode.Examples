@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace Leetcode.Problems.Easy
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/determine-if-string-halves-are-alike/

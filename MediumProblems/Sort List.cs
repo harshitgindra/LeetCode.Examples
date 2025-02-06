@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     class Sort_List
     {

@@ -1,10 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.March
+namespace LeetCode.Problems._2021.March
 {
     class UndergroundSystem
     {

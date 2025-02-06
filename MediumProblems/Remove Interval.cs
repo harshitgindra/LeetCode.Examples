@@ -1,7 +1,4 @@
-﻿using NUnit.Framework;
-using System.Collections.Generic;
-
-namespace LeetCode.Medium
+﻿namespace LeetCode.MediumProblems
 {
     class Remove_Interval
     {

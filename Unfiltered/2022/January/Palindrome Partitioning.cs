@@ -1,8 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
-
-namespace Leetcode.Problems._2022.January
+namespace LeetCode.Problems._2022.January
 {
     public class Palindrome_Partitioning
     {

@@ -14,10 +14,7 @@ public class MaximumAscendingSubArraySum
         {
             return nums[0];
         }
-        List<int> subArray = new List<int>()
-        {
-            nums[0]
-        };
+        
         int tempSum = nums[0];
         int result = 0;
 
@@ -25,14 +22,11 @@ public class MaximumAscendingSubArraySum
         {
             if (nums[i] > nums[i - 1])
             {
-                subArray.Add(nums[i]);
                 tempSum+= nums[i];
             }
             else
             {
                 result = Math.Max(tempSum, result);
-                subArray.Clear();
-                subArray.Add(nums[i]);
                 tempSum = nums[i];
             }
         }

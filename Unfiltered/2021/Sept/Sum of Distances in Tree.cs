@@ -1,8 +1,4 @@
-﻿using NUnit.Framework;
-using System.Collections.Generic;
-using NUnit.Framework.Legacy;
-
-namespace Leetcode.Problems._2021.Sept
+﻿namespace LeetCode.Problems._2021.Sept
 {
     /// <summary>
     /// https://leetcode.com/problems/sum-of-distances-in-tree/

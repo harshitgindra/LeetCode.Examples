@@ -1,6 +1,4 @@
-using System;
-
-namespace Leetcode.Problems.Easy
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/

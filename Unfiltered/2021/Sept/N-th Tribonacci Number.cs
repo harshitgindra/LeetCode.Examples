@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.Sept
+namespace LeetCode.Problems._2021.Sept
 {
     public class N_th_Tribonacci_Number
     {

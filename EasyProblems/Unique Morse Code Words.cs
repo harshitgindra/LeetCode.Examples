@@ -1,7 +1,6 @@
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Unique_Morse_Code_Words
     {

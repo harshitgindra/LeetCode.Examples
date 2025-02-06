@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Mock
+﻿namespace LeetCode.Mock
 {
     /// <summary>
     /// https://leetcode.com/problems/minimum-time-visiting-all-points/submissions/

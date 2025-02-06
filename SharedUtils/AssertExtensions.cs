@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LeetCode;
-using NUnit.Framework;
-
-namespace SharedUtils
+﻿namespace LeetCode.SharedUtils
 {
     public static class AssertExtensions
     {

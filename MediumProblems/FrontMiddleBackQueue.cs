@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using NUnit.Framework;
-
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class FrontMiddleBackQueue
     {

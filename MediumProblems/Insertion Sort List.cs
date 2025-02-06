@@ -1,11 +1,8 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 using NUnit.Framework.Legacy;
-using SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     class Insertion_Sort_List
     {

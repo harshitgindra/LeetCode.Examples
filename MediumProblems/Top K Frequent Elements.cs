@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode.Medium
+﻿namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/top-k-frequent-elements/

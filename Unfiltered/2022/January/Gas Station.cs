@@ -1,6 +1,4 @@
-using System.Linq;
-
-namespace Leetcode.Problems._2022.January
+namespace LeetCode.Problems._2022.January
 {
     /// <summary>
     /// https://leetcode.com/problems/gas-station/submissions/

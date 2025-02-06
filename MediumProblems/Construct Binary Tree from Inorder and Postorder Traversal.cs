@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
-using NUnit.Framework.Legacy;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal
     {

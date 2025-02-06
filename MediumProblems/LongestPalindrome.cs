@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class LongestPalindromeTest
     {

@@ -1,10 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/find-all-anagrams-in-a-string/

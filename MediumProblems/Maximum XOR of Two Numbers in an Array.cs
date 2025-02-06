@@ -1,10 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Maximum_XOR_of_Two_Numbers_in_an_Array
     {

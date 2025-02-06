@@ -1,4 +1,4 @@
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Number_of_Islands
     {

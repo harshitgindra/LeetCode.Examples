@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode.Easy
+﻿namespace LeetCode.EasyProblems
 {
     public class Find_Common_Characters
     {

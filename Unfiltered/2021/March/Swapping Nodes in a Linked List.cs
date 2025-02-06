@@ -1,10 +1,6 @@
-﻿using LeetCode;
-using NUnit.Framework;
-using System.Collections.Generic;
-using Leetcode.Problems.Common;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace SharedUtils
+namespace LeetCode.SharedUtils
 {
     class Swapping_Nodes_in_a_Linked_List
     {

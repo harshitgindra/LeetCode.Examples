@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LeetCode;
-using SharedUtils;
-using NUnit.Framework;
-using NUnit.Framework.Internal.Execution;
-
-namespace Leetcode.Problems.Hard
+﻿namespace LeetCode.HardProblems
 {
     class Palindrome_Pairs
     {

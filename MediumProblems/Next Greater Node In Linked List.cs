@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-using System.Linq;
-using SharedUtils;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     public class Next_Greater_Node_In_Linked_List
     {

@@ -1,11 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     class Check_If_N_and_Its_Double_Exist
     {

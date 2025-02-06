@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class BSTIterator
     {

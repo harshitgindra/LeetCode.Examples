@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-
-namespace LeetCode.Hard
+﻿namespace LeetCode.Hard
 {
     class Non_negative_Integers_without_Consecutive_Ones
     {

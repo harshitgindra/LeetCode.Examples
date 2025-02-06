@@ -1,6 +1,6 @@
-using System;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Diameter_of_Binary_Tree
     {

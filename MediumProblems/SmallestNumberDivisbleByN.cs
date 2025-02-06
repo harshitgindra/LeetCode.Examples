@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class SmallestNumberDivisbleByN
     {

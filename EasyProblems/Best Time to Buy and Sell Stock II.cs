@@ -1,12 +1,6 @@
-﻿using NUnit.Framework;
-using NUnit.Framework.Internal.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     class Best_Time_to_Buy_and_Sell_Stock_II
     {

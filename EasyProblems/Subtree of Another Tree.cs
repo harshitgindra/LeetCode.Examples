@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/subtree-of-another-tree/

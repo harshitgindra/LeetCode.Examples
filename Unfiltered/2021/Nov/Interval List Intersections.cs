@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.Nov
+namespace LeetCode.Problems._2021.Nov
 {
     public class Interval_List_Intersections
     {

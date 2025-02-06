@@ -1,10 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     class Longest_Substring_with_At_Least_K_Repeating_Characters
     {

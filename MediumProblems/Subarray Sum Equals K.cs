@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace Leetcode.Problems.Medium
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/subarray-sum-equals-k/

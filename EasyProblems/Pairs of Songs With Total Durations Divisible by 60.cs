@@ -1,4 +1,4 @@
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Pairs_of_Songs_With_Total_Durations_Divisible_by_60
     {

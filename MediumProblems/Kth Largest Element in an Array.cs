@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Medium
+﻿namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/kth-largest-element-in-an-array/

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-
-namespace Leetcode.Problems.Medium
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/4sum-ii/

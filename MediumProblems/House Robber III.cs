@@ -1,10 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class House_Robber_III
     {

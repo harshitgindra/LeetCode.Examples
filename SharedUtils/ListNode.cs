@@ -1,4 +1,4 @@
-namespace SharedUtils;
+namespace LeetCode.SharedUtils;
 
 public class ListNode
 {

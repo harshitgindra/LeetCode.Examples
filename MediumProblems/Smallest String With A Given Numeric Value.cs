@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Smallest_String_With_A_Given_Numeric_Value
     {

@@ -1,4 +1,4 @@
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Island_Perimeter
     {

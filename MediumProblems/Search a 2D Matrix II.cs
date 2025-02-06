@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
-using NUnit.Framework.Legacy;
-
-namespace LeetCode.Medium
+﻿namespace LeetCode.MediumProblems
 {
     class Search_a_2D_Matrix_II
     {

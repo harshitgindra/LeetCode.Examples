@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Easy
+﻿using LeetCode.SharedUtils;
+
+namespace LeetCode.EasyProblems
 {
     class Path_Sum
     {

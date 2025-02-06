@@ -1,10 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+
+namespace LeetCode.EasyProblems
 {
     class Reverse_Linked_List
     {

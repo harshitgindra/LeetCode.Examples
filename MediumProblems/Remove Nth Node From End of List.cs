@@ -1,8 +1,6 @@
-﻿using SharedUtils;
-using NUnit.Framework;
-using System.Collections.Generic;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     class Delete_Node_in_a_Linked_List
     {

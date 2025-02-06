@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
+﻿using LeetCode.SharedUtils;
 using NUnit.Framework.Legacy;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     class Range_Sum_of_BST
     {

@@ -1,5 +1,3 @@
-using System;
-
 namespace LeetCode.August
 {
     public class BestTimeToBuyAndSellStockIII

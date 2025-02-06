@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.Sept
+namespace LeetCode.Problems._2021.Sept
 {
     public class Maximum_Length_of_a_Concatenated_String_with_Unique_Characters
     {

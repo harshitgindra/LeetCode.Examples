@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     //https://leetcode.com/problems/two-sum-iv-input-is-a-bst/submissions/
     class Two_Sum_IV___Input_is_a_BST

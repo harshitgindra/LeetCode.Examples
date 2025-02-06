@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode.Easy
+﻿namespace LeetCode.EasyProblems
 {
     class Pascal_s_Triangle
     {

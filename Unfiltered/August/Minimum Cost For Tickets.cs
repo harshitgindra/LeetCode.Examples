@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LeetCode.August
+﻿namespace LeetCode.August
 {
     public class Minimum_Cost_For_Tickets
     {

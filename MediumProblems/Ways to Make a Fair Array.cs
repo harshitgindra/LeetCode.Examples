@@ -1,4 +1,4 @@
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Ways_to_Make_a_Fair_Array
     {

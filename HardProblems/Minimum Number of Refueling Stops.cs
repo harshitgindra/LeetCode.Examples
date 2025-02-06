@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SharedUtils;
-using NUnit.Framework;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems.Hard
+namespace LeetCode.HardProblems
 {
     class Minimum_Number_of_Refueling_Stops
     {

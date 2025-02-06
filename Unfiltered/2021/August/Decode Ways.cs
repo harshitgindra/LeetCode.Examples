@@ -1,9 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.August
+namespace LeetCode.Problems._2021.August
 {
     class Decode_Ways
     {

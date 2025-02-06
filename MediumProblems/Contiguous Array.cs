@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems.Medium
+namespace LeetCode.MediumProblems
 {
     public class Contiguous_Array
     {

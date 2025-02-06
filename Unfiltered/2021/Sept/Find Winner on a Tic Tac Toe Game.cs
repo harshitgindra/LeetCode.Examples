@@ -1,12 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2021.Sept
+namespace LeetCode.Problems._2021.Sept
 {
     class Find_Winner_on_a_Tic_Tac_Toe_Game
     {

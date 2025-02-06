@@ -1,6 +1,4 @@
-using System;
-
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Max_Area_of_Island
     {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode.May
+﻿namespace LeetCode.May
 {
     /// <summary>
     /// https://leetcode.com/problems/majority-element/

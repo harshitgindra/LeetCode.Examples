@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
 namespace LeetCode.Contest

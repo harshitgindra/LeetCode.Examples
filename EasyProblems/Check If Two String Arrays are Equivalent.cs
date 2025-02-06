@@ -1,4 +1,4 @@
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Check_If_Two_String_Arrays_are_Equivalent
     {

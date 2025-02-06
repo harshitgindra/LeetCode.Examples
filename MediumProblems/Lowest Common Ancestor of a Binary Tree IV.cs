@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     public class Lowest_Common_Ancestor_of_a_Binary_Tree_IV
     {

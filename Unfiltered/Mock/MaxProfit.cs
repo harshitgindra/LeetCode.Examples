@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Mock
+﻿namespace LeetCode.Mock
 {
     /// <summary>
     /// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/

@@ -1,6 +1,4 @@
-using LeetCode;
-
-namespace Leetcode.Problems._2022.January
+namespace LeetCode.Problems._2022.January
 {
     public class Linked_List_Cycle_II
     {

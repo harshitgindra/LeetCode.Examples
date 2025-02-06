@@ -1,10 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     class Rotate_List
     {

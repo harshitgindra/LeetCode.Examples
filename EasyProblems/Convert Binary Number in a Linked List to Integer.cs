@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/submissions/

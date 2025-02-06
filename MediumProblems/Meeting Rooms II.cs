@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-
-namespace LeetCode.Medium
+﻿namespace LeetCode.MediumProblems
 {
     class Meeting_Rooms_II
     {

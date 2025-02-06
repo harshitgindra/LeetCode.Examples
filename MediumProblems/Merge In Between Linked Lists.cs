@@ -1,9 +1,7 @@
-using System.Collections.Generic;
-using NUnit.Framework;
-using NUnit.Framework.Legacy;
-using SharedUtils;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     public class Merge_In_Between_Linked_Lists
     {

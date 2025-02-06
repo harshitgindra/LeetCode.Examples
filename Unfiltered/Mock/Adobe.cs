@@ -1,9 +1,4 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Mock
+﻿namespace LeetCode.Mock
 {
     class Adobe
     {

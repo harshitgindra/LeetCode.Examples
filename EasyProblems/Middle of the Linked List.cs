@@ -1,7 +1,7 @@
-using LeetCode;
-using SharedUtils;
+using LeetCode.SharedUtils;
 
-namespace Leetcode.Problems._2021.December
+
+namespace LeetCode.Problems._2021.December
 {
     public class Middle_of_the_Linked_List
     {

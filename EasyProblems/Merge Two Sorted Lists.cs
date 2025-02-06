@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/merge-two-sorted-lists/

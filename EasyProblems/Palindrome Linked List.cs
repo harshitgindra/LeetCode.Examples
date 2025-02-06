@@ -1,11 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+
+namespace LeetCode.EasyProblems
 {
     class Palindrome_Linked_List
     {

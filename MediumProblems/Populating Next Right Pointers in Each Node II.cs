@@ -1,8 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-
-
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/

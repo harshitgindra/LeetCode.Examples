@@ -1,6 +1,6 @@
-using System;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/maximum-average-subtree/

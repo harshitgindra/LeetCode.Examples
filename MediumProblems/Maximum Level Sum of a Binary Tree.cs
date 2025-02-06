@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
+using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+namespace LeetCode.MediumProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/

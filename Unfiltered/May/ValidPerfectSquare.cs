@@ -1,5 +1,3 @@
-using System;
-
 namespace LeetCode.May
 {
     public class ValidPerfectSquare

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     class Trim_a_Binary_Search_Tree
     {

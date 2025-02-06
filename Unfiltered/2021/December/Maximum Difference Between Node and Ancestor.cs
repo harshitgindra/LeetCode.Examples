@@ -1,7 +1,6 @@
-using System;
-using LeetCode;
+using LeetCode.SharedUtils;
 
-namespace Leetcode.Problems._2021.December
+namespace LeetCode.Problems._2021.December
 {
     /// <summary>
     /// https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/

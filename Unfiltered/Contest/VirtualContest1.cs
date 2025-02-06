@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Text;
-
-namespace LeetCode.Contest
+﻿namespace LeetCode.Contest
 {
     class VirtualContest1
     {

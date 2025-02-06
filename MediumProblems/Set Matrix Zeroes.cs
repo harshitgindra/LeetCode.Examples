@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Medium
+﻿namespace LeetCode.MediumProblems
 {
     class Set_Matrix_Zeroes
     {

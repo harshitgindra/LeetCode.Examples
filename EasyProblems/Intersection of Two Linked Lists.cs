@@ -1,12 +1,8 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using LeetCode.SharedUtils;
 using NUnit.Framework.Legacy;
-using SharedUtils;
 
-namespace LeetCode.Easy
+
+namespace LeetCode.EasyProblems
 {
     class Intersection_of_Two_Linked_Lists
     {

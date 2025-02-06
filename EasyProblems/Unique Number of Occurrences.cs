@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems.Easy
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/unique-number-of-occurrences/

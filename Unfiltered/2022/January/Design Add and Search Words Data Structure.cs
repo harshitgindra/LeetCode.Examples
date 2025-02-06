@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
-namespace Leetcode.Problems._2022.January
+namespace LeetCode.Problems._2022.January
 {
     public class WordDictionary
     {

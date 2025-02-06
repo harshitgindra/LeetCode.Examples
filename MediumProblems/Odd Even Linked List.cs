@@ -1,8 +1,7 @@
-﻿using NUnit.Framework;
-using System.Collections.Generic;
-using SharedUtils;
+﻿using LeetCode.SharedUtils;
 
-namespace LeetCode.Medium
+
+namespace LeetCode.MediumProblems
 {
     class Odd_Even_Linked_List
     {

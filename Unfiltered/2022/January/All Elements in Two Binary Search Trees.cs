@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
-using LeetCode;
+using LeetCode.SharedUtils;
 
-namespace Leetcode.Problems._2022.January
+namespace LeetCode.Problems._2022.January
 {
     /// <summary>
     /// https://leetcode.com/problems/all-elements-in-two-binary-search-trees/

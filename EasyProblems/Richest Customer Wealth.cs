@@ -1,7 +1,4 @@
-using System;
-using System.Linq;
-
-namespace Leetcode.Problems.Easy
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/richest-customer-wealth/

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LeetCode.May
+﻿namespace LeetCode.May
 {
     public class FirstBadVersionTest
     {

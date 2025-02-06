@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace LeetCode.Easy
+namespace LeetCode.EasyProblems
 {
     public class Defuse_the_Bomb
     {

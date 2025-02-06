@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
-
-namespace Leetcode.Problems._2022.January
+namespace LeetCode.Problems._2022.January
 {
     public class Minimum_Number_of_Arrows_to_Burst_Balloons
     {

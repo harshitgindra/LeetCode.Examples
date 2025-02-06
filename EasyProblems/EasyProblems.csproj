@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <RootNamespace>LeetCode.EasyProblems</RootNamespace>
+        <AssemblyName>LeetCode.EasyProblems</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

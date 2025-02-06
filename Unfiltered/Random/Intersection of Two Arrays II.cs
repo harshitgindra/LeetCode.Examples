@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class Intersection_of_Two_Arrays_II
     {

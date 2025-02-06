@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode.Easy
+﻿namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/find-pivot-index/
