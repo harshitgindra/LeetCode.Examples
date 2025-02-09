@@ -1,7 +1,7 @@
 ﻿using LeetCode.SharedUtils;
 
 
-namespace LeetCode.MediumProblems
+namespace LeetCode.EasyProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/merge-two-sorted-lists/
