@@ -4,24 +4,6 @@ namespace LeetCode.EasyProblems
 {
     class Best_Time_to_Buy_and_Sell_Stock_II
     {
-        public int[] PlusOne(int[] digits)
-        {
-            var nums = digits.ToList();
-
-            if (nums.Last() == 9)
-            {
-                nums[digits.Length - 1] = 1;
-                nums.Add(0);
-            }
-            else
-            {
-                nums[digits.Length - 1]++;
-            }
-
-            return nums.ToArray();
-        }
-
-
         public int MaxProfit(int[] prices)
         {
             int result = 0;

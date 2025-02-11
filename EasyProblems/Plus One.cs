@@ -6,29 +6,37 @@ namespace LeetCode.EasyProblems
     {
         public int[] PlusOne(int[] digits)
         {
-            Stack<int> result = new Stack<int>();
-
             int carry = 1;
             for (int i = digits.Length - 1; i >= 0; i--)
             {
-                if (digits[i] == 9 && carry == 1)
+                var newTotal = digits[i] + carry;
+                if (newTotal == 10)
                 {
+                    digits[i] = 0;
                     carry = 1;
-                    result.Push(0);
                 }
                 else
                 {
-                    result.Push(digits[i] + carry);
+                    digits[i] = newTotal;
                     carry = 0;
                 }
             }
 
-            if (carry == 1)
+            if (digits[0] == 0 && carry == 1)
             {
-                result.Push(carry);
-            }
+                int[] newDigits = new int[digits.Length + 1];
+                newDigits[0] = 1;
 
-            return result.ToArray();
+                for (int i = 1; i < digits.Length; i++)
+                {
+                    newDigits[i] = digits[i-1];
+                }
+                return newDigits;
+            }
+            else
+            {
+                return digits;
+            }
         }
 
         [Test(Description = "https://leetcode.com/problems/plus-one/")]
