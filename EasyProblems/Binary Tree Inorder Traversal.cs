@@ -8,26 +8,24 @@ namespace LeetCode.MediumProblems
         public IList<int> InorderTraversal(TreeNode root)
         {
             IList<int> results = new List<int>();
-            Process(root, results);
+            Traverse(root, results);
             return results;
         }
 
-        private void Process(TreeNode node, IList<int> results)
+        private void Traverse(TreeNode node, IList<int> results)
         {
             if (node != null)
             {
-                Process(node.left, results);
-
+                this.Traverse(node.left, results);
                 results.Add(node.val);
-
-                Process(node.right, results);
+                this.Traverse(node.right, results);
             }
         }
 
-        [Test(Description = "https://leetcode.com/problems/binary-tree-preorder-traversal/")]
-        [Category("Medium")]
+        [Test(Description = "https://leetcode.com/problems/binary-tree-inorder-traversal/")]
+        [Category("Easy")]
         [Category("LeetCode")]
-        [Category("Binary Tree Preorder Traversal")]
+        [Category("Binary Tree Inorder Traversal")]
         [TestCaseSource("Input")]
         public void Test1((IList<int> Output, TreeNode Input) item)
         {
