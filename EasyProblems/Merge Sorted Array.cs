@@ -6,14 +6,36 @@ namespace LeetCode.EasyProblems
     {
         public void Merge(int[] nums1, int m, int[] nums2, int n)
         {
-            int num2Index = 0;
-            for (int i = m; i < nums1.Length; i++)
-            {
-                nums1[i] = nums2[num2Index];
-                num2Index++;
-            }
+            int returnArrayCounter = nums1.Length -1;
+            int num1Counter = m - 1;
+            int num2Counter = n - 1;
 
-            Array.Sort(nums1);
+            while (num1Counter >= 0 || num2Counter >= 0)
+            {
+                if (num1Counter >= 0 && num2Counter >= 0)
+                {
+                    if (nums1[num1Counter] > nums2[num2Counter])
+                    {
+                        nums1[returnArrayCounter] = nums1[num1Counter];
+                        num1Counter--;
+                    }
+                    else
+                    {
+                        nums1[returnArrayCounter] = nums2[num2Counter];
+                        num2Counter--;
+                    }
+                } else if (num1Counter >= 0)
+                {
+                    nums1[returnArrayCounter] = nums1[num1Counter];
+                    num1Counter--;
+                } else
+                {
+                    nums1[returnArrayCounter] = nums2[num2Counter];
+                    num2Counter--;
+                }
+
+                returnArrayCounter--;
+            }
         }
 
 
