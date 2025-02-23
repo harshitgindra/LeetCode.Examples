@@ -3,7 +3,7 @@ using NUnit.Framework.Legacy;
 
 namespace LeetCode.EasyProblems;
 
-public class MiniumDepthOfBinaryTree
+public class MinimumDepthOfBinaryTree
 {
     private int _minHeight = Int32.MaxValue;
 
@@ -38,6 +38,7 @@ public class MiniumDepthOfBinaryTree
     [Category("LeetCode")]
     [Category("Minimum Depth Of Binary Tree")]
     [TestCaseSource("Input")]
+    
     public void Test1((int Output, int?[] Input) item)
     {
         var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input);
