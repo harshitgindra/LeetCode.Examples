@@ -4,7 +4,7 @@ namespace LeetCode.EasyProblems
 {
     class Maximum_Depth_of_Binary_Tree
     {
-        //https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/
+        //https://leetcode.com/problems/maximum-depth-of-binary-tree/
         public int MaxDepth(TreeNode root)
         {
             int max = Check(root, 0, 0);

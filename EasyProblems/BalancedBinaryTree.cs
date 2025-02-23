@@ -1,4 +1,5 @@
 using LeetCode.SharedUtils;
+using NUnit.Framework.Legacy;
 
 namespace Easy;
 
@@ -15,30 +16,55 @@ public class BalancedBinaryTree
 
     private int _Dfs(TreeNode node)
     {
-        if (node != null)
+        if (node == null)
         {
-            int left = _Dfs(node.left);
-            if (left == -1)
-            {
-                return -1;
-            }
-
-            int right = _Dfs(node.right);
-
-            if (right == -1)
-            {
-                return -1;
-            }
-
-            int diff = left - right;
-            if (diff != 0 && diff != 1 && diff != -1)
-            {
-                return -1;
-            }
-
-            return Math.Max(left, right) + 1;
+            return 0;
         }
-
-        return 0;
+        
+        int leftHeight = _Dfs(node.left);
+        if (leftHeight == -1)
+        {
+            return -1;
+        }
+        int rightHeight = _Dfs(node.right);
+        if (rightHeight == -1)
+        {
+            return -1;
+        }
+        
+        int diff = Math.Abs(leftHeight - rightHeight);
+        if (diff < 2)
+        {
+            return Math.Max(leftHeight, rightHeight) + 1;
+        }
+        else
+        {
+            return -1;
+        }
     }
+    
+    [Test(Description = "https://leetcode.com/problems/balanced-binary-tree/")]
+    [Category("Easy")]
+    [Category("LeetCode")]
+    [Category("Balanced Binary Tree")]
+    [TestCaseSource("Input")]
+    public void Test1((bool Output, int?[] Input) item)
+    {
+        var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input);
+        var response = IsBalanced(treeNode);
+        ClassicAssert.AreEqual(item.Output, response);
+    }
+
+    public static IEnumerable<(bool Output, int?[] Input)> Input
+    {
+        get
+        {
+            return new List<(bool Output, int?[] Input)>()
+            {
+                // (true, new int?[]{3,9,20,null,null,15,7}),
+                (false, new int?[]{1,2,2,3,3,null,null,4,4}),
+            };
+        }
+    }
+
 }
