@@ -8,41 +8,40 @@
             {
             };
 
-            if (numRows != 0)
+            if (numRows >= 1)
             {
-                var prev = new List<int>() { 1 };
+                results.Add(new List<int>(){1});
+            }
+            
+            int[] prev = new int[2]{1,1};
+            if (numRows >= 2)
+            {
                 results.Add(prev);
-
-                if (numRows > 1)
-                {
-                    while (true)
-                    {
-                        prev = Start(prev);
-                        results.Add(prev);
-                        if (prev.Count == numRows)
-                        {
-                            break;
-                        }
-                    }
-                }
-
+            }
+            
+            for (int i = 2; i < numRows; i++)
+            {
+                var current = Iterate(prev);
+                results.Add(current);
+                prev = current;
             }
 
             return results;
         }
 
-        private List<int> Start(IList<int> nums)
+        private int[] Iterate(int[] prev)
         {
-            int numLength = nums.Count;
-            var tempList = nums.ToList();
-            tempList.Add(nums[0]);
+            int[] current = new int[prev.Length + 1];
+            
+            current[0] = prev[0];
+            current[prev.Length] = prev[prev.Length - 1];
 
-            for (int i = 0; i < numLength - 1; i++)
+            for (int i = 1; i < prev.Length ; i++)
             {
-                tempList[i + 1] = nums[i] + nums[i + 1];
+                current[i] = prev[i - 1] + prev[i];
             }
 
-            return tempList;
+            return current;
         }
     }
 }
