@@ -19,7 +19,7 @@ jobs:
       
     - name: Build Projects
       run: |
-        dotnet build ./LeetCode.Examples/EasyProblems.csproj -c Release
-        dotnet build ./LeetCode.Examples/MediumProblems.csproj -c Release
-        dotnet build ./LeetCode.Examples/HardProblems.csproj -c Release
+        dotnet build ./EasyProblems/EasyProblems.csproj -c Release
+        dotnet build ./MediumProblems/MediumProblems.csproj -c Release
+        dotnet build ./HardProblems/HardProblems.csproj -c Release
         
