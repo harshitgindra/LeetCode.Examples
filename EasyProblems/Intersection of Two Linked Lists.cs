@@ -6,50 +6,21 @@ namespace LeetCode.EasyProblems
 {
     class Intersection_of_Two_Linked_Lists
     {
-        public ListNode GetIntersectionNode(ListNode headA, ListNode headB)
-        {
-            List<int> headANodes = new List<int>();
-            var nodeA = headA;
-            while (nodeA != null)
+        public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {
+            ListNode a = headA;
+            ListNode b = headB;
+        
+            // continue until a and b are equal.
+            while(a != b)
             {
-                headANodes.Add(nodeA.val);
-                nodeA = nodeA.next;
+                // If one reaches end first then move a|b to the head of b|a
+                // This handles case if both have different lengths. No need to
+                // count length of A and B. If there is no overlap both A and B ends with null.
+                a = a != null? a.next:headB;
+                b = b != null? b.next:headA;
             }
-
-            ListNode nodeToReturn = null;
-            var nodeB = headB?.next;
-            while (nodeB != null)
-            {
-                if (headANodes.Contains(nodeB.val))
-                {
-                    var indexOf = headANodes.IndexOf(nodeB.val);
-                    if (IsMatch(headANodes, indexOf, nodeB))
-                    {
-                        nodeToReturn = nodeB;
-                        break;
-                    }
-                }
-
-                nodeB = nodeB.next;
-            }
-
-            return nodeToReturn?.next;
-        }
-
-        private bool IsMatch(List<int> val, int index, ListNode node)
-        {
-            if (node == null || index >= val.Count)
-            {
-                return true;
-            }
-            else if (val.ElementAt(index) == node.val)
-            {
-                return IsMatch(val, index + 1, node.next);
-            }
-            else
-            {
-                return false;
-            }
+        
+            return a;
         }
 
         [Test(Description = "https://leetcode.com/problems/intersection-of-two-linked-lists/")]
@@ -57,22 +28,21 @@ namespace LeetCode.EasyProblems
         [Category("LeetCode")]
         [Category("Intersection of Two Linked Lists")]
         [TestCaseSource("Input")]
-        public void Test1((ListNode Output, (ListNode, ListNode) Input) item)
+        public void Test1((int[] Output, (int[], int[]) Input) item)
         {
-            var response = GetIntersectionNode(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            var inputListNode1 = ListNodeBuilder.BuildListNode(item.Input.Item1);
+            var inputListNode2 = ListNodeBuilder.BuildListNode(item.Input.Item2);
+            var response = GetIntersectionNode(inputListNode1, inputListNode2);
+            ListNodeBuilder.AssertListNode(response, item.Output);
         }
 
-        public static IEnumerable<(ListNode Output, (ListNode, ListNode) Input)> Input
+        public static IEnumerable<(int[] Output, (int[], int[]) Input)> Input
         {
             get
             {
-                return new List<(ListNode Output, (ListNode, ListNode) Input)>()
+                return new List<(int[] Output, (int[], int[]) Input)>()
                 {
-                    (new ListNode(8, new ListNode(4, new ListNode(5))),
-                    (new ListNode(4, new ListNode(1, new ListNode(8, new ListNode(4, new ListNode(5))))),
-                    new ListNode(5, new ListNode(1, new ListNode(1, new ListNode(8, new ListNode(4, new ListNode(5))))))
-                    )),
+                    (new int[]{2,4}, (new int[]{4,1,8,4,5}, new int[] {5,6,1,8,4,5})),
                 };
             }
         }

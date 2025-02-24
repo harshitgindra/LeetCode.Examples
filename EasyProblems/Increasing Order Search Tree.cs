@@ -41,20 +41,21 @@ namespace LeetCode.EasyProblems
         [Category("LeetCode")]
         [Category("Increasing Order Search Tree")]
         [TestCaseSource("Input")]
-        public void Test1((TreeNode Output, TreeNode Input) item)
+        public void Test1((int?[] Output, int?[] Input) item)
         {
-            var response = IncreasingBST(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input);
+            var response = IncreasingBST(treeNode);
+            TreeNodeBuilder.AssertTreeNodeAgainstArray(response, item.Output);
         }
 
-        public static IEnumerable<(TreeNode Output, TreeNode Input)> Input
+        public static IEnumerable<(int?[] Output, int?[] Input)> Input
         {
             get
             {
-                return new List<(TreeNode Output, TreeNode Input)>()
+                return new List<(int?[] Output, int?[] Input)>()
                 {
 
-                    (null, new TreeNode(5, new TreeNode(3, new TreeNode(2, new TreeNode(1)), new TreeNode(4)), new TreeNode(6, null, new TreeNode(8, new TreeNode(7), new TreeNode(9)))))
+                    (new int?[]{1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9}, new int?[]{5,3,6,2,4,null,8,1,null,null,null,7,9})
                 };
             }
         }

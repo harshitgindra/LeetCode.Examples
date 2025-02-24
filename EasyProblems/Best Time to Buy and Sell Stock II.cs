@@ -6,45 +6,17 @@ namespace LeetCode.EasyProblems
     {
         public int MaxProfit(int[] prices)
         {
-            int result = 0;
-            for (int i = 0; i < prices.Length - 1; i++)
+            int sum = 0;
+            for (int i = 1; i < prices.Length; i++)
             {
-                result = Math.Max(result, Check(prices, prices[i], i + 1, 0, 0, 0, true));
-            }
-            return result;
-        }
-
-        private int Check(int[] prices, int buyPrice, int day, int transactionCount, int tempProfit, int maxProfit, bool isPurchased)
-        {
-            if (transactionCount == 2 || day >= prices.Length)
-            {
-                return Math.Max(tempProfit, maxProfit);
-            }
-            else
-            {
-                for (int i = day; i < prices.Length; i++)
+                int diff = prices[i] - prices[i - 1];
+                if (diff > 0)
                 {
-                    int dayPrice = prices[i];
-                    if (isPurchased)
-                    {
-
-                        if (buyPrice < dayPrice)
-                        {
-                            int p = dayPrice - buyPrice;
-                            tempProfit += p;
-
-                            maxProfit = Check(prices, dayPrice, i + 1, transactionCount + 1, tempProfit, maxProfit, false);
-
-                            tempProfit -= p;
-                        }
-                    }
-                    else
-                    {
-                        maxProfit = Check(prices, prices[i], i + 1, transactionCount, tempProfit, maxProfit, true);
-                    }
+                    sum += diff;
                 }
-                return maxProfit;
             }
+
+            return sum;
         }
 
         [Test(Description = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/")]

@@ -6,8 +6,6 @@ public class RemoveDuplicatesFromSortedArray
 {
     public int RemoveDuplicates(int[] nums)
     {
-
-        int p1 = 0;
         int uniquePointer = 1;
         int returnValue = 1;
 
@@ -24,10 +22,10 @@ public class RemoveDuplicatesFromSortedArray
         return returnValue;
     }
     
-    [Test(Description = "https://leetcode.com/problems/binary-watch/")]
+    [Test(Description = "https://leetcode.com/problems/remove-duplicates-from-sorted-array/")]
     [Category("Easy")]
     [Category("LeetCode")]
-    [Category("Binary Watch")]
+    [Category("Remove Duplicates From Sorted Array")]
     [TestCaseSource("Input")]
     public void Test1((int Output, int[] Input) item)
     {
@@ -42,7 +40,7 @@ public class RemoveDuplicatesFromSortedArray
             return new List<(int Output, int[] Input)>()
             {
 
-                (10, [0,0,1,1,1,2,2,3,3,4]),
+                (5, [0,0,1,1,1,2,2,3,3,4]),
             };
         }
     }

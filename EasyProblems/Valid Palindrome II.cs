@@ -91,7 +91,7 @@ namespace LeetCode.EasyProblems
             return true;
         }
 
-        [Test(Description = "https://leetcode.com/problems/valid-palindrome-ii/submissions/")]
+        [Test(Description = "https://leetcode.com/problems/valid-palindrome-ii/")]
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Valid Palindrome II")]
@@ -109,7 +109,6 @@ namespace LeetCode.EasyProblems
                 return new List<(bool Output, string Input)>()
                 {
                     (true, "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"),
-                    (true, "eeccccbebaeeabebccceea"),
                 };
             }
         }
