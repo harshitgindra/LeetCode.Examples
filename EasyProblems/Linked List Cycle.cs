@@ -28,20 +28,20 @@ namespace LeetCode.EasyProblems
         [Category("LeetCode")]
         [Category("Linked List Cycle")]
         [TestCaseSource("Input")]
-        public void Test1((ListNode Output, ListNode Input) item)
+        public void Test1((bool Output, ListNode Input) item)
         {
             var response = HasCycle(item.Input);
             //ClassicAssert.AreEqual(item.Output, response);
         }
 
-        public static IEnumerable<(ListNode Output, ListNode Input)> Input
+        public static IEnumerable<(bool Output, ListNode Input)> Input
         {
             get
             {
-                return new List<(ListNode Output, ListNode Input)>()
+                return new List<(bool Output, ListNode Input)>()
                 {
 
-                    (new ListNode(1, new ListNode(3, new ListNode(2, new ListNode(1)))),
+                    (true,
                     new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))))),
                 };
             }

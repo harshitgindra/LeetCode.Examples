@@ -25,7 +25,7 @@ namespace LeetCode
             return result;
         }
 
-        [Test(Description = "https://leetcode.com/problems/singl-number/")]
+        [Test(Description = "https://leetcode.com/problems/single-number/")]
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Single Number")]
