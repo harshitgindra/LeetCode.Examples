@@ -1,7 +1,7 @@
 ﻿using LeetCode.SharedUtils;
 using NUnit.Framework.Legacy;
 
-namespace LeetCode.MediumProblems
+namespace LeetCode.EasyProblems
 {
     class Binary_Tree_Preorder_Traversal
     {
@@ -25,24 +25,24 @@ namespace LeetCode.MediumProblems
         }
 
         [Test(Description = "https://leetcode.com/problems/binary-tree-preorder-traversal/")]
-        [Category("Medium")]
+        [Category("Easy")]
         [Category("LeetCode")]
         [Category("Binary Tree Preorder Traversal")]
         [TestCaseSource("Input")]
-        public void Test1((IList<int> Output, TreeNode Input) item)
+        public void Test1((IList<int> Output, int?[] Input) item)
         {
-            var response = this.PreorderTraversal(item.Input);
+            var input = TreeNodeBuilder.ArrayToTreeNode(item.Input);
+            var response = this.PreorderTraversal(input);
             ClassicAssert.AreEqual(item.Output, response);
         }
 
-        public static IEnumerable<(IList<int> Output, TreeNode Input)> Input
+        public static IEnumerable<(IList<int> Output, int?[] Input)> Input
         {
             get
             {
-                return new List<(IList<int> Output, TreeNode Input)>()
+                return new List<(IList<int> Output, int?[] Input)>()
                 {
-                    (new List<int>{ 1,2,3},
-                    new TreeNode(1,null, new TreeNode(2, new TreeNode(3))))
+                    (new List<int>{ 1,2,3}, new int?[]{1, null, 2,3})
                 };
             }
         }
