@@ -6,45 +6,39 @@ namespace LeetCode.EasyProblems
     {
         public bool IsIsomorphic(string s, string t)
         {
-            if (string.IsNullOrEmpty(s) && string.IsNullOrEmpty(t))
-            {
-                return true;
-            }
-            else if (s.Length != t.Length)
+            if (s.Length != t.Length)
             {
                 return false;
             }
-            else
-            {
-                if (Compare(s, t))
-                {
-                    return Compare(t, s);
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
 
-        private bool Compare(string s, string t)
-        {
-            IDictionary<char, char> dict = new Dictionary<char, char>();
+            // Create a dictionary to store character mappings
+            Dictionary<char, char> charMap = new Dictionary<char, char>();
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (dict.ContainsKey(s[i]))
+                char original = s[i];
+                char replacement = t[i];
+
+                if (!charMap.TryGetValue(original, out var mappedCharacter))
                 {
-                    if (dict[s[i]] != t[i])
+                    if (!charMap.ContainsValue(replacement))
+                    {
+                        charMap[original] = replacement;
+                    }
+                    else
                     {
                         return false;
                     }
                 }
                 else
                 {
-                    dict.Add(s[i], t[i]);
+                    if (mappedCharacter != replacement)
+                    {
+                        return false;
+                    }
                 }
             }
+
             return true;
         }
 

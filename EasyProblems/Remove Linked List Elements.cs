@@ -3,6 +3,9 @@
 
 namespace LeetCode.EasyProblems
 {
+    /// <summary>
+    /// https://leetcode.com/problems/remove-linked-list-elements/
+    /// </summary>
     class Remove_Linked_List_Elements
     {
         /// <summary>
