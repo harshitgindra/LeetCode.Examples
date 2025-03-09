@@ -52,7 +52,7 @@ namespace LeetCode.Problems._2021.Nov
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Interval List Intersections")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[][] Output, (int[][] firstList, int[][] secondList) Input) item)
         {
             var response = IntervalIntersection(item.Input.firstList, item.Input.secondList);

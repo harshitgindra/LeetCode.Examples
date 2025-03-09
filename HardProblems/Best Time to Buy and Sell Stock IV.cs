@@ -38,7 +38,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Best Time to Buy and Sell Stock IV")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int, int[]) Input) item)
         {
             var response = MaxProfit(item.Input.Item1, item.Input.Item2);

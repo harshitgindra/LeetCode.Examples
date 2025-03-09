@@ -35,22 +35,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Find Numbers with Even Number of Digits")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = FindNumbers(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-                    (2, new int[] {12,345,2,6,7896}),
-                };
-            }
-        }
+                (2, [12,345,2,6,7896]),
+            };
     }
 }

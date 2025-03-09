@@ -32,7 +32,7 @@ namespace LeetCode.Problems._2021.Nov
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Maximum Subarray")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = MaxSubArray(item.Input);

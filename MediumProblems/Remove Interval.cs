@@ -41,7 +41,7 @@
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Remove Interval")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<IList<int>> Output, (int[][], int[]) Input) item)
         {
             var response = RemoveInterval(item.Input.Item1, item.Input.Item2);

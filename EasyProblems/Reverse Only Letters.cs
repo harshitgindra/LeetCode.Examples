@@ -30,22 +30,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Reverse Words in a String III")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, string Input) item)
         {
             var response = ReverseWords(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(string Output, string Input)> Input
-        {
-            get
+        public static IEnumerable<(string Output, string Input)> Input =>
+            new List<(string Output, string Input)>()
             {
-                return new List<(string Output, string Input)>()
-                {
-                    ("s'teL ekat edoCteeL tsetnoc", "Let's take LeetCode contest"),
-                };
-            }
-        }
+                ("s'teL ekat edoCteeL tsetnoc", "Let's take LeetCode contest"),
+            };
     }
 }

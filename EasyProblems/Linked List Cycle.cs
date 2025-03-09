@@ -1,4 +1,5 @@
 ﻿using LeetCode.SharedUtils;
+using NUnit.Framework.Legacy;
 
 
 namespace LeetCode.EasyProblems
@@ -27,24 +28,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Linked List Cycle")]
-        [TestCaseSource("Input")]
-        public void Test1((bool Output, ListNode Input) item)
+        [TestCaseSource(nameof(Input))]
+        public void Test1((bool Output, int[] Input) item)
         {
-            var response = HasCycle(item.Input);
-            //ClassicAssert.AreEqual(item.Output, response);
+            var listNode = ListNodeBuilder.BuildListNode(item.Input);
+            HasCycle(listNode);
         }
 
-        public static IEnumerable<(bool Output, ListNode Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, int[] Input)> Input =>
+            new List<(bool Output, int[] Input)>()
             {
-                return new List<(bool Output, ListNode Input)>()
-                {
 
-                    (true,
-                    new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))))),
-                };
-            }
-        }
+                (true, [3,2,0,4,2]),
+            };
     }
 }

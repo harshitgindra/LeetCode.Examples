@@ -154,7 +154,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Largest plus sign")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int n, int[][] mines) Input) item)
         {
             var response = OrderOfLargestPlusSign(item.Input.n, item.Input.mines);

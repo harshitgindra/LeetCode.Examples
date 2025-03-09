@@ -62,7 +62,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("My Calendar 2")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (int, int) Input) item)
         {
             //MyCalendar cal = new MyCalendar();

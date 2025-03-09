@@ -35,7 +35,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Binary Tree Level Order Traversal")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<IList<int>> Output, TreeNode Input) item)
         {
             var response = this.LevelOrder(item.Input);

@@ -56,7 +56,7 @@ public class FillingBookcaseShelves
     [Category("Medium")]
     [Category("LeetCode")]
     [Category("Filling bookcase shelves")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, (int[][] books, int shelfWidth) Input) item)
     {
         var response = MinHeightShelves(item.Input.books, item.Input.shelfWidth);

@@ -37,7 +37,7 @@ public class MinimumDepthOfBinaryTree
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Minimum Depth Of Binary Tree")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     
     public void Test1((int Output, int?[] Input) item)
     {

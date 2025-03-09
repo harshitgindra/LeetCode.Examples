@@ -108,7 +108,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Find Winner on a Tic Tac Toe Game")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, int[][] Input) item)
         {
             var response = Tictactoe(item.Input);

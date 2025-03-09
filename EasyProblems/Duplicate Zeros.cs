@@ -29,11 +29,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Duplicate Zeros")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             DuplicateZeros(item.Input);
-            ClassicAssert.AreEqual(item.Output, item.Input);
+            Assert.That(item.Input, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[] Output, int[] Input)> Input
@@ -43,9 +43,9 @@ namespace LeetCode.EasyProblems
                 return new List<(int[] Output, int[] Input)>()
                 {
 
-                    (new int[]{ 1,0,0,2,3,0,0,4}, new int[]{ 1,0,2,3,0,4,5,0}),
-                    (new int[]{ 1,2,3}, new int[]{ 1,2,3}),
-                    (new int[]{ 0,0,0,0,0,0,0}, new int[]{ 0,0,0,0,0,0,0}),
+                    ([1,0,0,2,3,0,0,4], [1,0,2,3,0,4,5,0]),
+                    ([1,2,3], [1,2,3]),
+                    ([0,0,0,0,0,0,0], [0,0,0,0,0,0,0]),
                 };
             }
         }

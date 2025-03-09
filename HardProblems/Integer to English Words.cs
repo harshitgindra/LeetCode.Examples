@@ -130,7 +130,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Integer to English Words")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, int Input) item)
         {
             var response = NumberToWords(item.Input);

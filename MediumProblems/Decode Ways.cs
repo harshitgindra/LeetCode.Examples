@@ -49,7 +49,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Decode Ways")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = NumDecodings(item.Input);

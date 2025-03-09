@@ -1,5 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
+﻿
 namespace LeetCode.EasyProblems
 {
     class Check_if_One_String_Swap_Can_Make_Strings_Equal
@@ -66,23 +65,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Check if One String Swap Can Make Strings Equal")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (string, string) Input) item)
         {
             var response = AreAlmostEqual(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(bool Output, (string, string) Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, (string, string) Input)> Input =>
+            new List<(bool Output, (string, string) Input)>()
             {
-                return new List<(bool Output, (string, string) Input)>()
-                {
-                    (false, ("attack", "defend")),
-                    (true, ("bank", "kanb")),
-                };
-            }
-        }
+                (false, ("attack", "defend")),
+                (true, ("bank", "kanb")),
+            };
     }
 }

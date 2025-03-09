@@ -26,11 +26,11 @@ namespace LeetCode.MediumProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Binary Tree Inorder Traversal")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<int> Output, TreeNode Input) item)
         {
             var response = this.InorderTraversal(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(IList<int> Output, TreeNode Input)> Input

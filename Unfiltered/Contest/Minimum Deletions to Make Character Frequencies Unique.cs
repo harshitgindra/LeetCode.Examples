@@ -75,7 +75,7 @@ namespace LeetCode.Contest
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Binary Watch")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = MinDeletions(item.Input);

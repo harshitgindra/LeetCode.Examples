@@ -49,7 +49,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("maximal square")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, char[][] Input) item)
         {
             var response = MaximalSquare(item.Input);

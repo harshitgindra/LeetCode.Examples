@@ -7,19 +7,6 @@ namespace LeetCode.EasyProblems;
 /// </summary>
 public class ConvertSortedArrayToBinarySearchTree
 {
-    /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
     public TreeNode SortedArrayToBST(int[] nums)
     {
         if (nums == null || nums.Length == 0)
@@ -41,4 +28,21 @@ public class ConvertSortedArrayToBinarySearchTree
 
         return node;
     }
+    
+    [Test(Description = "https://leetcode.com/problems/count-complete-tree-nodes/")]
+    [Category("Easy")]
+    [Category("LeetCode")]
+    [Category("Count Complete Tree Nodes")]
+    [TestCaseSource(nameof(Input))]
+    public void Test1((int?[] Output, int[] Input) item)
+    {
+        var response = SortedArrayToBST(item.Input);
+        Assert.That(response.ToArray(), Is.EqualTo(item.Output));
+    }
+
+    public static IEnumerable<(int?[] Output, int[] Input)> Input =>
+        new List<(int?[] Output, int[] Input)>()
+        {
+            ([0,-3,9,-10,null,5], ([-10,-3,0,5,9])),
+        };
 }

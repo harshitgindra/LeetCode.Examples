@@ -2,8 +2,13 @@ using NUnit.Framework.Legacy;
 
 namespace LeetCode.SharedUtils;
 
-public class TreeNodeBuilder
+public static class TreeNodeBuilder
 {
+    public static TreeNode ToTreeNode(this int?[] arr)
+    {
+        return ArrayToTreeNode(arr);
+    }
+    
     public static TreeNode ArrayToTreeNode(int?[] arr)
     {
         if (arr == null || arr.Length == 0 || !arr[0].HasValue)
@@ -66,4 +71,38 @@ public class TreeNodeBuilder
 
         ClassicAssert.AreEqual(array.Length, index, "Array length does not match tree size");
     }
+    
+    public static int?[] ToArray(this TreeNode root)
+    {
+        if (root == null)
+            return new int?[0];
+
+        List<int?> result = new List<int?>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        while (queue.Count > 0)
+        {
+            TreeNode node = queue.Dequeue();
+            if (node != null)
+            {
+                result.Add(node.val);
+                queue.Enqueue(node.left);
+                queue.Enqueue(node.right);
+            }
+            else
+            {
+                result.Add(null);
+            }
+        }
+
+        // Remove trailing nulls
+        while (result.Count > 0 && result[result.Count - 1] == null)
+        {
+            result.RemoveAt(result.Count - 1);
+        }
+
+        return result.ToArray();
+    }
+
 }

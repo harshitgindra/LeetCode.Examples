@@ -1,4 +1,6 @@
-﻿namespace LeetCode
+﻿using LeetCode.SharedUtils;
+
+namespace LeetCode
 {
     public class AddTwoNumbers
     {

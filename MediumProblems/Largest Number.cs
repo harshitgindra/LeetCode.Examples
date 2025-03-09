@@ -21,7 +21,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Largest Number")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, int[] Input) item)
         {
             var response = LargestNumber(item.Input);

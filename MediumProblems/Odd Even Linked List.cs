@@ -48,7 +48,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Odd Even Linked List")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, ListNode Input) item)
         {
             var response = OddEvenList(item.Input);

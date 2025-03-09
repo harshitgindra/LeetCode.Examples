@@ -79,7 +79,7 @@ namespace LeetCode.Problems._2021.August
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Maximum Product of Splitted Binary Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, TreeNode Input) item)
         {
             var response = this.MaxProduct(item.Input);

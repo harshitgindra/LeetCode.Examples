@@ -43,7 +43,7 @@ namespace LeetCode.Hard
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Add Two Numbers II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, int[] Input) item)
         {
             var response = MinimumMountainRemovals(item.Input);

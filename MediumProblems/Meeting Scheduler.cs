@@ -47,7 +47,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Meeting Scheduler")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((List<int> Output, (int[][], int[][], int) Input) item)
         {
             var response = MinAvailableDuration(item.Input.Item1, item.Input.Item2, item.Input.Item3);

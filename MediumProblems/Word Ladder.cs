@@ -73,7 +73,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("maximal rectangle")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string beginWord, string endWord, IList<string> wordList) Input) item)
         {
             var response = LadderLength(item.Input.beginWord, item.Input.endWord, item.Input.wordList);

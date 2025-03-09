@@ -14,7 +14,7 @@ namespace LeetCode.MediumProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Flip String to Monotone Increasing")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = MinFlipsMonoIncr(item.Input);

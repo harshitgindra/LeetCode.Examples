@@ -29,11 +29,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("House Robber")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = ThreeSumTest(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -42,9 +42,9 @@ namespace LeetCode.EasyProblems
             {
                 return new List<(int Output, int[] Input)>()
                 {
-                    (4, new int[] {2,1,1,2}),
-                    (4, new int[] {1,2,3,1}),
-                    (12, new int[] {2,7,9,3,1}),
+                    (4, [2,1,1,2]),
+                    (4, [1,2,3,1]),
+                    (12, [2,7,9,3,1]),
                 };
             }
         }

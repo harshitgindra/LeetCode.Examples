@@ -37,7 +37,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Reverse Words in a String II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((char[] Output, char[] Input) item)
         {
             ReverseWords(item.Input);

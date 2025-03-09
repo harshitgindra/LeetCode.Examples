@@ -42,7 +42,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Minimum Size Subarray Sum")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int, int[]) Input) item)
         {
             var response = MinSubArrayLen(item.Input.Item1, item.Input.Item2);

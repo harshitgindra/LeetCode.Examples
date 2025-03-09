@@ -66,7 +66,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Remove K Digits")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, (string, int) Input) item)
         {
             var response = RemoveKdigits(item.Input.Item1, item.Input.Item2);

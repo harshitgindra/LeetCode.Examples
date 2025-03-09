@@ -46,7 +46,7 @@ namespace LeetCode.SharedUtils
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Swapping Nodes in a Linked List")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = SwapNodes(item.Input.Item1, item.Input.Item2);

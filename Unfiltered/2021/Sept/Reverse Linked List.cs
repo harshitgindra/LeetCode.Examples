@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Problems._2021.Sept
+﻿using LeetCode.SharedUtils;
+
+namespace LeetCode.Problems._2021.Sept
 {
     /// <summary>
     /// https://leetcode.com/problems/reverse-linked-list/

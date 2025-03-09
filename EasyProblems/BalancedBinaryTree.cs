@@ -47,12 +47,12 @@ public class BalancedBinaryTree
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Balanced Binary Tree")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((bool Output, int?[] Input) item)
     {
         var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input);
         var response = IsBalanced(treeNode);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
     public static IEnumerable<(bool Output, int?[] Input)> Input

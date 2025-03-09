@@ -34,25 +34,20 @@ namespace LeetCode.EasyProblems
         [Category("LeetCode")]
         [Category("LeetCode 219")]
         [Category("Contains Duplicate II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (int[], int) Input) item)
         {
             var response = ContainsNearbyDuplicate(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(bool Output, (int[], int) Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, (int[], int) Input)> Input =>
+            new List<(bool Output, (int[], int) Input)>()
             {
-                return new List<(bool Output, (int[], int) Input)>()
-                {
-                    (true, (new int[] { 1, 2, 3, 1 }, 3)),
-                    (true, (new int[] { 1, 0, 1, 1 }, 1)),
-                    (false, (new int[] { 1, 2, 3, 1, 2, 3 }, 2)),
-                    (true, (new int[] { 99,99 }, 1)),
-                };
-            }
-        }
+                (true, ([1, 2, 3, 1], 3)),
+                (true, ([1, 0, 1, 1], 1)),
+                (false, ([1, 2, 3, 1, 2, 3], 2)),
+                (true, ([99,99], 1)),
+            };
     }
 }

@@ -45,7 +45,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Maximum Number of Balloons")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = MaxNumberOfBalloons(item.Input);

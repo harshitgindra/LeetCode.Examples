@@ -44,7 +44,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Sum Root to Leaf Numbers")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, TreeNode Input) item)
         {
             var response = this.SumNumbers(item.Input);

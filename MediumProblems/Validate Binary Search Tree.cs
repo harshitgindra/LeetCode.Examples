@@ -51,7 +51,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Validate Binary Search Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, TreeNode Input) item)
         {
             var response = this.IsValidBST(item.Input);

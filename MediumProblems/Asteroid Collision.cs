@@ -67,7 +67,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Asteroid Collision")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             var response = AsteroidCollision(item.Input);

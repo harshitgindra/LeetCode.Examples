@@ -102,7 +102,7 @@ namespace LeetCode.MediumProblems
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Super Palindromes")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, string) Input) item)
         {
             // FrontMiddleBackQueue q = new FrontMiddleBackQueue();

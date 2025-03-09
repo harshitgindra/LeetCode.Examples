@@ -50,7 +50,7 @@ namespace LeetCode.Hard
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("maximal rectangle")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, char[][] Input) item)
         {
             FreqStack freqStack = new FreqStack();

@@ -81,7 +81,7 @@ namespace LeetCode.Problems._2021.August
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Palindrome Partitioning II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = MinCut(item.Input);

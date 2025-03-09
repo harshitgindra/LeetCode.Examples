@@ -72,7 +72,7 @@ namespace LeetCode.Problems._2021.Nov
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Largest Component Size by Common Factor")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = LargestComponentSize(item.Input);

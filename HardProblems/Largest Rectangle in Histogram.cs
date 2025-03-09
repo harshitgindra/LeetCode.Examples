@@ -57,7 +57,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Largest Rectangle in Histogram")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = LargestRectangleArea(item.Input);

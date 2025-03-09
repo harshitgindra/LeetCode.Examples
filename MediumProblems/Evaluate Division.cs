@@ -76,7 +76,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Evaluate Division")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((double[] Output, (IList<IList<string>>, double[], IList<IList<string>>) Input) item)
         {
             var response = CalcEquation(item.Input.Item1, item.Input.Item2, item.Input.Item3);

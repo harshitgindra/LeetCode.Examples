@@ -62,7 +62,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Find K Closest Elements")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<int> Output, (int[], int, int) Input) item)
         {
             var response = FindClosestElements(item.Input.Item1, item.Input.Item2, item.Input.Item3);

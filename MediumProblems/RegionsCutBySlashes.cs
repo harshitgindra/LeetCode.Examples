@@ -64,7 +64,7 @@ public class RegionsCutBySlashes
     [Category("Medium")]
     [Category("LeetCode")]
     [Category("Regions cut by slashes")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, string[] Input) item)
     {
         var response = RegionsBySlashes(item.Input);

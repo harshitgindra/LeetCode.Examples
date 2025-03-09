@@ -37,7 +37,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("3Sum Closest")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = ThreeSumClosest(item.Input.Item1, item.Input.Item2);

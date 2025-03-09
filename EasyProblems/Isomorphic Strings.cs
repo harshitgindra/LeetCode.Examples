@@ -46,11 +46,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Isomorphic Strings")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (string, string) Input) item)
         {
             var response = IsIsomorphic(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, (string, string) Input)> Input

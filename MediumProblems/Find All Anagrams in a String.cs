@@ -124,7 +124,7 @@ namespace LeetCode.MediumProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Valid Anagram")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = FindAnagrams(item.Input.Item1, item.Input.Item2);

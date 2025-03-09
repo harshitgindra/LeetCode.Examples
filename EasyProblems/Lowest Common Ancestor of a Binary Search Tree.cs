@@ -48,7 +48,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Lowest Common Ancestor of a Binary Search Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((TreeNode Output, (TreeNode, TreeNode, TreeNode) Input) item)
         {
             var response = this.LowestCommonAncestor(item.Input.Item1, item.Input.Item2, item.Input.Item3);

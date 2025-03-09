@@ -55,7 +55,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Word Break II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, IList<string>) Input) item)
         {
             var response = WordBreak(item.Input.Item1, item.Input.Item2);

@@ -35,7 +35,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Maximum Average Subtree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((double Output, TreeNode Input) item)
         {
             var response = MaximumAverageSubtree(item.Input);

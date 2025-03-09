@@ -66,7 +66,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Meeting Scheduler")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((List<int> Output, (ListNode list1, int a, int b, ListNode list2) Input) item)
         {
             var response = MergeInBetween(item.Input.list1, item.Input.a, item.Input.b, item.Input.list2);

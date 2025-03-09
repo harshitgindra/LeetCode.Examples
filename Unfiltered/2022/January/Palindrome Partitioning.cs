@@ -61,7 +61,7 @@ namespace LeetCode.Problems._2022.January
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Palindrome Partitioning")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, string Input) item)
         {
             var response = Partition(item.Input);

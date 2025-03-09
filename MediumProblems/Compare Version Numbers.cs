@@ -45,7 +45,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Combination Sum")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = CompareVersion(item.Input.Item1, item.Input.Item2);

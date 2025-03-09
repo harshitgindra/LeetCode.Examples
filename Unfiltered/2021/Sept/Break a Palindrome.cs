@@ -48,7 +48,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("LeetCode")]
         [Category("Break a Palindrome")]
         [Category("1328")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, string Input) item)
         {
             var response = BreakPalindrome(item.Input);

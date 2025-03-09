@@ -57,7 +57,7 @@ public class Minimum_Rounds_to_Complete_All_Tasks_V1
     [Category("Medium")]
     [Category("LeetCode")]
     [Category("Minimum Rounds to Complete All Tasks")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, int[] Input) item)
     {
         var response = MinimumRounds(item.Input);

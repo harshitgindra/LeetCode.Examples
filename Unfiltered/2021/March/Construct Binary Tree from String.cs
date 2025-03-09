@@ -87,7 +87,7 @@ namespace LeetCode.Problems._2021.March
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Construct Binary Tree from String")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((TreeNode Output, string Input) item)
         {
             var response = Str2tree(item.Input);

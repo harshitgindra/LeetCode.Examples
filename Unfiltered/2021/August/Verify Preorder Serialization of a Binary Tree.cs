@@ -41,7 +41,7 @@ namespace LeetCode.Problems._2021.August
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Verify Preorder Serialization of a Binary Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, string Input) item)
         {
             var response = IsValidSerialization(item.Input);

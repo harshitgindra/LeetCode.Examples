@@ -54,7 +54,7 @@ namespace LeetCode.Problems._2022.January
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Stone Game II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, int Input) item)
         {
             var response = WinnerSquareGame(item.Input);

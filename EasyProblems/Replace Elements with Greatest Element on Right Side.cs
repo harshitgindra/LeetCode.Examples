@@ -4,7 +4,6 @@ namespace LeetCode.EasyProblems
 {
     class Replace_Elements_with_Greatest_Element_on_Right_Side
     {
-
         public int[] ReplaceElements(int[] arr)
         {
             int[] returnValue = new int[arr.Length];
@@ -23,23 +22,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Replace Elements with Greatest Element on Right Side")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             var response = ReplaceElements(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(int[] Output, int[] Input)>()
-                {
-
-                    (new int[]{ 18,6,6,6,1,-1}, (new int[] {17,18,5,4,6,1})),
-                };
-            }
-        }
+                ([18, 6, 6, 6, 1, -1], ( [17, 18, 5, 4, 6, 1])),
+            };
     }
 }

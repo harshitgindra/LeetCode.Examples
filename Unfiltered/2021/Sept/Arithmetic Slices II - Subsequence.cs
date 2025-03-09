@@ -49,7 +49,7 @@ namespace LeetCode.HardProblems
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Arithmetic Slices II - Subsequence")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = NumberOfArithmeticSlices(item.Input);

@@ -78,7 +78,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Unique Binary Search Trees II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int Input) item)
         {
             var response = this.GenerateTrees(item.Input);

@@ -57,22 +57,17 @@ namespace LeetCode.HardProblems
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Longest Valid Parentheses")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = LongestValidParentheses(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, string Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, string Input)> Input =>
+            new List<(int Output, string Input)>()
             {
-                return new List<(int Output, string Input)>()
-                {
-                    (4, ")()())"),
-                };
-            }
-        }
+                (4, ")()())"),
+            };
     }
 }

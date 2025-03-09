@@ -43,7 +43,7 @@ namespace LeetCode.Mock.Bloomberg
         [Category("LeetCode")]
         [Category("Mock Test")]
         [Category("Combination Sum")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var respone = MinCostClimbingStairs(item.Input);

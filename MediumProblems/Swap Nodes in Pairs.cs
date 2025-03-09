@@ -35,7 +35,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Swap Nodes in Pairs")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, ListNode Input) item)
         {
             var response = SwapPairs(item.Input);

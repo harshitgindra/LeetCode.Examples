@@ -72,11 +72,11 @@ namespace LeetCode.Mock
         [Category("LeetCode")]
         [Category("Mock Test")]
         [Category("Combination Sum")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = KEmptySlots(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int[], int) Input)> Input

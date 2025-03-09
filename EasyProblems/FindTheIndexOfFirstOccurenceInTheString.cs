@@ -1,5 +1,3 @@
-using NUnit.Framework.Legacy;
-
 namespace LeetCode.EasyProblems;
 
 public class FindTheIndexOfFirstOccurenceInTheString
@@ -23,7 +21,7 @@ public class FindTheIndexOfFirstOccurenceInTheString
                             break;
                         }
                     }
-                    
+
                     if (result != -1)
                     {
                         break;
@@ -38,30 +36,24 @@ public class FindTheIndexOfFirstOccurenceInTheString
 
         return result;
     }
-    
-    [Test(Description = "https://leetcode.com/problems/remove-element/")]
+
+    [Test(Description = "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/")]
     [Category("Easy")]
     [Category("LeetCode")]
-    [Category("Remove Element")]
-    [TestCaseSource("Input")]
+    [Category("Find The Index Of First Occurrence")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, (string, string) Input) item)
     {
         var response = StrStr(item.Input.Item1, item.Input.Item2);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(int Output, (string, string) Input)> Input
-    {
-        get
+    public static IEnumerable<(int Output, (string, string) Input)> Input =>
+        new List<(int Output, (string, string) Input)>()
         {
-            return new List<(int Output, (string, string) Input)>()
-            {
-
-                (2, ("abc", "c")),
-                (0, ("a", "a")),
-                (0, ("sadbutsad", "sad")),
-                (-1, ("leetcode", "leeto")),
-            };
-        }
-    }
+            (2, ("abc", "c")),
+            (0, ("a", "a")),
+            (0, ("sadbutsad", "sad")),
+            (-1, ("leetcode", "leeto")),
+        };
 }

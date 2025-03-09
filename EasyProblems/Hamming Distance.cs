@@ -28,11 +28,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Hamming Distance")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int, int) Input) item)
         {
             var response = HammingDistance(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int, int) Input)> Input

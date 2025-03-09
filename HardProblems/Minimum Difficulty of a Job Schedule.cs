@@ -83,7 +83,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Minimum Difficulty of a Job Schedule")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = MinDifficulty(item.Input.Item1, item.Input.Item2);

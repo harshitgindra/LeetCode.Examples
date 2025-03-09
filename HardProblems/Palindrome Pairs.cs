@@ -50,7 +50,7 @@
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Palindrome Pairs")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<IList<int>> Output, string[] Input) item)
         {
             var response = PalindromePairs(item.Input);

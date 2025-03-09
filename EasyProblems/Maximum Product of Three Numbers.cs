@@ -38,11 +38,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Maximum Product of Three Numbers")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = MaximumProduct(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -51,11 +51,10 @@ namespace LeetCode.EasyProblems
             {
                 return new List<(int Output, int[] Input)>()
                 {
-
-                    (126, new int[] {7,3,1,0,0,6}),
-                    (-6, new int[] {-1,-2,-3}),
-                    (24, new int[] {1,2,3,4}),
-                    (6, new int[] {-1,-2,1,2,3}),
+                    (126, [7, 3, 1, 0, 0, 6]),
+                    (-6, [-1, -2, -3]),
+                    (24, [1, 2, 3, 4]),
+                    (6, [-1, -2, 1, 2, 3]),
                 };
             }
         }

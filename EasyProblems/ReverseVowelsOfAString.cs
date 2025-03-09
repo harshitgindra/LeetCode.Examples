@@ -40,7 +40,7 @@ public class ReverseVowelsOfAString
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Reverse Vowels of a string")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((string Output, string Input) item)
     {
         var response = ReverseVowels(item.Input);

@@ -51,7 +51,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Palindrome Linked List")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, ListNode Input) item)
         {
             var response = IsPalindrome(item.Input);

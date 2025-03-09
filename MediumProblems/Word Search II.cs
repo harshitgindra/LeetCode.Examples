@@ -47,7 +47,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Word Search II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<string> Output, (char[][], string[]) Input) item)
         {
             var response = FindWords(item.Input.Item1, item.Input.Item2);

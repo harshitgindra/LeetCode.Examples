@@ -1,5 +1,4 @@
 ﻿using LeetCode.SharedUtils;
-using NUnit.Framework.Legacy;
 
 namespace LeetCode.EasyProblems
 {
@@ -49,23 +48,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Path Sum")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (int?[], int) Input) item)
         {
-            var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input.Item1);
-            var response = HasPathSum(treeNode, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            var response = HasPathSum(item.Input.Item1.ToTreeNode(), item.Input.Item2);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(bool Output, (int?[], int) Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, (int?[], int) Input)> Input =>
+            new List<(bool Output, (int?[], int) Input)>()
             {
-                return new List<(bool Output, (int?[], int) Input)>()
-                {
-                    (true, (new int?[] { 5,4,8,11,null,13,4,7,2,null,null,null,1 }, 22)),
-                };
-            }
-        }
+                (true, ([5,4,8,11,null,13,4,7,2,null,null,null,1], 22)),
+            };
     }
 }

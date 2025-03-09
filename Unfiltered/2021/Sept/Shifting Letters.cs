@@ -30,7 +30,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Shifting Letters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, (string s, int[] shifts) Input) item)
         {
             var response = ShiftingLetters(item.Input.s, item.Input.shifts);

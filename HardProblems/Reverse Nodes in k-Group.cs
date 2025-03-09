@@ -51,7 +51,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Reverse Nodes in k-Group")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = ReverseKGroup(item.Input.Item1, item.Input.Item2);

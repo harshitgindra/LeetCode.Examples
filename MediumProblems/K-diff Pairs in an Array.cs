@@ -41,7 +41,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("K-diff Pairs in an Array")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = FindPairs(item.Input.Item1, item.Input.Item2);

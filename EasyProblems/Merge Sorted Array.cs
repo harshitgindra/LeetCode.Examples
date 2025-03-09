@@ -43,23 +43,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Merge Sorted Array")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, (int[], int, int[], int) Input) item)
         {
             Merge(item.Input.Item1, item.Input.Item2, item.Input.Item3, item.Input.Item4);
-            ClassicAssert.AreEqual(item.Output, item.Input.Item1);
+            Assert.That(item.Input.Item1, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, (int[], int, int[], int) Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, (int[], int, int[], int) Input)> Input =>
+            new List<(int[] Output, (int[], int, int[], int) Input)>()
             {
-                return new List<(int[] Output, (int[], int, int[], int) Input)>()
-                {
 
-                    (new int[]{ 1,2,2,3,5,6}, (new int[]{ 1,2,3,0,0,0}, 3,new int[]{ 2,5,6},3)),
-                };
-            }
-        }
+                ([1,2,2,3,5,6], ([1,2,3,0,0,0], 3, [2,5,6],3)),
+            };
     }
 }

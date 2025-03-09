@@ -54,7 +54,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Car Pooling")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (string[], string) Input) item)
         {
             var response = CamelMatch(item.Input.Item1, item.Input.Item2);

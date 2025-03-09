@@ -35,7 +35,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Longest Substring with At Most Two Distinct Characters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = LengthOfLongestSubstringTwoDistinct(item.Input);

@@ -40,7 +40,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Increasing Order Search Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int?[] Output, int?[] Input) item)
         {
             var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input);

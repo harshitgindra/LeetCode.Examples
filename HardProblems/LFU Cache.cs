@@ -95,7 +95,7 @@
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Minimum Difficulty of a Job Schedule")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int[], int) Input) item)
         {
             LFUCache lfu = new LFUCache(3);

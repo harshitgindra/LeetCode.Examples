@@ -44,7 +44,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Remove Nth Node From End of List")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = RemoveNthFromEnd(item.Input.Item1, item.Input.Item2);

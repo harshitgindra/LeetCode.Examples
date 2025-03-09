@@ -18,7 +18,24 @@
 
             return node;
         }
-        
+
+        public static int[] ToArray(this ListNode head)
+        {
+            if (head == null)
+                return new int[0];
+
+            List<int> values = new List<int>();
+            ListNode current = head;
+
+            while (current != null)
+            {
+                values.Add(current.val);
+                current = current.next;
+            }
+
+            return values.ToArray();
+        }
+
         /// <summary>
         /// Builds a linked list from an array of integers.
         /// </summary>
@@ -40,7 +57,7 @@
 
             return head;
         }
-        
+
         /// <summary>
         /// Asserts if a linked list matches an array of integers.
         /// </summary>

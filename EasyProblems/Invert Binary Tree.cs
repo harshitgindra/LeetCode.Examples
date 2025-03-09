@@ -26,26 +26,20 @@ namespace LeetCode.EasyProblems
 
 
         [Test(Description = "https://leetcode.com/problems/invert-binary-tree/")]
-        [Category("Medium")]
+        [Category("Easy")]
         [Category("LeetCode")]
         [Category("Invert Binary Tree")]
-        [TestCaseSource("Input")]
-        public void Test1((TreeNode Output, TreeNode Input) item)
+        [TestCaseSource(nameof(Input))]
+        public void Test1((int?[] Output, int?[] Input) item)
         {
-            var response = this.InvertTree(item.Input);
-            //ClassicAssert.AreEqual(item.Output, response);
+            var response = InvertTree(item.Input.ToTreeNode());
+            Assert.That(response.ToArray(), Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(TreeNode Output, TreeNode Input)> Input
-        {
-            get
+        public static IEnumerable<(int?[] Output, int?[] Input)> Input =>
+            new List<(int?[] Output, int?[] Input)>()
             {
-                return new List<(TreeNode Output, TreeNode Input)>()
-                {
-                    (null,
-                    new TreeNode(4,new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7, new TreeNode(6), new TreeNode(9))))
-                };
-            }
-        }
+                ([4, 7, 2, 9, 6, 3, 1], ( [4, 2, 7, 1, 3, 6, 9])),
+            };
     }
 }

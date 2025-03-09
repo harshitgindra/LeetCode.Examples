@@ -44,7 +44,7 @@ public class MinimumDeletionsToMakeStringBalanced
     [Category("Medium")]
     [Category("LeetCode")]
     [Category("Minimum deletions to make string balanced")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, string Input) item)
     {
         var response = MinimumDeletions(item.Input);

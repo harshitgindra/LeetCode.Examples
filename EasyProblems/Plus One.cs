@@ -43,23 +43,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Plus One")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             var response = PlusOne(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(int[] Output, int[] Input)>()
-                {
-                    (new int[]{9,8,7,6,5,4,3,2,1,1}, new int[] {9,8,7,6,5,4,3,2,1,0}),
-                    (new int[]{ 1,0,0,}, new int[] {9,9}),
-                };
-            }
-        }
+                ([9,8,7,6,5,4,3,2,1,1], [9,8,7,6,5,4,3,2,1,0]),
+                ([1,0,0], [9,9]),
+            };
     }
 }

@@ -65,7 +65,7 @@
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Sum of Distances in Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int, int[][]) Input) item)
         {
             var response = SumOfDistancesInTree(item.Input.Item1, item.Input.Item2);

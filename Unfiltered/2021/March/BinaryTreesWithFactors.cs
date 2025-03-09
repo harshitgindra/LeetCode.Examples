@@ -58,7 +58,7 @@ namespace LeetCode.March
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Binary Trees With Factors")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = NumFactoredBinaryTrees(item.Input);

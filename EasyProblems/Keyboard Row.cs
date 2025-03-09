@@ -60,11 +60,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Keyboard Row")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string[] Output, string[] Input) item)
         {
             var response = FindWords(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(string[] Output, string[] Input)> Input
@@ -74,7 +74,7 @@ namespace LeetCode.EasyProblems
                 return new List<(string[] Output, string[] Input)>()
                 {
 
-                    (new string[]{"Alaska", "Dad" }, new string[]{"Hello", "Alaska", "Dad", "Peace" }),
+                    (["Alaska", "Dad"], ["Hello", "Alaska", "Dad", "Peace"]),
                 };
             }
         }

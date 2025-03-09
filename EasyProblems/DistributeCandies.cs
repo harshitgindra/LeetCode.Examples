@@ -14,11 +14,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Distribute Candies")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = DistributeCandies(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -27,11 +27,10 @@ namespace LeetCode.EasyProblems
             {
                 return new List<(int Output, int[] Input)>()
                 {
-
-                    (2, new int[] {3,1,0,4}),
-                    (2, new int[] {1,1,2,3}),
-                    (3, new int[] {1,1,2,2,3,3}),
-                    (2, new int[] {1000,1,1,1}),
+                    (2, [3, 1, 0, 4]),
+                    (2, [1, 1, 2, 3]),
+                    (3, [1, 1, 2, 2, 3, 3]),
+                    (2, [1000, 1, 1, 1]),
                 };
             }
         }

@@ -66,23 +66,18 @@ public class Add_Binary
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Plus One")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((string Output, (string a, string b) Input) item)
     {
         var response = AddBinary(item.Input.a, item.Input.b);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(string Output, (string a, string b) Input)> Input
-    {
-        get
+    public static IEnumerable<(string Output, (string a, string b) Input)> Input =>
+        new List<(string Output, (string a, string b) Input)>()
         {
-            return new List<(string Output, (string a, string b) Input)>()
-            {
-                ("100", ("11", "1")),
-                ("10101", ("1010", "1011")),
-                ("11110", ("1111", "1111")),
-            };
-        }
-    }
+            ("100", ("11", "1")),
+            ("10101", ("1010", "1011")),
+            ("11110", ("1111", "1111")),
+        };
 }

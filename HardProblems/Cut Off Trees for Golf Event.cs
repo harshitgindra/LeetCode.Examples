@@ -105,7 +105,7 @@ namespace LeetCode.Hard
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("maximal rectangle")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, IList<IList<int>> Input) item)
         {
             var response = CutOffTree(item.Input);

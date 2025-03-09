@@ -82,7 +82,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Longest Palindromic Substring")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((List<int> Output, int[][] Input) item)
         {
             var response = SpiralOrder(item.Input);

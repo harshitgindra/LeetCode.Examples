@@ -70,7 +70,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Longest Substring with At Least K Repeating Characters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, int) Input) item)
         {
             var response = LongestSubstring(item.Input.Item1, item.Input.Item2);

@@ -41,7 +41,7 @@ namespace LeetCode.Problems._2021.March
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Russian Doll Envelopes")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         [Ignore("Incomplete implementation")]
         public void Test1((int Output, int[][] Input) item)
         {

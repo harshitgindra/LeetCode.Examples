@@ -47,7 +47,7 @@ namespace LeetCode.Problems._2021.August
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Paint Fence")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int n, int k) Input) item)
         {
             var response = NumWays(item.Input.n, item.Input.k);

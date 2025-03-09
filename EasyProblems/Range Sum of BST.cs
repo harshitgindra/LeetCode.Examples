@@ -31,24 +31,19 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Repeated Substring Pattern")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, TreeNode Input) item)
         {
             var response = RangeSumBST(item.Input, 7, 15);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, TreeNode Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, TreeNode Input)> Input =>
+            new List<(int Output, TreeNode Input)>()
             {
-                return new List<(int Output, TreeNode Input)>()
-                {
-                    (32, new TreeNode(10,
-                        new TreeNode(5, new TreeNode(3), new TreeNode(7)),
-                        new TreeNode(15, new TreeNode(18)))),
-                };
-            }
-        }
+                (32, new TreeNode(10,
+                    new TreeNode(5, new TreeNode(3), new TreeNode(7)),
+                    new TreeNode(15, new TreeNode(18)))),
+            };
     }
 }

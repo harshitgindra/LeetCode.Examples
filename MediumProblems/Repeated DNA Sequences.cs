@@ -38,7 +38,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Repeated DNA Sequences")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((List<string> Output, string Input) item)
         {
             var response = FindRepeatedDnaSequences(item.Input);

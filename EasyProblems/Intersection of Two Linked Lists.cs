@@ -27,7 +27,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Intersection of Two Linked Lists")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, (int[], int[]) Input) item)
         {
             var inputListNode1 = ListNodeBuilder.BuildListNode(item.Input.Item1);

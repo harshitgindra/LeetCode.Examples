@@ -43,24 +43,19 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Repeated Substring Pattern")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, string Input) item)
         {
             var response = RepeatedSubstringPattern(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(bool Output, string Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, string Input)> Input =>
+            new List<(bool Output, string Input)>()
             {
-                return new List<(bool Output, string Input)>()
-                {
-                    (false, "ab"),
-                    (true, "abab"),
-                    (false, "aba"),
-                };
-            }
-        }
+                (false, "ab"),
+                (true, "abab"),
+                (false, "aba"),
+            };
     }
 }

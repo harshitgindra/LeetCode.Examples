@@ -26,7 +26,7 @@
         //[Category("Easy")]
         //[Category("LeetCode")]
         //[Category("Find the Town Judge")]
-        //[TestCaseSource("Input")]
+        //[TestCaseSource(nameof(Input))]
         //public void Test1((int Output, int[][] Input) item)
         //{
         //    var response = CanAttendMeetings(item.Input);

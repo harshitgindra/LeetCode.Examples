@@ -28,11 +28,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Check If N and Its Double Exist")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, int[] Input) item)
         {
             var response = CheckIfExist(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, int[] Input)> Input
@@ -42,9 +42,9 @@ namespace LeetCode.EasyProblems
                 return new List<(bool Output, int[] Input)>()
                 {
 
-                    (true, (new int[] {10,2,5,3})),
-                    (false, (new int[] {3,1,7,11})),
-                    (false, (new int[] {-2,0,10,-19,4,6,-8})),
+                    (true, ( [10,2,5,3])),
+                    (false, ( [3,1,7,11])),
+                    (false, ( [-2,0,10,-19,4,6,-8])),
                 };
             }
         }

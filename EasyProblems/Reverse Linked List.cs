@@ -30,7 +30,7 @@ namespace LeetCode.EasyProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Reverse Linked List")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, ListNode Input) item)
         {
             var response = ReverseList(item.Input);

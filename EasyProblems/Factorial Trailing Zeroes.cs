@@ -1,6 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.EasyProblems
+﻿namespace LeetCode.EasyProblems
 {
     class Factorial_Trailing_Zeroes
     {
@@ -35,25 +33,20 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Isomorphic Strings")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int Input) item)
         {
             var response = TrailingZeroes(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int Input)> Input =>
+            new List<(int Output, int Input)>()
             {
-                return new List<(int Output, int Input)>()
-                {
 
-                    (2, 7),
-                    (2, 13),
-                    (1, 5),
-                };
-            }
-        }
+                (2, 7),
+                (2, 13),
+                (1, 5),
+            };
     }
 }

@@ -29,23 +29,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Find the Difference")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((char Output, (string, string) Input) item)
         {
             var response = FindTheDifference(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(char Output, (string, string) Input)> Input
-        {
-            get
+        public static IEnumerable<(char Output, (string, string) Input)> Input =>
+            new List<(char Output, (string, string) Input)>()
             {
-                return new List<(char Output, (string, string) Input)>()
-                {
 
-                    ('e', ("abcd", "abcde")),
-                };
-            }
-        }
+                ('e', ("abcd", "abcde")),
+            };
     }
 }

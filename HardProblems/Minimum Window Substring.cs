@@ -59,7 +59,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Best Time to Buy and Sell Stock IV")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, (string, string) Input) item)
         {
             var response = MinWindow(item.Input.Item1, item.Input.Item2);

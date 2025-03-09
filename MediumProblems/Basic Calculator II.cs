@@ -97,7 +97,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Basic Calculator II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string[], string) Input) item)
         {
             var response = Calculate(item.Input.Item2);

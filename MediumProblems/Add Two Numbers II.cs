@@ -64,7 +64,7 @@ namespace LeetCode.MediumProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Add Two Numbers II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, (ListNode, ListNode) Input) item)
         {
             var response = AddTwoNumbers(item.Input.Item1, item.Input.Item2);

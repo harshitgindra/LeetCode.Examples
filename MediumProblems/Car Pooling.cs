@@ -41,7 +41,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Car Pooling")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (int[][], int) Input) item)
         {
             var response = CarPooling(item.Input.Item1, item.Input.Item2);

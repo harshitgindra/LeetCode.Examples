@@ -44,7 +44,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Longest Palindrome")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, string Input) item)
         {
             var response = LongestPalindrome(item.Input);

@@ -1,5 +1,3 @@
-using NUnit.Framework.Legacy;
-
 namespace LeetCode.EasyProblems;
 
 public class SearchInsertPosition
@@ -29,22 +27,17 @@ public class SearchInsertPosition
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Search Insert Position")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, (int[], int) Input) item)
     {
         var response = SearchInsert(item.Input.Item1, item.Input.Item2);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(int Output, (int[], int) Input)> Input
-    {
-        get
+    public static IEnumerable<(int Output, (int[], int) Input)> Input =>
+        new List<(int Output, (int[], int) Input)>()
         {
-            return new List<(int Output, (int[], int) Input)>()
-            {
 
-                (4, (new int[] {1,3,5,6}, 7)),
-            };
-        }
-    }
+            (4, ([1,3,5,6], 7)),
+        };
 }

@@ -45,23 +45,18 @@ namespace LeetCode
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Valid Palindrome")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, string Input) item)
         {
             var response = IsPalindrome(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(bool Output, string Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, string Input)> Input =>
+            new List<(bool Output, string Input)>()
             {
-                return new List<(bool Output, string Input)>()
-                {
-                    (false, "race a car"),
-                    (true, "A man, a plan, a canal: Panama"),
-                };
-            }
-        }
+                (false, "race a car"),
+                (true, "A man, a plan, a canal: Panama"),
+            };
     }
 }

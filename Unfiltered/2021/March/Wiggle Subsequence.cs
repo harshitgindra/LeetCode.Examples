@@ -71,7 +71,7 @@ namespace LeetCode.Problems._2021.March
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Wiggle Subsequence")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = WiggleMaxLength(item.Input);

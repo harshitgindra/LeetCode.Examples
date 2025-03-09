@@ -43,7 +43,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Sloweest Key")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((char Output, (int[] releaseTimes, string keysPressed) Input) item)
         {
             var response = SlowestKey(item.Input.releaseTimes, item.Input.keysPressed);

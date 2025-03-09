@@ -39,11 +39,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Lucky Numbers in a Matrix")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<int> Output, int[][] Input) item)
         {
             var response = LuckyNumbers(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(IList<int> Output, int[][] Input)> Input
@@ -52,10 +52,14 @@ namespace LeetCode.EasyProblems
             {
                 return new List<(IList<int> Output, int[][] Input)>()
                 {
+                    (new List<int>() { 15 },
+                        new[] { new[] { 3, 7, 8 }, new[] { 9, 11, 13 }, new[] { 15, 16, 17 } }),
 
-                    (new List<int>(){ 15}, new int[][]{new int[]{ 3, 7, 8 }, new int[]{ 9, 11, 13 }, new int[]{ 15, 16, 17 } }),
-
-                    (new List<int>(){ 12}, new int[][]{new int[]{ 1, 10, 4, 2 }, new int[]{ 9, 3, 8, 7 }, new int[]{ 15, 16, 17, 12 } }),
+                    (new List<int>() { 12 },
+                        new[]
+                        {
+                            [1, 10, 4, 2], new[] { 9, 3, 8, 7 }, new[] { 15, 16, 17, 12 }
+                        }),
                 };
             }
         }

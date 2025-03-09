@@ -25,11 +25,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Height Cracker")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = HeightChecker(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -39,9 +39,9 @@ namespace LeetCode.EasyProblems
                 return new List<(int Output, int[] Input)>()
                 {
 
-                    (3, new int[]{1,1,4,2,1,3 }),
-                    (5, new int[]{5,1,2,3,4 }),
-                    (0, new int[]{1,2,3,4, 5 }),
+                    (3, [1,1,4,2,1,3]),
+                    (5, [5,1,2,3,4]),
+                    (0, [1,2,3,4, 5]),
                 };
             }
         }

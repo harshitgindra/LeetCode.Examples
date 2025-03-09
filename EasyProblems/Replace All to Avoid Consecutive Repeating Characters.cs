@@ -44,7 +44,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Replace All ?'s to Avoid Consecutive Repeating Characters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, string Input) item)
         {
             var response = ModifyString(item.Input);

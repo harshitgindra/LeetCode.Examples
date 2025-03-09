@@ -1,6 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.EasyProblems
+﻿namespace LeetCode.EasyProblems
 {
     class Best_Time_to_Buy_and_Sell_Stock_II
     {
@@ -23,11 +21,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Best Time to Buy and Sell Stock II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = MaxProfit(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -37,10 +35,10 @@ namespace LeetCode.EasyProblems
                 return new List<(int Output, int[] Input)>()
                 {
 
-                    (8, (new int[] {3,3,5,0,0,3,1,4})),
-                    (7, (new int[] {7,1,5,3,6,4})),
-                    (4, (new int[] {1,2,3,4,5})),
-                    (0, (new int[] {7,6,4,3,1})),
+                    (8, ( [3,3,5,0,0,3,1,4])),
+                    (7, ( [7,1,5,3,6,4])),
+                    (4, ( [1,2,3,4,5])),
+                    (0, ( [7,6,4,3,1])),
                 };
             }
         }

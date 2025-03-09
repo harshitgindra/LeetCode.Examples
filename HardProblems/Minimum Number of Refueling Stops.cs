@@ -52,7 +52,7 @@ namespace LeetCode.HardProblems
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Minimum Number of Refueling Stops")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int target, int startFuel, int[][] stations) Input) item)
         {
             var response = MinRefuelStops(item.Input.target, item.Input.startFuel, item.Input.stations);

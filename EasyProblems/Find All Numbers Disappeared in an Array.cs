@@ -16,22 +16,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Find All Numbers Disappeared in an Array")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             var response = FindDisappearedNumbers(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(int[] Output, int[] Input)>()
-                {
-                    (new int[]{ 5,6}, new int[] { 4,3,2,7,8,2,3,1 })
-                };
-            }
-        }
+                ([5,6], [4,3,2,7,8,2,3,1])
+            };
     }
 }

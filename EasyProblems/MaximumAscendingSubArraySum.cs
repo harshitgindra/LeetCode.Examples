@@ -40,23 +40,18 @@ public class MaximumAscendingSubArraySum
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Maximum Ascending Sub Array")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, int[] Input) item)
     {
         var response = MaxAscendingSum(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
     
-    public static IEnumerable<(int Output, int [] Input)> Input
-    {
-        get
+    public static IEnumerable<(int Output, int [] Input)> Input =>
+        new List<(int Output, int [] Input)>()
         {
-            return new List<(int Output, int [] Input)>()
-            {
-                (65, new int[]{10,20,30,5,10,50}),
-                (150, new int[]{10,20,30,40,50}),
-                (33, new int[]{12,17,15,13,10,11,12}),
-            };
-        }
-    }
+            (65, [10,20,30,5,10,50]),
+            (150, [10,20,30,40,50]),
+            (33, [12,17,15,13,10,11,12]),
+        };
 }

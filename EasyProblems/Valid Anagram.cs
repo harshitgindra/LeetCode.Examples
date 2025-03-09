@@ -13,24 +13,19 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Valid Anagram")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, (string, string) Input) item)
         {
             var response = IsAnagram(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(bool Output, (string, string) Input)> Input
-        {
-            get
+        public static IEnumerable<(bool Output, (string, string) Input)> Input =>
+            new List<(bool Output, (string, string) Input)>()
             {
-                return new List<(bool Output, (string, string) Input)>()
-                {
 
-                    (true, ("anagram", "nagaram")),
-                    (false, ("rat", "car")),
-                };
-            }
-        }
+                (true, ("anagram", "nagaram")),
+                (false, ("rat", "car")),
+            };
     }
 }

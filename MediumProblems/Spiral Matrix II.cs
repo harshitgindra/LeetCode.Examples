@@ -66,7 +66,7 @@ namespace LeetCode.MediumProblems
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("String Compression")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int Input) item)
         {
             var response = GenerateMatrix(item.Input);

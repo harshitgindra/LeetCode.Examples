@@ -64,7 +64,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Longest Substring with At Most K Distinct Characters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, int) Input) item)
         {
             var response = LengthOfLongestSubstringKDistinct(item.Input.Item1, item.Input.Item2);

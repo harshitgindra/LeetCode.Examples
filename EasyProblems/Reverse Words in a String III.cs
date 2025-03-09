@@ -44,7 +44,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Reverse Only Letters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, string Input) item)
         {
             var response = ReverseOnlyLetters(item.Input);

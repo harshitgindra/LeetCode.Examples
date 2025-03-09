@@ -29,7 +29,7 @@ namespace LeetCode.Problems._2021.March
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Single-Row Keyboard")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = CalculateTime(item.Input.Item1, item.Input.Item2);

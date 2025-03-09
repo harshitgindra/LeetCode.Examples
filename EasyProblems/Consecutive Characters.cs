@@ -40,20 +40,15 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Consecutive Characters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, string Input) item)
         {
             var response = MaxPower(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, string Input)> Input
-        {
-            get
-            {
-                return new List<(int Output, string Input)> { (2, "leetcode"),
-                    (2, "cc")};
-            }
-        }
+        public static IEnumerable<(int Output, string Input)> Input =>
+            new List<(int Output, string Input)> { (2, "leetcode"),
+                (2, "cc")};
     }
 }

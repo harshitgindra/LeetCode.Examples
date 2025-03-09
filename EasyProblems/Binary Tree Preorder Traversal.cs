@@ -28,12 +28,12 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Binary Tree Preorder Traversal")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<int> Output, int?[] Input) item)
         {
             var input = TreeNodeBuilder.ArrayToTreeNode(item.Input);
             var response = this.PreorderTraversal(input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(IList<int> Output, int?[] Input)> Input

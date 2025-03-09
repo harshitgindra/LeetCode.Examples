@@ -50,7 +50,7 @@ namespace LeetCode.EasyProblems
         [Category("LeetCode")]
         [Category("Valid Mountain Array")]
         [Category("Jan-2022")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, int[] Input) item)
         {
             var response = ValidMountainArray(item.Input);

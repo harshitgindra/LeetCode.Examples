@@ -77,7 +77,7 @@
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Search a 2D Matrix II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((List<int> Output, int[,] Input) item)
         {
             var response = SearchMatrix(item.Input, 20);

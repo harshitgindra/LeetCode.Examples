@@ -19,23 +19,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Excel Sheet Column Title")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((string Output, int Input) item)
         {
             var response = ConvertToTitle(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(string Output, int Input)> Input
-        {
-            get
+        public static IEnumerable<(string Output, int Input)> Input =>
+            new List<(string Output, int Input)>()
             {
-                return new List<(string Output, int Input)>()
-                {
 
-                    ("ZY", 701),
-                };
-            }
-        }
+                ("ZY", 701),
+            };
     }
 }

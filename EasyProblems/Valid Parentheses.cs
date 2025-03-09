@@ -4,12 +4,12 @@ namespace LeetCode.EasyProblems;
 
 public class Valid_Parentheses
 {
-    private Dictionary<char, char> dictionary;
+    private Dictionary<char, char> _dictionary;
     public bool IsValid(string s) {
-        dictionary = new Dictionary<char, char>();
-        dictionary.Add('(', ')');
-        dictionary.Add('[', ']');
-        dictionary.Add('{', '}');
+        _dictionary = new Dictionary<char, char>();
+        _dictionary.Add('(', ')');
+        _dictionary.Add('[', ']');
+        _dictionary.Add('{', '}');
 
         Stack<char> stack = new Stack<char>();
         var response = Helper(0, s, stack);
@@ -21,11 +21,11 @@ public class Valid_Parentheses
         if (i < s.Length)
         {
             // If stack count is empty, it means we have found pairs for all parantheses so far
-            if (stack.Count == 0 || dictionary[stack.Peek()] != s[i])
+            if (stack.Count == 0 || _dictionary[stack.Peek()] != s[i])
             {
                 // Check if the char is opening parantheses
                 // if it's a closing parantheses, it should have found a match already
-                if (dictionary.ContainsKey(s[i]))
+                if (_dictionary.ContainsKey(s[i]))
                 {
                     stack.Push(s[i]);
                     return Helper(i + 1, s, stack);
@@ -45,23 +45,18 @@ public class Valid_Parentheses
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Valid Parentheses")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((bool Output, string Input) item)
     {
         var response = IsValid(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(bool Output, string Input)> Input
-    {
-        get
+    public static IEnumerable<(bool Output, string Input)> Input =>
+        new List<(bool Output, string Input)>()
         {
-            return new List<(bool Output, string Input)>()
-            {
-                (true, "([])"),
-                (false, "(]"),
-                (false, "["),
-            };
-        }
-    }
+            (true, "([])"),
+            (false, "(]"),
+            (false, "["),
+        };
 }

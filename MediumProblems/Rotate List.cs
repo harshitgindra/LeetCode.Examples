@@ -33,7 +33,7 @@ namespace LeetCode.MediumProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Rotate List")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = RotateRight(item.Input.Item1, item.Input.Item2);

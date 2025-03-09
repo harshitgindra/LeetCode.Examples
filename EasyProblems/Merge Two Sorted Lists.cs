@@ -34,5 +34,24 @@ namespace LeetCode.EasyProblems
 
             return result;
         }
+        
+        [Test(Description = "https://leetcode.com/problems/valid-parentheses/")]
+        [Category("Easy")]
+        [Category("LeetCode")]
+        [Category("Valid Parentheses")]
+        [TestCaseSource(nameof(Input))]
+        public void Test1((int[] Output, (int[], int[]) Input) item)
+        {
+            var l1 = ListNodeBuilder.BuildListNode(item.Input.Item1);
+            var l2 = ListNodeBuilder.BuildListNode(item.Input.Item2);
+            var response = MergeTwoLists(l1, l2);
+            Assert.That(item.Output, Is.EqualTo(response.ToArray()));
+        }
+
+        public static IEnumerable<(int[] Output, (int[], int[]) Input)> Input =>
+            new List<(int[] Output, (int[], int[]) Input)>()
+            {
+                ([1,1,2,3,4,4], ([1,2,4], [1,3,4])),
+            };
     }
 }

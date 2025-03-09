@@ -95,7 +95,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Valid Palindrome II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, string Input) item)
         {
             var response = ValidPalindrome(item.Input);

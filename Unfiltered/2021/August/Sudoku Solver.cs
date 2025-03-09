@@ -132,7 +132,7 @@
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Maximum Product of Splitted Binary Tree")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, char[][] Input) item)
         {
             this.SolveSudoku(item.Input);

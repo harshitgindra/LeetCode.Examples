@@ -31,22 +31,17 @@ public class Length_Of_Last_Word
     [Category("Easy")]
     [Category("LeetCode")]
     [Category("Length Of Last Word")]
-    [TestCaseSource("Input")]
+    [TestCaseSource(nameof(Input))]
     public void Test1((int Output, string Input) item)
     {
         var response = LengthOfLastWord(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(int Output, string Input)> Input
-    {
-        get
+    public static IEnumerable<(int Output, string Input)> Input =>
+        new List<(int Output, string Input)>()
         {
-            return new List<(int Output, string Input)>()
-            {
-                (6, "luffy is still joyboy"),
-                (4, "l   fly me   to   the moon  "),
-            };
-        }
-    }
+            (6, "luffy is still joyboy"),
+            (4, "l   fly me   to   the moon  "),
+        };
 }

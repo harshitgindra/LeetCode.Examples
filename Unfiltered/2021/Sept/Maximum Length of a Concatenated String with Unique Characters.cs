@@ -78,7 +78,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Maximum Length of a Concatenated String with Unique Characters")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, IList<string> Input) item)
         {
             var response = MaxLength(item.Input);

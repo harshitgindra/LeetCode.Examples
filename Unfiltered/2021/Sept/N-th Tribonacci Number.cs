@@ -32,7 +32,7 @@ namespace LeetCode.Problems._2021.Sept
         [Category("LeetCode")]
         [Category("N-th Tribonacci Number")]
         [Category("1137")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int Input) item)
         {
             var response = Tribonacci(item.Input);

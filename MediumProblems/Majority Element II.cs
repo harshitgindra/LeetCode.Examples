@@ -45,7 +45,7 @@ namespace LeetCode.MediumProblems
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Majority Element II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((IList<int> Output, int[] Input) item)
         {
             var response = MajorityElement(item.Input);

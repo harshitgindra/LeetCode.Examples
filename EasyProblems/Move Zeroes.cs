@@ -29,11 +29,11 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Move Zeroes")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             MoveZeroes(item.Input);
-            ClassicAssert.AreEqual(item.Output, item.Input);
+            Assert.That(item.Input, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[] Output, int[] Input)> Input
@@ -43,7 +43,7 @@ namespace LeetCode.EasyProblems
                 return new List<(int[] Output, int[] Input)>()
                 {
 
-                    (new int[]{ 1,3,12,0,0}, (new int[] {0,1,0,3,12})),
+                    ([1,3,12,0,0], ( [0,1,0,3,12])),
                 };
             }
         }

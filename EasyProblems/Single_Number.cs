@@ -29,22 +29,17 @@ namespace LeetCode
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Single Number")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = SingleNumber(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-                    (4, new int[] { 4, 1, 2, 1, 2 }),
-                };
-            }
-        }
+                (4, [4, 1, 2, 1, 2]),
+            };
     }
 }

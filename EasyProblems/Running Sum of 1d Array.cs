@@ -8,7 +8,7 @@ namespace LeetCode.EasyProblems
         {
             for (int i = 1; i < nums.Length; i++)
             {
-                nums[i]+= nums[i-1];
+                nums[i] += nums[i - 1];
             }
 
             return nums;
@@ -18,24 +18,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Running Sum of 1d Array")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
             var response = RunningSum(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(int[] Output, int[] Input)>()
-                {
-
-                    (new int[]{ 1,3,6,10}, (new int[] {1,2,3,4})),
-                };
-            }
-        }
-
+                ([1, 3, 6, 10], ( [1, 2, 3, 4])),
+            };
     }
 }

@@ -1,5 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
+﻿
 namespace LeetCode.EasyProblems
 {
     public class BinaryWatch
@@ -48,23 +47,18 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Binary Watch")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int Input) item)
         {
             var response = ReadBinaryWatch(item.Input);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int Input)> Input =>
+            new List<(int Output, int Input)>()
             {
-                return new List<(int Output, int Input)>()
-                {
 
-                    (10, 1),
-                };
-            }
-        }
+                (10, 1),
+            };
     }
 }

@@ -62,7 +62,7 @@ namespace LeetCode.Mock.Microsoft
         [Category("LeetCode")]
         [Category("Mock Test")]
         [Category("Combination Sum")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((List<int> Output, int[] Input) item)
         {
             var response = MajorityElement(item.Input);

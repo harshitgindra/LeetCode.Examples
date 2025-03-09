@@ -37,7 +37,7 @@ namespace LeetCode.Hard
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Super Palindromes")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = SuperpalindromesInRange(item.Input.Item1, item.Input.Item2);

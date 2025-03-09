@@ -21,6 +21,7 @@ namespace LeetCode.EasyProblems
                     returnValue = Math.Max(tempCount, returnValue);
                     tempCount = 0;
                 }
+
                 index++;
             }
 
@@ -33,22 +34,17 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Max Consecutive Ones")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = FindMaxConsecutiveOnes(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-                    (3, new int[] {1,1,0,1,1,1}),
-                };
-            }
-        }
+                (3, [1, 1, 0, 1, 1, 1]),
+            };
     }
 }

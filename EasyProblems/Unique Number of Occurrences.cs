@@ -38,7 +38,7 @@ namespace LeetCode.EasyProblems
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Unique Number of Occurrences")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((bool Output, int[] Input) item)
         {
             var response = UniqueOccurrences(item.Input);

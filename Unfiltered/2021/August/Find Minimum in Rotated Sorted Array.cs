@@ -53,7 +53,7 @@ namespace LeetCode.Problems._2021.August
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Find Minimum in Rotated Sorted Array")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, int[] Input) item)
         {
             var response = FindMin(item.Input);

@@ -72,7 +72,7 @@
         [Category("Hard")]
         [Category("LeetCode")]
         [Category("Course Schedule II")]
-        [TestCaseSource("Input")]
+        [TestCaseSource(nameof(Input))]
         public void Test1((int Output, (int numCourses, int[][] prerequisites) Input) item)
         {
             var response = FindOrder(item.Input.numCourses, item.Input.prerequisites);
