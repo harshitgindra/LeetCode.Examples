@@ -1,8 +1,8 @@
-﻿namespace LeetCode
+﻿namespace LeetCode.EasyProblems
 {
     public class RomanToInteger
     {
-        IDictionary<Char, int> keys = new Dictionary<Char, int> { { 'I', 1 },
+        private IDictionary<Char, int> _keys = new Dictionary<Char, int> { { 'I', 1 },
             { 'V', 5 },
             { 'X', 10 },
             { 'L', 50 },
@@ -16,23 +16,38 @@
         {
             var returnValue = 0;
 
-            for (var i = s.Length - 1; i >= 0; i--)
+            for (int i = 0; i < s.Length -1; i++)
             {
-                var charAt = s.ElementAt(i);
-                //***
-                //*** Compare current char with the next char
-                //***
-                if (s.ElementAtOrDefault(i + 1) != 0 && keys[charAt] < keys[s.ElementAt(i + 1)])
+                if (_keys[s[i]] >= _keys[s[i + 1]])
                 {
-                    returnValue += (-keys[charAt]);
+                    returnValue += _keys[s[i]];
                 }
                 else
                 {
-                    returnValue += keys[charAt];
+                    returnValue -= _keys[s[i]];
                 }
             }
-
+            
+            returnValue += _keys[s[s.Length -1]];
             return returnValue;
         }
+        
+        [Test(Description = "https://leetcode.com/problems/roman-to-integer/")]
+        [Category("Easy")]
+        [Category("LeetCode")]
+        [Category("Roman to Integer")]
+        [TestCaseSource(nameof(Input))]
+        public void Test1((int Output, string Input) item)
+        {
+            var response = RomanToInt(item.Input);
+            Assert.That(response, Is.EqualTo(item.Output));
+        }
+
+        public static IEnumerable<(int Output, string Input)> Input =>
+            new List<(int Output, string Input)>()
+            {
+
+                (58, ("LVIII")),
+            };
     }
 }
