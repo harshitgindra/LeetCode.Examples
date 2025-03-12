@@ -1,12 +1,26 @@
-﻿using NUnit.Framework.Legacy;
-
+﻿
 namespace LeetCode.EasyProblems
 {
     class Valid_Anagram
     {
         public bool IsAnagram(string s, string t)
         {
-            return string.Concat(s.OrderBy(c => c)) == String.Concat(t.OrderBy(c => c));
+            if (s.Length != t.Length) return false;
+
+            Dictionary<char, int> counts = new Dictionary<char, int>();
+
+            foreach (char c in s)
+            {
+                counts[c] = counts.GetValueOrDefault(c, 0) + 1;
+            }
+
+            foreach (char c in t)
+            {
+                if (!counts.ContainsKey(c) || counts[c] == 0) return false;
+                counts[c]--;
+            }
+
+            return true;
         }
 
         [Test(Description = "https://leetcode.com/problems/valid-anagram/")]
