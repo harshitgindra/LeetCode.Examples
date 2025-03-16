@@ -6,25 +6,17 @@ namespace LeetCode.MediumProblems
     {
         public int RemoveDuplicates(int[] nums)
         {
-            if (nums == null || nums.Length == 0)
+            if (nums == null || nums.Length <= 2) return nums?.Length ?? 0;
+
+            int k = 2;
+            for (int i = 2; i < nums.Length; i++)
             {
-                return 0;
-            }
-            int currIndex = 0, count = 1;
-            for (int i = 1; i < nums.Length; i++)
-            {
-                if (nums[i] != nums[currIndex])
+                if (nums[i] != nums[k - 2])
                 {
-                    nums[++currIndex] = nums[i];
-                    count = 0;
+                    nums[k++] = nums[i];
                 }
-                else if (count < 2)
-                {
-                    nums[++currIndex] = nums[i];
-                }
-                count++;
             }
-            return currIndex + 1;
+            return k;
         }
 
         [Test(Description = "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/")]
@@ -35,22 +27,17 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, int[] Input) item)
         {
             var response = RemoveDuplicates(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
 
-                    (1, new int[] {0,0,1,1,1,1,2,2,2,4}),
-                    (5, new int[] {1,1,1, 1,2,2,3}),
-                    (7, new int[] {0,0,1,1,1,1,2,3,3}),
-                    (5, new int[] {1,1,1,2,2,3}),
-                };
-            }
-        }
+                (1, [0,0,1,1,1,1,2,2,2,4]),
+                (5, [1,1,1, 1,2,2,3]),
+                (7, [0,0,1,1,1,1,2,3,3]),
+                (5, [1,1,1,2,2,3]),
+            };
     }
 }
