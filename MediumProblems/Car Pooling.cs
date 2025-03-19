@@ -1,5 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
+﻿
 namespace LeetCode.MediumProblems
 {
     class Car_Pooling
@@ -45,7 +44,7 @@ namespace LeetCode.MediumProblems
         public void Test1((bool Output, (int[][], int) Input) item)
         {
             var response = CarPooling(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, (int[][], int) Input)> Input

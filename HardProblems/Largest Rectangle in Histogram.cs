@@ -1,6 +1,5 @@
-using NUnit.Framework.Legacy;
 
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/largest-rectangle-in-histogram/
@@ -61,20 +60,15 @@ namespace LeetCode.Hard
         public void Test1((int Output, int[] Input) item)
         {
             var response = LargestRectangleArea(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-                    (5, new int[] {2, 1, 2, 3, 1}),
-                    (4, new int[] {1, 2, 3}),
-                };
-            }
-        }
+                (5, [2, 1, 2, 3, 1]),
+                (4, [1, 2, 3]),
+            };
 
         public int LargestRectangleArea2(int[] heights)
         {

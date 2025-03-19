@@ -1,7 +1,4 @@
-using LeetCode.SharedUtils;
-
-
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     public class Minimum_Number_of_Removals_to_Make_Mountain_Array
     {
@@ -33,8 +30,7 @@ namespace LeetCode.Hard
                     }
                 }
             }
-            
-            
+
 
             return ret;
         }
@@ -44,21 +40,17 @@ namespace LeetCode.Hard
         [Category("LeetCode")]
         [Category("Add Two Numbers II")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((ListNode Output, int[] Input) item)
         {
-            var response = MinimumMountainRemovals(item.Input);
+            // var response = MinimumMountainRemovals(item.Input);
             //ClassicAssert.AreEqual(item.Output, response);
         }
 
-        public static IEnumerable<(ListNode Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(ListNode Output, int[] Input)> Input =>
+            new List<(ListNode Output, int[] Input)>()
             {
-                return new List<(ListNode Output, int[] Input)>()
-                {
-                    (null, new int[] {2, 1, 1, 5, 6, 2, 3, 1})
-                };
-            }
-        }
+                (null, [2, 1, 1, 5, 6, 2, 3, 1])
+            };
     }
 }

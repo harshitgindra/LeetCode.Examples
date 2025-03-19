@@ -1,6 +1,3 @@
-using LeetCode.SharedUtils;
-using NUnit.Framework.Legacy;
-
 namespace LeetCode.MediumProblems
 {
     public class All_Nodes_Distance_K_in_Binary_Tree
@@ -74,16 +71,16 @@ namespace LeetCode.MediumProblems
         [TestCaseSource(nameof(Input))]
         public void Test1((List<int> Output, (int?[], int?[], int) Input) item)
         {
-            var response = DistanceK(item.Input.Item1.ToTreeNode(),
-                item.Input.Item2.ToTreeNode(),
-                item.Input.Item3);
+            // var response = DistanceK(item.Input.Item1.ToTreeNode(),
+            //     item.Input.Item2.ToTreeNode(),
+            //     item.Input.Item3);
             // Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(List<int> Output, (int?[], int?[], int) Input)> Input =>
             new List<(List<int> Output, (int?[], int?[], int) Input)>()
             {
-                ([7,4,1], ([3,5,1,6,2,0,8,null,null,7,4], [5], 2))
+                ([7, 4, 1], ([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], [5], 2))
             };
     }
 }

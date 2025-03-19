@@ -1,6 +1,6 @@
-﻿using NUnit.Framework.Legacy;
+﻿
 
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     class Word_Break_II
     {
@@ -59,19 +59,14 @@ namespace LeetCode.Hard
         public void Test1((int Output, (string, IList<string>) Input) item)
         {
             var response = WordBreak(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (string, IList<string>) Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, (string, IList<string>) Input)> Input =>
+            new List<(int Output, (string, IList<string>) Input)>()
             {
-                return new List<(int Output, (string, IList<string>) Input)>()
-                {
-                    (2, ("catsanddog", new List<string>(){"cat", "cats", "and", "sand", "dog"})),
-                    (3, ("pineapplepenapple", new List<string>(){"apple", "pen", "applepen", "pine", "pineapple"})),
-                };
-            }
-        }
+                (2, ("catsanddog", new List<string>(){"cat", "cats", "and", "sand", "dog"})),
+                (3, ("pineapplepenapple", new List<string>(){"apple", "pen", "applepen", "pine", "pineapple"})),
+            };
     }
 }

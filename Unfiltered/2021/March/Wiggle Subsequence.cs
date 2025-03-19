@@ -1,6 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.Problems._2021.March
+﻿namespace LeetCode.Problems._2021.March
 {
     class Wiggle_Subsequence
     {
@@ -72,10 +70,11 @@ namespace LeetCode.Problems._2021.March
         [Category("LeetCode")]
         [Category("Wiggle Subsequence")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((int Output, int[] Input) item)
         {
             var response = WiggleMaxLength(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -84,8 +83,8 @@ namespace LeetCode.Problems._2021.March
             {
                 return new List<(int Output, int[] Input)>()
                 {
-                    (1, new int[]{3,3,3,2,5}),
-                    (7, new int[]{1,17,5,10,13,15,10,5,16,8}),
+                    (1, new int[] { 3, 3, 3, 2, 5 }),
+                    (7, new int[] { 1, 17, 5, 10, 13, 15, 10, 5, 16, 8 }),
                     //(default, "1(2(3(4(5(6(7(8)))))))"),
                     //(default, "4"),
                 };

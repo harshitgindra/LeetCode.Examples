@@ -1,5 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
+﻿
 namespace LeetCode.MediumProblems
 {
     public class _4Sum
@@ -63,7 +62,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = FourSum(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int[], int))> Input
@@ -73,7 +72,7 @@ namespace LeetCode.MediumProblems
                 return new List<(int Output, (int[], int))>()
                 {
                     //(1, (new int[] {2,1,0,-1}, 2)),
-                    (3, (new int[] {1,0,-1,0,-2,2}, 0)),
+                    (3, ([1,0,-1,0,-2,2], 0)),
                 };
             }
         }

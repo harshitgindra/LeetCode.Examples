@@ -1,6 +1,5 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.Hard
+﻿
+namespace LeetCode.HardProblems
 {
     class Super_Palindromes
     {
@@ -41,18 +40,13 @@ namespace LeetCode.Hard
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = SuperpalindromesInRange(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (string, string) Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, (string, string) Input)> Input =>
+            new List<(int Output, (string, string) Input)>()
             {
-                return new List<(int Output, (string, string) Input)>()
-                {
-                    (4, ("4", "1000")),
-                };
-            }
-        }
+                (4, ("4", "1000")),
+            };
     }
 }

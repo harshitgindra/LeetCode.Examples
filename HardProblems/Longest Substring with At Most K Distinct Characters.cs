@@ -1,6 +1,4 @@
-using NUnit.Framework.Legacy;
-
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     public class Longest_Substring_with_At_Most_K_Distinct_Characters
     {
@@ -41,7 +39,7 @@ namespace LeetCode.Hard
             int maxLength = 0;
             for (int i = 0; i < s.Length; i++)
             {
-                var combo = new HashSet<char>() {s[i]};
+                var combo = new HashSet<char>() { s[i] };
                 int j = i;
                 for (; j < s.Length; j++)
                 {
@@ -68,18 +66,13 @@ namespace LeetCode.Hard
         public void Test1((int Output, (string, int) Input) item)
         {
             var response = LengthOfLongestSubstringKDistinct(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (string, int) Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, (string, int) Input)> Input =>
+            new List<(int Output, (string, int) Input)>()
             {
-                return new List<(int Output, (string, int) Input)>()
-                {
-                    (3, ("eceba", 2)),
-                };
-            }
-        }
+                (3, ("eceba", 2)),
+            };
     }
 }

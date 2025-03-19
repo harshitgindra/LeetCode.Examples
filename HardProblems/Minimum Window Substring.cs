@@ -1,6 +1,5 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.Hard
+﻿
+namespace LeetCode.HardProblems
 {
     class Minimum_Window_Substring
     {
@@ -63,18 +62,13 @@ namespace LeetCode.Hard
         public void Test1((string Output, (string, string) Input) item)
         {
             var response = MinWindow(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(string Output, (string, string) Input)> Input
-        {
-            get
+        public static IEnumerable<(string Output, (string, string) Input)> Input =>
+            new List<(string Output, (string, string) Input)>()
             {
-                return new List<(string Output, (string, string) Input)>()
-                {
-                    ("BANC", ("ADOBECODEBANC", "ABC")),
-                };
-            }
-        }
+                ("BANC", ("ADOBECODEBANC", "ABC")),
+            };
     }
 }

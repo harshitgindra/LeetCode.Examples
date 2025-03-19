@@ -1,4 +1,4 @@
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     public class FreqStack
     {

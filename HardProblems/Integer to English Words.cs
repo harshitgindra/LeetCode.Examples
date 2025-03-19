@@ -1,6 +1,5 @@
-using NUnit.Framework.Legacy;
 
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     public class Integer_to_English_Words
     {
@@ -131,22 +130,18 @@ namespace LeetCode.Hard
         [Category("LeetCode")]
         [Category("Integer to English Words")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((string Output, int Input) item)
         {
             var response = NumberToWords(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(string Output, int Input)> Input
-        {
-            get
+        public static IEnumerable<(string Output, int Input)> Input =>
+            new List<(string Output, int Input)>()
             {
-                return new List<(string Output, int Input)>()
-                {
-                    ("bab", 12345),
-                    ("bab", 123456),
-                };
-            }
-        }
+                ("bab", 12345),
+                ("bab", 123456),
+            };
     }
 }

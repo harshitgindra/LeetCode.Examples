@@ -1,6 +1,5 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.Hard
+﻿
+namespace LeetCode.HardProblems
 {
     class First_Missing_Positive
     {
@@ -31,7 +30,7 @@ namespace LeetCode.Hard
         public void Test1((int Output, int[] Input) item)
         {
             var response = FirstMissingPositive(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input
@@ -40,11 +39,11 @@ namespace LeetCode.Hard
             {
                 return new List<(int Output, int[] Input)>()
                 {
-                    (1, new int[] { -5 }),
-                    (1, new int[] { 2147483647 }),
-                    (2, new int[] { 3,4,-1,1 }),
-                    (3, new int[] {1,2,0}),
-                    (1, new int[] { 7,8,9,11,12 })
+                    (1, [-5]),
+                    (1, [2147483647]),
+                    (2, [3,4,-1,1]),
+                    (3, [1,2,0]),
+                    (1, [7,8,9,11,12])
                 };
             }
         }

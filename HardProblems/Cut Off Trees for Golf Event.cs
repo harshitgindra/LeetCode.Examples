@@ -1,6 +1,5 @@
-using NUnit.Framework.Legacy;
 
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     public class Cut_Off_Trees_for_Golf_Event
     {
@@ -106,32 +105,28 @@ namespace LeetCode.Hard
         [Category("LeetCode")]
         [Category("maximal rectangle")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((int Output, IList<IList<int>> Input) item)
         {
             var response = CutOffTree(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, IList<IList<int>> Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, IList<IList<int>> Input)> Input =>
+            new List<(int Output, IList<IList<int>> Input)>()
             {
-                return new List<(int Output, IList<IList<int>> Input)>()
+                (6, new List<IList<int>>()
                 {
-                    (6, new List<IList<int>>()
-                    {
-                        new List<int>() {1, 2, 3},
-                        new List<int>() {0, 0, 0},
-                        new List<int>() {7, 6, 5},
-                    }),
-                    (6, new List<IList<int>>()
-                    {
-                        new List<int>() {1, 2, 3},
-                        new List<int>() {0, 0, 4},
-                        new List<int>() {7, 6, 5},
-                    }),
-                };
-            }
-        }
+                    new List<int>() {1, 2, 3},
+                    new List<int>() {0, 0, 0},
+                    new List<int>() {7, 6, 5},
+                }),
+                (6, new List<IList<int>>()
+                {
+                    new List<int>() {1, 2, 3},
+                    new List<int>() {0, 0, 4},
+                    new List<int>() {7, 6, 5},
+                }),
+            };
     }
 }

@@ -1,6 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.MediumProblems
+﻿namespace LeetCode.MediumProblems
 {
     class Coin_Change
     {
@@ -37,7 +35,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = CoinChange(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int[], int) Input)> Input
@@ -46,7 +44,7 @@ namespace LeetCode.MediumProblems
             {
                 return new List<(int Output, (int[], int) Input)>()
                 {
-                    (3,(new int[] {1,2,5}, 11)),
+                    (3, (new int[] { 1, 2, 5 }, 11)),
                 };
             }
         }

@@ -1,6 +1,4 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.Hard
+﻿namespace LeetCode.HardProblems
 {
     class Longest_Consecutive_Sequence
     {
@@ -21,7 +19,6 @@ namespace LeetCode.Hard
                     {
                         if (nums[i] == nums[i + 1])
                         {
-
                         }
                         else if (nums[i] + 1 == nums[i + 1])
                         {
@@ -33,6 +30,7 @@ namespace LeetCode.Hard
                             tempReturnValue = 1;
                         }
                     }
+
                     returnValue = Math.Max(returnValue, tempReturnValue);
                 }
             }
@@ -49,20 +47,14 @@ namespace LeetCode.Hard
         public void Test1((int Output, int[] Input) item)
         {
             var response = LongestConsecutive(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-
-                    (4, new int[] {100, 4, 200, 1, 3, 2}),
-                    (2, new int[] {0, -1}),
-                };
-            }
-        }
+                (4, [100, 4, 200, 1, 3, 2]),
+                (2, [0, -1]),
+            };
     }
 }

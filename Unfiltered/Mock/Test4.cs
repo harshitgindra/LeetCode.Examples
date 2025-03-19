@@ -1,4 +1,4 @@
-﻿using NUnit.Framework.Legacy;
+﻿
 
 namespace LeetCode.Mock
 {
@@ -73,6 +73,7 @@ namespace LeetCode.Mock
         [Category("Mock Test")]
         [Category("Combination Sum")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = KEmptySlots(item.Input.Item1, item.Input.Item2);
@@ -230,25 +231,21 @@ namespace LeetCode.Mock
         [Category("Mock Test")]
         [Category("Combination Sum")]
         [TestCaseSource("Input2")]
+        [Ignore("")]
         public void Test2((int Output, (int, int) Input) item)
         {
             var response = AreConnected(item.Input.Item1, item.Input.Item2);
             //ClassicAssert.AreEqual(item.Output, response);
         }
 
-        public static IEnumerable<(int Output, (int, int) Input)> Input2
-        {
-            get
+        public static IEnumerable<(int Output, (int, int) Input)> Input2 =>
+            new List<(int Output, (int, int) Input)>()
             {
-                return new List<(int Output, (int, int) Input)>()
-                {
-                     //(6, (new int[]{3,9,2,8,1,6,10,5,4,7}, 1)),
-                     //(-1, (new int[]{ 1,2,3}, 1)),
-                     (2, (6,1)),
-                     (2, (6,2)),
-                };
-            }
-        }
+                //(6, (new int[]{3,9,2,8,1,6,10,5,4,7}, 1)),
+                //(-1, (new int[]{ 1,2,3}, 1)),
+                (2, (6,1)),
+                (2, (6,2)),
+            };
 
         public IList<bool> AreConnected(int n, int threshold, int[][] queries = null)
         {

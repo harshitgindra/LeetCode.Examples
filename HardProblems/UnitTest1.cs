@@ -1,4 +1,4 @@
-﻿namespace HardProblems;
+﻿namespace LeetCode.HardProblems;
 
 public class Tests
 {

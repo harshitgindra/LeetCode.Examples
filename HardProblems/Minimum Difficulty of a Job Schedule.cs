@@ -1,7 +1,5 @@
-﻿using NUnit.Framework.Legacy;
-using CategoryAttribute = NUnit.Framework.CategoryAttribute;
-
-namespace LeetCode.Hard
+﻿
+namespace LeetCode.HardProblems
 {
     /// <summary>
     /// https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/
@@ -87,7 +85,7 @@ namespace LeetCode.Hard
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = MinDifficulty(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int[], int) Input)> Input

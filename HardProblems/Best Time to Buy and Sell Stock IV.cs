@@ -1,6 +1,5 @@
-﻿using NUnit.Framework.Legacy;
-
-namespace LeetCode.Hard
+﻿
+namespace LeetCode.HardProblems
 {
     class Best_Time_to_Buy_and_Sell_Stock_IV
     {
@@ -42,20 +41,14 @@ namespace LeetCode.Hard
         public void Test1((int Output, (int, int[]) Input) item)
         {
             var response = MaxProfit(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (int, int[]) Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, (int, int[]) Input)> Input =>
+            new List<(int Output, (int, int[]) Input)>()
             {
-                return new List<(int Output, (int, int[]) Input)>()
-                {
-
-                    (2,( 2, new int[] {2,4,1})),
-                    (7,( 2, new int[] {3,2,6,5,0,3})),
-                };
-            }
-        }
+                (2, (2, [2, 4, 1])),
+                (7, (2, [3, 2, 6, 5, 0, 3])),
+            };
     }
 }

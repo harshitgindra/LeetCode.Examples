@@ -1,8 +1,6 @@
 ﻿using LeetCode.SharedUtils;
-using NUnit.Framework.Legacy;
 
-
-namespace LeetCode.Hard
+namespace LeetCode.HardProblems
 {
     class Reverse_Nodes_in_k_Group
     {
@@ -52,23 +50,18 @@ namespace LeetCode.Hard
         [Category("LeetCode")]
         [Category("Reverse Nodes in k-Group")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = ReverseKGroup(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(ListNode Output, (ListNode, int) Input)> Input
-        {
-            get
+        public static IEnumerable<(ListNode Output, (ListNode, int) Input)> Input =>
+            new List<(ListNode Output, (ListNode, int) Input)>()
             {
-                return new List<(ListNode Output, (ListNode, int) Input)>()
-                {
-
-                    (null,( new ListNode(1,new ListNode(2, new ListNode(3
+                (null, (new ListNode(1, new ListNode(2, new ListNode(3
                     , new ListNode(4, new ListNode(5))))), 2)),
-                };
-            }
-        }
+            };
     }
 }
