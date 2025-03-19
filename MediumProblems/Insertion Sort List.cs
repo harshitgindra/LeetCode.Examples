@@ -41,23 +41,17 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("Insertion Sort List")]
         [TestCaseSource(nameof(Input))]
-        public void Test1((ListNode Output, ListNode Input) item)
+        public void Test1((int[] Output, int[] Input) item)
         {
-            var response = InsertionSortList(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            var response = InsertionSortList(item.Input.ToListNode());
+            Assert.That(response.ToArray(), Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(ListNode Output, ListNode)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[])> Input =>
+            new List<(int[] Output, int[])>()
             {
-                return new List<(ListNode Output, ListNode)>()
-                {
-                    (new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4)))),
-                    new ListNode(4, new ListNode(2, new ListNode(1, new ListNode(3))))
-                    )
-                };
-            }
-        }
+                ([1, 2, 3, 4],
+                    [4, 2, 1, 3])
+            };
     }
 }

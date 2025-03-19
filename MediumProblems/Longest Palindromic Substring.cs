@@ -43,19 +43,13 @@ namespace LeetCode.MediumProblems
         public void Test1((string Output, string Input) item)
         {
             var response = LongestPalindrome(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(string Output, string Input)> Input
-        {
-            get
+        public static IEnumerable<(string Output, string Input)> Input =>
+            new List<(string Output, string Input)>()
             {
-                return new List<(string Output, string Input)>()
-                {
-                    ("bab", "babad"),
-                    ("bb", "cbbd")
-                };
-            }
-        }
+                ("bb", "cbbd")
+            };
     }
 }

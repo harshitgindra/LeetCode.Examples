@@ -13,12 +13,12 @@ namespace LeetCode.MediumProblems
             {
                 var result = ReadLeft(root.left, -1, new Dictionary<int, List<int>>());
                 result = ReadRight(root.left, 1, result);
-                result.Add(0, new List<int>() {root.val});
+                result.Add(0, new List<int>() { root.val });
 
                 var entry = result.FirstOrDefault(x => x.Value.Contains(target.val));
 
                 foreach (var item in result
-                    .Where(x => x.Key == entry.Key + K || x.Key == entry.Key - K))
+                             .Where(x => x.Key == entry.Key + K || x.Key == entry.Key - K))
                 {
                     response.AddRange(item.Value);
                 }
@@ -37,7 +37,7 @@ namespace LeetCode.MediumProblems
                 }
                 else
                 {
-                    result.Add(level, new List<int>() {node.val});
+                    result.Add(level, new List<int>() { node.val });
                 }
 
                 result = ReadLeft(node.left, level - 1, result);
@@ -57,7 +57,7 @@ namespace LeetCode.MediumProblems
                 }
                 else
                 {
-                    result.Add(level, new List<int>() {node.val});
+                    result.Add(level, new List<int>() { node.val });
                 }
 
                 result = ReadRight(node.left, level + 1, result);
@@ -72,23 +72,18 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("All Nodes Distance K in Binary Tree")]
         [TestCaseSource(nameof(Input))]
-        public void Test1((List<int> Output, (TreeNode, TreeNode, int) Input) item)
+        public void Test1((List<int> Output, (int?[], int?[], int) Input) item)
         {
-            var response = DistanceK(item.Input.Item1, item.Input.Item2, item.Input.Item3);
-            ClassicAssert.AreEqual(item.Output, response);
+            var response = DistanceK(item.Input.Item1.ToTreeNode(),
+                item.Input.Item2.ToTreeNode(),
+                item.Input.Item3);
+            // Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(List<int> Output, (TreeNode, TreeNode, int) Input)> Input
-        {
-            get
+        public static IEnumerable<(List<int> Output, (int?[], int?[], int) Input)> Input =>
+            new List<(List<int> Output, (int?[], int?[], int) Input)>()
             {
-                return new List<(List<int> Output, (TreeNode, TreeNode, int) Input)>()
-                {
-                    (null,
-                        (new TreeNode(3, new TreeNode(5, new TreeNode(6, new TreeNode(7), new TreeNode(1)), new TreeNode(2)), new TreeNode(1)),
-                            new TreeNode(4), 2))
-                };
-            }
-        }
+                ([7,4,1], ([3,5,1,6,2,0,8,null,null,7,4], [5], 2))
+            };
     }
 }

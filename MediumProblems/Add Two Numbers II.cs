@@ -65,25 +65,16 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("Add Two Numbers II")]
         [TestCaseSource(nameof(Input))]
-        public void Test1((ListNode Output, (ListNode, ListNode) Input) item)
+        public void Test1((int[] Output, (int[], int[]) Input) item)
         {
-            var response = AddTwoNumbers(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            var response = AddTwoNumbers(item.Input.Item1.ToListNode(), item.Input.Item2.ToListNode());
+            Assert.That(response.ToArray(), Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(ListNode Output, (ListNode, ListNode) Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, (int[], int[]) Input)> Input =>
+            new List<(int[] Output, (int[], int[]) Input)>()
             {
-                return new List<(ListNode Output, (ListNode, ListNode) Input)>()
-                {
-                    (new ListNode(7, new ListNode(8, new ListNode(0, new ListNode(7)))),
-
-                    (new ListNode(7, new ListNode(2, new ListNode(4, new ListNode(3)))),
-                    new ListNode(5, new ListNode(6, new ListNode(4))))
-                    )
-                };
-            }
-        }
+                ([7,8,0,7], ([7,2,4,3], [5,6,4]))
+            };
     }
 }

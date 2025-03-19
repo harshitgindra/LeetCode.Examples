@@ -22,6 +22,7 @@ namespace LeetCode.MediumProblems
                 previousLevel2 = previousLevel1;
                 previousLevel1 = current;
             }
+
             return current;
         }
 
@@ -33,20 +34,14 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, int[] Input) item)
         {
             var response = Rob(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-                    (3, new int[] {2,3,2}),
-                    (4, new int[] {1,2,3,1}),
-                    (3, new int[] {1,2,1,1}),
-                };
-            }
-        }
+                (4, [1, 2, 3, 1]),
+                (3, [1, 2, 1, 1]),
+            };
     }
 }

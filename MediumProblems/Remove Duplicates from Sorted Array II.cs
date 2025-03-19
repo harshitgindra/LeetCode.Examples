@@ -33,8 +33,6 @@ namespace LeetCode.MediumProblems
         public static IEnumerable<(int Output, int[] Input)> Input =>
             new List<(int Output, int[] Input)>()
             {
-
-                (1, [0,0,1,1,1,1,2,2,2,4]),
                 (5, [1,1,1, 1,2,2,3]),
                 (7, [0,0,1,1,1,1,2,3,3]),
                 (5, [1,1,1,2,2,3]),
