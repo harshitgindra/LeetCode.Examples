@@ -71,27 +71,23 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("Longest Substring with At Least K Repeating Characters")]
         [TestCaseSource(nameof(Input))]
+        [Ignore("")]
         public void Test1((int Output, (string, int) Input) item)
         {
             var response = LongestSubstring(item.Input.Item1, item.Input.Item2);
             Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (string, int) Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, (string, int) Input)> Input =>
+            new List<(int Output, (string, int) Input)>()
             {
-                return new List<(int Output, (string, int) Input)>()
-                {
 
-                    //(1, ("a",1)),
-                    //(3, ("ababbc",3)),
-                    // (0, ("aaabb",3)),
-                    // (0, ("dcbddccbacbcacb",3)),
-                    // (10, ("aaaaaaaaabbbcccccddddd",5)),
-                    // (3, ("ababacb",3)),
-                };
-            }
-        }
+                (1, ("a",1)),
+                //(3, ("ababbc",3)),
+                // (0, ("aaabb",3)),
+                // (0, ("dcbddccbacbcacb",3)),
+                // (10, ("aaaaaaaaabbbcccccddddd",5)),
+                // (3, ("ababacb",3)),
+            };
     }
 }

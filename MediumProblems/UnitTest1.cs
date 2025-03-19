@@ -1,4 +1,4 @@
-﻿namespace MediumProblems;
+﻿namespace LeetCode.MediumProblems;
 
 public class Tests
 {

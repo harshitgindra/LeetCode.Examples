@@ -1,6 +1,6 @@
 using NUnit.Framework.Legacy;
 
-namespace Medium;
+namespace LeetCode.MediumProblems;
 
 public class RegionsCutBySlashes
 {
@@ -48,18 +48,18 @@ public class RegionsCutBySlashes
         return retValue;
     }
 
-    private void _Helper(int[][] lookup, int i , int j)
+    private void _Helper(int[][] lookup, int i, int j)
     {
         if (i > -1 && j > -1 && i < lookup.Length && j < lookup.Length && lookup[i][j] == 0)
         {
             lookup[i][j] = 1;
-            _Helper(lookup, i+1, j); // right
-            _Helper(lookup, i, j+1); // bottom
-            _Helper(lookup, i-1, j); // left
-            _Helper(lookup, i, j-1); // top
+            _Helper(lookup, i + 1, j); // right
+            _Helper(lookup, i, j + 1); // bottom
+            _Helper(lookup, i - 1, j); // left
+            _Helper(lookup, i, j - 1); // top
         }
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/regions-cut-by-slashes/")]
     [Category("Medium")]
     [Category("LeetCode")]
@@ -68,18 +68,13 @@ public class RegionsCutBySlashes
     public void Test1((int Output, string[] Input) item)
     {
         var response = RegionsBySlashes(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(int Output, string[] )> Input
-    {
-        get
+    public static IEnumerable<(int Output, string[] )> Input =>
+        new List<(int Output, string[] Input)>()
         {
-            return new List<(int Output, string[] Input)>()
-            {
-                (2, new String[] {" /","/ "}),
-                (5, new String[] {"/\\","\\/"}),
-            };
-        }
-    }
+            (2, [" /", "/ "]),
+            (5, ["/\\", "\\/"]),
+        };
 }

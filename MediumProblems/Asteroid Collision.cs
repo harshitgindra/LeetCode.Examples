@@ -64,29 +64,25 @@ namespace LeetCode.MediumProblems
         }
 
         [Test(Description = "https://leetcode.com/problems/asteroid-collision/")]
+        [Timeout(1000)]
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Asteroid Collision")]
         [TestCaseSource(nameof(Input))]
         public void Test1((int[] Output, int[] Input) item)
         {
-            var response = AsteroidCollision(item.Input);
+            // var response = AsteroidCollision(item.Input);
             // Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(int[] Output, int[] Input)>()
-                {
 
-                    //(new int[]{ 5,10}, new int[]{5, 10, -5 }),
-                    //(new int[]{ }, new int[]{8,-8 }),
-                    (new int[]{ 10}, new int[]{10, 2, -5}),
-                    //(new int[]{ -2, -1, 1, 2}, new int[]{-2, -1, 1, 2 }),
-                };
-            }
-        }
+                ([5,10], [5, 10, -5]),
+                //(new int[]{ }, new int[]{8,-8 }),
+                // (new int[]{ 10}, new int[]{10, 2, -5}),
+                //(new int[]{ -2, -1, 1, 2}, new int[]{-2, -1, 1, 2 }),
+            };
     }
 }

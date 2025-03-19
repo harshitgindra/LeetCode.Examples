@@ -36,23 +36,17 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("Swap Nodes in Pairs")]
         [TestCaseSource(nameof(Input))]
-        public void Test1((ListNode Output, ListNode Input) item)
+        public void Test1((int[] Output, int[] Input) item)
         {
-            var response = SwapPairs(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            var response = SwapPairs(item.Input.ToListNode());
+            Assert.That(response.ToArray(), Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(ListNode Output, ListNode Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(ListNode Output, ListNode Input)>()
-                {
-
-                    (new ListNode(2, new ListNode(1, new ListNode(4, new ListNode(3)))),
-                    new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))))),
-                };
-            }
-        }
+                ([2, 1, 4, 3],
+                    [1, 2, 3, 4]),
+            };
     }
 }

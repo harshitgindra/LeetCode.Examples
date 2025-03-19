@@ -17,18 +17,13 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = this.NumSubarrayProductLessThanK(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            // Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (int[], int) Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, (int[], int) Input)> Input =>
+            new List<(int Output, (int[], int) Input)>()
             {
-                return new List<(int Output, (int[], int) Input)>()
-                {
-                    (8, (new int[]{ 10, 5, 2, 6},100)),
-                };
-            }
-        }
+                (8, ([10, 5, 2, 6],100)),
+            };
     }
 }

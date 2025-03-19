@@ -1,4 +1,4 @@
-namespace Medium;
+namespace LeetCode.MediumProblems;
 /// <summary>
 /// https://leetcode.com/problems/kth-largest-element-in-a-stream/
 /// </summary>

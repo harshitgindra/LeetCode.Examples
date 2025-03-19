@@ -1,6 +1,6 @@
 using NUnit.Framework.Legacy;
 
-namespace Medium;
+namespace LeetCode.MediumProblems;
 
 /// <summary>
 /// https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/

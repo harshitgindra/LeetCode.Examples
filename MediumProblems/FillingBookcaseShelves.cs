@@ -1,6 +1,6 @@
 using NUnit.Framework.Legacy;
 
-namespace Medium;
+namespace LeetCode.MediumProblems;
 
 public class FillingBookcaseShelves
 {

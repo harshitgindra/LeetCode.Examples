@@ -1,6 +1,5 @@
-using NUnit.Framework.Legacy;
 
-namespace Medium;
+namespace LeetCode.MediumProblems;
 
 public class MinimumDeletionsToMakeStringBalanced
 {
@@ -48,7 +47,7 @@ public class MinimumDeletionsToMakeStringBalanced
     public void Test1((int Output, string Input) item)
     {
         var response = MinimumDeletions(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
     public static IEnumerable<(int Output, string Input)> Input
