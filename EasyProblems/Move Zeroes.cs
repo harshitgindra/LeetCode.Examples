@@ -6,21 +6,19 @@ namespace LeetCode.EasyProblems
     {
         public void MoveZeroes(int[] nums)
         {
-            int moveLeft = 0;
+            int j = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[i] == 0)
+                if (nums[i] != 0)
                 {
-                    moveLeft++;
+                    nums[j] = nums[i];
+                    j++;
                 }
-                else
-                {
-                    nums[i - moveLeft] = nums[i];
-                    if (moveLeft != 0)
-                    {
-                        nums[i] = 0;
-                    }
-                }
+            }
+
+            for (int i = j; i < nums.Length; i++)
+            {
+                nums[i] = 0;
             }
         }
 
@@ -36,16 +34,11 @@ namespace LeetCode.EasyProblems
             Assert.That(item.Input, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
             {
-                return new List<(int[] Output, int[] Input)>()
-                {
 
-                    ([1,3,12,0,0], ( [0,1,0,3,12])),
-                };
-            }
-        }
+                ([1,3,12,0,0], ( [0,1,0,3,12])),
+            };
     }
 }
