@@ -37,27 +37,6 @@ namespace LeetCode.MediumProblems
             }
         }
 
-        public void Rotate2(int[] nums, int k)
-        {
-            IDictionary<int, int> calc = new Dictionary<int, int>();
-            int nLength = nums.Length;
-            for (int i = 0; i < nLength; i++)
-            {
-                int newPosition = (i + k);
-                while (newPosition >= nLength)
-                {
-                    newPosition = Math.Abs(newPosition - nLength);
-                }
-
-                calc.Add(newPosition, nums[i]);
-            }
-
-            foreach (var item in calc)
-            {
-                nums[item.Key] = item.Value;
-            }
-        }
-
         [Test(Description = "https://leetcode.com/problems/rotate-array/")]
         [Category("Easy")]
         [Category("LeetCode")]
@@ -66,18 +45,13 @@ namespace LeetCode.MediumProblems
         public void Test1((int[] Output, (int[], int) Input) item)
         {
             Rotate(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, item.Input.Item1);
+            Assert.That(item.Input.Item1, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int[] Output, (int[], int) Input)> Input
-        {
-            get
+        public static IEnumerable<(int[] Output, (int[], int) Input)> Input =>
+            new List<(int[] Output, (int[], int) Input)>()
             {
-                return new List<(int[] Output, (int[], int) Input)>()
-                {
-                    (new int[] {5, 6, 7, 1, 2, 3, 4}, (new int[] {1, 2, 3, 4, 5, 6, 7}, 3)),
-                };
-            }
-        }
+                ([5, 6, 7, 1, 2, 3, 4], ([1, 2, 3, 4, 5, 6, 7], 3)),
+            };
     }
 }
