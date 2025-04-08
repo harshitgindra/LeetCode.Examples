@@ -2,7 +2,7 @@
 
 namespace LeetCode.MediumProblems
 {
-    class Rotate_Array
+    class RotateArray
     {
         public void Rotate(int[] nums, int k)
         {
