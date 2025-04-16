@@ -1,26 +1,27 @@
-﻿
-
-namespace LeetCode.MediumProblems
+﻿namespace LeetCode.MediumProblems
 {
-    [TestFixture]
-    public class Container_With_Most_Water
+    public class ContainerWithMostWater
     {
         public int MaxArea(int[] height)
         {
-            int maxArea = 0;
-            for (int i = 0; i < height.Length - 1; i++)
-            {
-                int firstLineHeight = height[i];
-                for (int j = i+1 ; j < height.Length; j++)
-                {
-                    int secondLineHeight = height[j];
+            int returnValue = 0;
 
-                    var area = (j - i) * (Math.Min(firstLineHeight, secondLineHeight));
-                    maxArea = Math.Max(area, maxArea);
-                }
+            int left = 0;
+            int right = height.Length - 1;
+            while (left < right)
+            {
+                int distance = right - left;
+                int minHeight = Math.Min(height[left], height[right]);
+                int currentProduct = distance * minHeight;
+                returnValue = Math.Max(returnValue, currentProduct);
+
+                if (height[left] < height[right])
+                    left++;
+                else
+                    right--;
             }
 
-            return maxArea;
+            return returnValue;
         }
 
         [Test(Description = "https://leetcode.com/problems/container-with-most-water/")]
@@ -31,18 +32,13 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, int[] Input) item)
         {
             var response = MaxArea(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, int[] Input)> Input
-        {
-            get
+        public static IEnumerable<(int Output, int[] Input)> Input =>
+            new List<(int Output, int[] Input)>()
             {
-                return new List<(int Output, int[] Input)>()
-                {
-                    (49, new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 })
-                };
-            }
-        }
+                (49, [1, 8, 6, 2, 5, 4, 8, 3, 7])
+            };
     }
 }
