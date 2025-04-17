@@ -1,4 +1,4 @@
-﻿namespace LeetCode.EasyProblems
+﻿namespace LeetCode.MediumProblems
 {
     class TwoSumIiInputArrayIsSorted
     {
