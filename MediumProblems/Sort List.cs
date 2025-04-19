@@ -3,39 +3,88 @@
 
 namespace LeetCode.MediumProblems
 {
-    class Sort_List
+    class SortListSolution
     {
-        /// <summary>
-        /// https://leetcode.com/problems/sort-list/
-        /// </summary>
-        /// <param name="head"></param>
-        /// <returns></returns>
         public ListNode SortList(ListNode head)
         {
-            List<int> nums = new List<int>();
-            Read(head, nums);
-
-            nums = nums.OrderByDescending(x => x).ToList();
-
-            ListNode currNode = default, prevNode = new ListNode();
-            int i = 0;
-            while (i < nums.Count)
+            // Base case: empty list or single node is already sorted
+            if (head == null || head.next == null)
             {
-                prevNode = currNode;
-                currNode = new ListNode(nums[i], prevNode);
-                i++;
+                return head;
             }
 
-            return currNode;
+            // Split the list into two halves
+            ListNode middle = GetMiddle(head);
+            ListNode right = middle.next;
+            middle.next = null; // Disconnect the two halves
+
+            // Recursively sort both halves
+            ListNode left = SortList(head);
+            right = SortList(right);
+
+            // Merge the sorted halves
+            return Merge(left, right);
         }
 
-        private void Read(ListNode node, List<int> result)
+        // Find the middle of the linked list using slow/fast pointers
+        private ListNode GetMiddle(ListNode head)
         {
-            if (node != null)
+            ListNode slow = head;
+            ListNode fast = head.next;
+
+            while (fast != null && fast.next != null)
             {
-                result.Add(node.val);
-                Read(node.next, result);
+                slow = slow.next;
+                fast = fast.next.next;
             }
+
+            return slow;
         }
+
+        // Merge two sorted linked lists
+        private ListNode Merge(ListNode left, ListNode right)
+        {
+            ListNode dummy = new ListNode();
+            ListNode current = dummy;
+
+            // Compare nodes and link them in sorted order
+            while (left != null && right != null)
+            {
+                if (left.val < right.val)
+                {
+                    current.next = left;
+                    left = left.next;
+                }
+                else
+                {
+                    current.next = right;
+                    right = right.next;
+                }
+
+                current = current.next;
+            }
+
+            // Attach remaining nodes (if any)
+            current.next = (left != null) ? left : right;
+
+            return dummy.next;
+        }
+
+        [Test(Description = "https://leetcode.com/problems/sort-list/")]
+        [Category("Medium")]
+        [Category("LeetCode")]
+        [Category("Sort List")]
+        [TestCaseSource(nameof(Input))]
+        public void Test1((int?[] Output, int[] Input) item)
+        {
+            var response = SortList(item.Input.ToListNode());
+            Assert.That(response.ToArray(), Is.EqualTo(item.Output));
+        }
+
+        public static IEnumerable<(int[] Output, int[] Input)> Input =>
+            new List<(int[] Output, int[] Input)>()
+            {
+                ([-1, 0, 3, 4, 5], ( [-1, 5, 3, 4, 0])),
+            };
     }
 }
