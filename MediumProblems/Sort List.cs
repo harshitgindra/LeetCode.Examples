@@ -1,7 +1,4 @@
-﻿using LeetCode.SharedUtils;
-
-
-namespace LeetCode.MediumProblems
+﻿namespace LeetCode.MediumProblems
 {
     class SortListSolution
     {
@@ -75,7 +72,7 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("Sort List")]
         [TestCaseSource(nameof(Input))]
-        public void Test1((int?[] Output, int[] Input) item)
+        public void Test1((int[] Output, int[] Input) item)
         {
             var response = SortList(item.Input.ToListNode());
             Assert.That(response.ToArray(), Is.EqualTo(item.Output));

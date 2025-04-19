@@ -1,110 +1,75 @@
-﻿using LeetCode.SharedUtils;
-
-
-namespace LeetCode.Hard
+﻿namespace LeetCode.HardProblems
 {
-    //https://leetcode.com/problems/merge-k-sorted-lists/submissions/
-    class Merge_k_Sorted_Lists
+    class MergeKSortedLists
     {
         public ListNode MergeKLists(ListNode[] lists)
         {
-            if (lists != null && lists.Length > 0)
+            // Handle edge cases
+            if (lists == null || lists.Length == 0) return null;
+
+            // Start the divide-and-conquer process
+            return MergeDivideAndConquer(lists, 0, lists.Length - 1);
+        }
+
+        private ListNode MergeDivideAndConquer(ListNode[] lists, int left, int right)
+        {
+            // Base case: only one list in the current range
+            if (left == right) return lists[left];
+
+            // Divide the problem into two halves
+            int mid = left + (right - left) / 2;
+            ListNode leftList = MergeDivideAndConquer(lists, left, mid);
+            ListNode rightList = MergeDivideAndConquer(lists, mid + 1, right);
+
+            // Merge the two halves
+            return MergeTwoLists(leftList, rightList);
+        }
+
+        private ListNode MergeTwoLists(ListNode l1, ListNode l2)
+        {
+            // Create a dummy head to simplify edge cases
+            ListNode dummy = new ListNode();
+            ListNode current = dummy;
+
+            // Compare and link nodes in sorted order
+            while (l1 != null && l2 != null)
             {
-                if (lists.Length == 1)
+                if (l1.val <= l2.val)
                 {
-                    return lists[0];
+                    current.next = l1;
+                    l1 = l1.next;
                 }
                 else
                 {
-                    var currNode = lists[0];
-
-                    for (int i = 1; i < lists.Length; i++)
-                    {
-                        currNode = Merge(currNode, lists[i]);
-                    }
-
-                    return currNode;
+                    current.next = l2;
+                    l2 = l2.next;
                 }
+
+                current = current.next;
             }
-            else
-            {
-                return null;
-            }
+
+            // Attach remaining nodes (if any)
+            current.next = (l1 != null) ? l1 : l2;
+
+            return dummy.next;
         }
 
-        private ListNode Merge(ListNode node1, ListNode node2)
+
+        [Test(Description = "https://leetcode.com/problems/merge-k-sorted-lists/")]
+        [Category("Hard")]
+        [Category("LeetCode")]
+        [Category("Merge K Sorted Lists")]
+        [TestCaseSource(nameof(Input))]
+        public void Test1((int[] Output, int[][] Input) item)
         {
-            ListNode returnValue = new ListNode(0);
-            var curr = returnValue;
-
-            while (node1 != null && node2 != null)
-            {
-                if (node1 != null && node2 != null)
-                {
-                    if (node1.val < node2.val)
-                    {
-                        curr.next = node1;
-                        node1 = node1.next;
-                    }
-                    else
-                    {
-                        curr.next = node2;
-                        node2 = node2.next;
-                    }
-                }
-
-                curr = curr.next;
-            }
-
-            if (node1 == null)
-            {
-                curr.next = node2;
-            }
-
-            if (node2 == null)
-            {
-                curr.next = node1;
-            }
-
-            return returnValue.next;
+            var response = MergeKLists(item.Input.Select(x => x.ToListNode()).ToArray());
+            Assert.That(response.ToArray(), Is.EqualTo(item.Output));
         }
 
-        public ListNode MergeKLists2(ListNode[] lists)
-        {
-            if (lists != null || lists.Count() > 0)
+        public static IEnumerable<(int[] Output, int[][] Input)> Input =>
+            new List<(int[] Output, int[][] Input)>()
             {
-                List<int> vals = new List<int>();
-                foreach (var item in lists)
-                {
-                    vals = Read(item, vals);
-                }
-
-                var orderedList = vals.OrderBy(x => x).ToArray();
-
-                ListNode currNode = default, prevNode = default;
-                for (int i = orderedList.Length - 1; i >= 0; i--)
-                {
-                    prevNode = currNode;
-                    currNode = new ListNode(orderedList[i], prevNode);
-                }
-
-                return currNode;
-            }
-            else
-            {
-                return default;
-            }
-        }
-
-        private List<int> Read(ListNode node, List<int> val)
-        {
-            if (node != null)
-            {
-                val.Add(node.val);
-                val = Read(node.next, val);
-            }
-
-            return val;
-        }
+                ([1, 1, 2, 3, 4, 4, 5, 6], ( [[1, 4, 5], [1, 3, 4], [2, 6]])),
+            };
     }
 }
