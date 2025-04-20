@@ -1,54 +1,42 @@
-﻿
-
-namespace LeetCode.MediumProblems
+﻿namespace LeetCode.MediumProblems
 {
-    class Merge_Intervals
+    class MergeIntervals
     {
         public int[][] Merge(int[][] intervals)
         {
-            List<int[]> ret = new List<int[]>();
-            //***
-            //*** Order the results by first element and then by second
-            //***
-            intervals = intervals.OrderBy(x => x[0])
-                .ThenBy(x=>x[1])
-                .ToArray();
-
-            var i = intervals[0][0];
-            var j = intervals[0][1];
-
-            for (int k = 1; k < intervals.Length; k++)
+            // Handle edge case
+            if (intervals == null || intervals.Length <= 1)
             {
-                var item = intervals[k];
+                return intervals;
+            }
 
-                //***
-                //*** If first element is less than previous second element
-                //***
-                if (item[0] <= j)
+            // Sort intervals by start time to easily find overlaps
+            Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
+
+            List<int[]> mergedList = new List<int[]>();
+            int[] currentInterval = intervals[0];
+
+            // Iterate through all intervals
+            foreach (var interval in intervals)
+            {
+                // If current interval overlaps with the next one, merge them
+                if (currentInterval[1] >= interval[0])
                 {
-                    //***
-                    //*** if second element is greater than previous second element
-                    //***
-                    if (item[1] > j)
-                    {
-                        //***
-                        //*** Override the second element with current element
-                        //***
-                        j = item[1];
-                    }
+                    // Update end time to the maximum of both intervals
+                    currentInterval[1] = Math.Max(currentInterval[1], interval[1]);
                 }
                 else
                 {
-                    ret.Add(new int[] { i, j });
-
-                    i = item[0];
-                    j = item[1];
+                    // No overlap, add current interval to result and move to next one
+                    mergedList.Add(currentInterval);
+                    currentInterval = interval;
                 }
             }
 
-            ret.Add(new int[] { i, j });
+            // Add the last interval
+            mergedList.Add(currentInterval);
 
-            return ret.ToArray();
+            return mergedList.ToArray();
         }
 
         [Test(Description = "https://leetcode.com/problems/merge-intervals/")]
@@ -59,7 +47,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int[][] Output, int[][] Input) item)
         {
             var response = Merge(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[][] Output, int[][])> Input
@@ -70,17 +58,17 @@ namespace LeetCode.MediumProblems
                 {
                     (new int[][]
                         {
-                            new int[]{1,6},
-                            new int[]{8,10},
-                            new int[]{15,18},
+                            [1, 6],
+                            [8, 10],
+                            [15, 18],
                         }
-                    , new int[][]
-                    {
-                        new int[]{1,3},
-                        new int[]{2,6},
-                        new int[]{8,10},
-                        new int[]{15,18},
-                    }),
+                        , new int[][]
+                        {
+                            [1, 3],
+                            [2, 6],
+                            [8, 10],
+                            [15, 18],
+                        }),
                 };
             }
         }
