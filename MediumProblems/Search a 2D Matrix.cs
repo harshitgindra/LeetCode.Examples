@@ -1,44 +1,27 @@
-﻿
-
-namespace LeetCode.MediumProblems
+﻿namespace LeetCode.MediumProblems
 {
-    class Search_a_2D_Matrix
+    class SearchA2DMatrix
     {
+        // Searches for a target value in a 2D matrix using binary search
         public bool SearchMatrix(int[][] matrix, int target)
         {
-            if (matrix == null)
-            {
-                return false;
-            }
-            int iMax = matrix.Length;
-            int jMax = 0;
-            if (iMax > 0)
-            {
-                jMax = matrix[0].Length;
-            }
-            int i = 0, j = 0;
+            int rows = matrix.Length;
+            int cols = matrix[0].Length;
+            int left = 0, right = rows * cols - 1;
 
-            while (i < iMax && j < jMax)
+            // Binary search over the "flattened" matrix
+            while (left <= right)
             {
-                if (matrix[i][j] == target)
-                {
+                int mid = left + (right - left) / 2;
+                // Map mid to 2D indices
+                int midValue = matrix[mid / cols][mid % cols];
+
+                if (midValue == target)
                     return true;
-                }
-                else if (matrix[i][j] > target)
-                {
-                    return false;
-                }
+                else if (midValue < target)
+                    left = mid + 1;
                 else
-                {
-                    if (matrix[i][matrix[i].Length - 1] < target)
-                    {
-                        i++;
-                    }
-                    else
-                    {
-                        j++;
-                    }
-                }
+                    right = mid - 1;
             }
 
             return false;
@@ -52,7 +35,7 @@ namespace LeetCode.MediumProblems
         public void Test1((bool Output, (int[][], int) Input) item)
         {
             var response = this.SearchMatrix(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, (int[][], int) Input)> Input
@@ -61,14 +44,16 @@ namespace LeetCode.MediumProblems
             {
                 return new List<(bool Output, (int[][], int) Input)>()
                 {
-                     (true, (new int[1][]{
-                    new int[]{ 1,3},
-                        },3)),
-                    (true, (new int[3][]{
-                    new int[]{ 1,3,5,7},
-                    new int[]{ 10,11,16,20},
-                    new int[]{ 23,30,34,60},
-                        },30)),
+                    (true, (new int[1][]
+                    {
+                        [1, 3],
+                    }, 3)),
+                    (true, (new int[3][]
+                    {
+                        [1, 3, 5, 7],
+                        [10, 11, 16, 20],
+                        [23, 30, 34, 60],
+                    }, 30)),
                 };
             }
         }
