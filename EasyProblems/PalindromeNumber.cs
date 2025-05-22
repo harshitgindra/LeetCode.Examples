@@ -36,6 +36,7 @@ namespace LeetCode.EasyProblems
             new List<(bool Output, int Input)>()
             {
                 (true, 121),
+                (true, 2112),
             };
     }
 }
