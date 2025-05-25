@@ -30,11 +30,10 @@ namespace LeetCode.MediumProblems
         [Category("LeetCode")]
         [Category("Product of Array Except Self")]
         [TestCaseSource(nameof(Input))]
-        [Ignore("")]
         public void Test1((int[] Output, int[] Input) item)
         {
-            // var response = ProductExceptSelf(item.Input);
-            // Assert.That(response, Is.EqualTo(item.Output));
+            var response = ProductExceptSelf(item.Input);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[] Output, int[] Input)> Input =>
