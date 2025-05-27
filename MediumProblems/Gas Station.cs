@@ -1,9 +1,9 @@
-namespace LeetCode.Problems._2022.January
+namespace LeetCode.MediumProblems
 {
     /// <summary>
-    /// https://leetcode.com/problems/gas-station/submissions/
+    /// https://leetcode.com/problems/gas-station/
     /// </summary>
-    public class Gas_Station
+    public class GasStation
     {
         public int CanCompleteCircuit(int[] gas, int[] cost)
         {
