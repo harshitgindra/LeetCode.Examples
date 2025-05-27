@@ -1,17 +1,16 @@
 ﻿namespace LeetCode.MediumProblems
 {
-    public class Reverse_Words_in_a_String
+    /// <summary>
+    /// https://leetcode.com/problems/reverse-words-in-a-string/
+    /// </summary>
+    public class ReverseWordsInAString
     {
         public string ReverseWords(string s)
         {
-            var wordArray = s.Split(" ").Where(x => !string.IsNullOrEmpty(x)).ToArray();
-            string returnValue = "";
-            for (int i = wordArray.Length - 1; i >= 0; i--)
-            {
-                returnValue += $"{wordArray[i].Trim()} ";
-            }
-
-            return returnValue.TrimEnd();
+            string[] words = s.Split(' ', StringSplitOptions.RemoveEmptyEntries
+                                          | StringSplitOptions.TrimEntries);
+            Array.Reverse(words);
+            return string.Join(" ", words);
         }
     }
 }
