@@ -1,41 +1,28 @@
-﻿
-
-namespace LeetCode.MediumProblems
+﻿namespace LeetCode.MediumProblems
 {
-    class Minimum_Size_Subarray_Sum
+    class MinimumSizeSubarraySum
     {
-        public int MinSubArrayLen(int s, int[] nums)
+        public int MinSubArrayLen(int target, int[] nums)
         {
-            var n = nums.Length;
+            int minLength = int.MaxValue;
+            int windowSum = 0;
+            int windowStart = 0;
 
-            var global = int.MaxValue;
-
-            var sum = 0;
-            var left = 0;
-            for (int right = 0; right < n; right++)
+            // Slide windowEnd across the array
+            foreach (int windowEnd in nums.Select((num, index) => index))
             {
-                sum += nums[right];
+                windowSum += nums[windowEnd];
 
-                if (sum >= s)
+                // Shrink window from left while sum >= target
+                while (windowSum >= target)
                 {
-                    while (sum >= s)
-                    {
-                        sum -= nums[left];
-                        left++;
-                    }
-                    if (sum < s)
-                    {
-                        left--;
-                        sum += nums[left];
-                    }
-
-                    var local = right - left + 1;
-
-                    global = Math.Min(global, local);
+                    minLength = Math.Min(minLength, windowEnd - windowStart + 1);
+                    windowSum -= nums[windowStart];
+                    windowStart++;
                 }
             }
 
-            return global == int.MaxValue ? 0 : global;
+            return minLength == int.MaxValue ? 0 : minLength;
         }
 
         [Test(Description = "https://leetcode.com/problems/minimum-size-subarray-sum/")]
@@ -55,7 +42,7 @@ namespace LeetCode.MediumProblems
             {
                 return new List<(int Output, (int, int[]))>()
                 {
-                    (3, (11, new int[] { 1,2,3,4,5})),
+                    (3, (11, new int[] { 1, 2, 3, 4, 5 })),
                 };
             }
         }
