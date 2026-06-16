@@ -50,7 +50,7 @@ public class BinaryTreePathsSolution
         Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<( IList<string> Output, int?[] Input)> Input =>
+    public static IEnumerable<(IList<string> Output, int?[] Input)> Input =>
         new List<(IList<string> Output, int?[] Input)>()
         {
             (["1->2->5", "1->3"], [1, 2, 3, null, 5]),

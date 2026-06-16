@@ -15,7 +15,7 @@ namespace LeetCode.EasyProblems
 
             return profit;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/")]
         [Category("Easy")]
         [Category("LeetCode")]

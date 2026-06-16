@@ -85,7 +85,7 @@ namespace LeetCode.Problems._2021.August
         public void Test1((int Output, string Input) item)
         {
             var response = MinCut(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, string Input)> Input

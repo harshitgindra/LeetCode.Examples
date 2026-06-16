@@ -43,13 +43,13 @@ namespace LeetCode.MediumProblems
                 {
                     found = item.Count(x => char.IsUpper(x)) == numOfUpperCases;
                 }
-                
+
                 result.Add(found);
             }
 
             return result;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/car-pooling/")]
         [Category("Medium")]
         [Category("LeetCode")]

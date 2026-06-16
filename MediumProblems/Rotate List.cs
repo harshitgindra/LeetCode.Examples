@@ -37,7 +37,7 @@ namespace LeetCode.MediumProblems
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = RotateRight(item.Input.Item1, item.Input.Item2);
-           // ClassicAssert.AreEqual(item.Output, response);
+            // ClassicAssert.AreEqual(item.Output, response);
         }
 
         public static IEnumerable<(ListNode Output, (ListNode, int) Input)> Input

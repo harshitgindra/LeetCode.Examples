@@ -26,8 +26,8 @@ namespace LeetCode.Problems._2021.Sept
 
             return c;
         }
-        
-        [Test(Description ="https://leetcode.com/problems/n-th-tribonacci-number/")]
+
+        [Test(Description = "https://leetcode.com/problems/n-th-tribonacci-number/")]
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("N-th Tribonacci Number")]
@@ -36,7 +36,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((int Output, int Input) item)
         {
             var response = Tribonacci(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int Input)> Input

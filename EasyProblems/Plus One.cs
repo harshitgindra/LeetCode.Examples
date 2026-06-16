@@ -29,7 +29,7 @@ namespace LeetCode.EasyProblems
 
                 for (int i = 1; i < digits.Length; i++)
                 {
-                    newDigits[i] = digits[i-1];
+                    newDigits[i] = digits[i - 1];
                 }
                 return newDigits;
             }

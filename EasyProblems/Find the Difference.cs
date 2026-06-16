@@ -16,7 +16,7 @@ namespace LeetCode.EasyProblems
 
             for (int i = 0; i < s.Length; i++)
             {
-                if(sArry[i] != tArry[i])
+                if (sArry[i] != tArry[i])
                 {
                     returnValue = tArry[i];
                     break;

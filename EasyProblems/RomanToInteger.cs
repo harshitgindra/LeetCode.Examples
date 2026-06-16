@@ -16,7 +16,7 @@
         {
             var returnValue = 0;
 
-            for (int i = 0; i < s.Length -1; i++)
+            for (int i = 0; i < s.Length - 1; i++)
             {
                 if (_keys[s[i]] >= _keys[s[i + 1]])
                 {
@@ -27,11 +27,11 @@
                     returnValue -= _keys[s[i]];
                 }
             }
-            
-            returnValue += _keys[s[s.Length -1]];
+
+            returnValue += _keys[s[s.Length - 1]];
             return returnValue;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/roman-to-integer/")]
         [Category("Easy")]
         [Category("LeetCode")]

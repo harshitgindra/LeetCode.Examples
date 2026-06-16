@@ -7,22 +7,26 @@ public class SearchInsertPosition
         int first = 0;
         int last = nums.Length - 1;
 
-        while(first <= last){
+        while (first <= last)
+        {
             int mid = (first + last) / 2;
 
-            if(target == nums[mid]){
+            if (target == nums[mid])
+            {
                 return mid;
             }
-            if(target < nums[mid]){
+            if (target < nums[mid])
+            {
                 last = mid - 1;
             }
-            else{
+            else
+            {
                 first = mid + 1;
             }
         }
         return first;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/search-insert-position/")]
     [Category("Easy")]
     [Category("LeetCode")]

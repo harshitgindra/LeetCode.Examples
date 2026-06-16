@@ -45,7 +45,7 @@ namespace LeetCode.Problems._2021.August
         public void Test1((bool Output, string Input) item)
         {
             var response = IsValidSerialization(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, string Input)> Input

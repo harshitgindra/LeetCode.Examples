@@ -65,7 +65,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, char[] Input) item)
         {
             var response = Compress(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, char[] Input)> Input

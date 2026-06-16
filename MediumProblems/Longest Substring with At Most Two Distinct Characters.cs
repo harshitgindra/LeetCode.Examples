@@ -9,7 +9,7 @@ namespace LeetCode.MediumProblems
             int maxLength = 0;
             for (int i = 0; i < s.Length - 1; i++)
             {
-                var combo = new HashSet<char>() {s[i]};
+                var combo = new HashSet<char>() { s[i] };
                 int j = i;
                 for (; j < s.Length; j++)
                 {

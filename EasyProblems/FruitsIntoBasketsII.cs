@@ -2,17 +2,17 @@ namespace LeetCode.EasyProblems;
 
 public class FruitsIntoBasketsII
 {
-    public int NumOfUnplacedFruits(int[] fruits, int[] baskets) 
+    public int NumOfUnplacedFruits(int[] fruits, int[] baskets)
     {
         int n = fruits.Length;
         int rem = 0;
 
-        for (int i = 0; i < n; i++) 
+        for (int i = 0; i < n; i++)
         {
             bool placed = false;
-            for (int j = 0; j < n; j++) 
+            for (int j = 0; j < n; j++)
             {
-                if (baskets[j] != -1 && fruits[i] <= baskets[j]) 
+                if (baskets[j] != -1 && fruits[i] <= baskets[j])
                 {
                     baskets[j] = -1;
                     placed = true;
@@ -26,7 +26,7 @@ public class FruitsIntoBasketsII
 
         return rem;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/fruits-into-baskets-ii/")]
     [Category("Easy")]
     [Category("LeetCode")]

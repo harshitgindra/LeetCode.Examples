@@ -46,7 +46,7 @@ public class FillingBookcaseShelves
 
             tmpWidth -= book[0];
             maxShelfHeight = Math.Max(maxShelfHeight, book[1]);
-            _dp[i] = Math.Min( _dp[i],_Helper(j + 1) + maxShelfHeight );
+            _dp[i] = Math.Min(_dp[i], _Helper(j + 1) + maxShelfHeight);
         }
 
         return _dp[i];
@@ -60,7 +60,7 @@ public class FillingBookcaseShelves
     public void Test1((int Output, (int[][] books, int shelfWidth) Input) item)
     {
         var response = MinHeightShelves(item.Input.books, item.Input.shelfWidth);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
     public static IEnumerable<(int Output, (int[][] books, int shelfWidth) Input)> Input

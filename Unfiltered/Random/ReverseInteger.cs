@@ -8,7 +8,7 @@ namespace LeetCode
             Console.WriteLine("Reverse Integer");
             Console.WriteLine("----------------------------------------------------------");
         }
-        
+
         public int Reverse(int x)
         {
             try

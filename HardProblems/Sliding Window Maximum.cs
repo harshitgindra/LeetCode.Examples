@@ -6,7 +6,7 @@ namespace LeetCode.HardProblems
         {
             var response = FindHighest(nums, 0, 0, -1, k);
 
-            List<int> result = new List<int>() {response.Max};
+            List<int> result = new List<int>() { response.Max };
             for (int i = 1; i <= nums.Length - k; i++)
             {
                 response = FindHighest(nums, i, response.Max, response.Index, k);

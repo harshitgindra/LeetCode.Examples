@@ -2,22 +2,23 @@ namespace LeetCode.MediumProblems;
 
 public class BinaryTreeRightSideView
 {
-    public IList<int> RightSideView(TreeNode root) {
+    public IList<int> RightSideView(TreeNode root)
+    {
         var dict = new Dictionary<int, int>();
         _Helper(root, 1, dict);
         return dict.Values.ToList();
     }
 
-    private void _Helper(TreeNode node, int depth, Dictionary<int, int> result )
+    private void _Helper(TreeNode node, int depth, Dictionary<int, int> result)
     {
         if (node != null)
         {
             result[depth] = node.val;
-            _Helper(node.left, depth + 1, result );
-            _Helper(node.right, depth + 1, result );
+            _Helper(node.left, depth + 1, result);
+            _Helper(node.right, depth + 1, result);
         }
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/binary-tree-right-side-view/")]
     [Category("Medium")]
     [Category("LeetCode")]

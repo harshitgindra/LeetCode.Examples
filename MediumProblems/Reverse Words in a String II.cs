@@ -41,7 +41,7 @@ namespace LeetCode.MediumProblems
         public void Test1((char[] Output, char[] Input) item)
         {
             ReverseWords(item.Input);
-            ClassicAssert.AreEqual(item.Output, item.Input);
+            Assert.That(item.Input, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(char[] Output, char[] Input)> Input

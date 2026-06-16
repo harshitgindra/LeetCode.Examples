@@ -89,15 +89,15 @@ namespace LeetCode.Problems._2021.March
             undergroundSystem.CheckOut(27, "Waterloo", 20);
             undergroundSystem.CheckOut(32, "Cambridge", 22);
             var response = undergroundSystem.GetAverageTime("Paradise", "Cambridge");
-            ClassicAssert.AreEqual(14, response);
-            
+            Assert.That(response, Is.EqualTo(14));
+
             undergroundSystem.CheckIn(10, "Leyton", 24);
             response = undergroundSystem.GetAverageTime("Leyton", "Waterloo");          // return 11.00000
-            ClassicAssert.AreEqual(11, response);
+            Assert.That(response, Is.EqualTo(11));
 
             undergroundSystem.CheckOut(10, "Waterloo", 38);
             response = undergroundSystem.GetAverageTime("Leyton", "Waterloo");
-            ClassicAssert.AreEqual(12, response);
+            Assert.That(response, Is.EqualTo(12));
 
         }
     }

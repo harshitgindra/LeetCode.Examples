@@ -6,7 +6,8 @@ namespace LeetCode.EasyProblems;
 /// </summary>
 public class ContainsDuplicateSolution
 {
-    public bool ContainsDuplicate(int[] nums) {
+    public bool ContainsDuplicate(int[] nums)
+    {
         HashSet<int> duplicates = new HashSet<int>();
         foreach (var item in nums)
         {

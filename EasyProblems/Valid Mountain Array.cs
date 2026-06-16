@@ -7,7 +7,7 @@ namespace LeetCode.EasyProblems
     /// </summary>
     class Valid_Mountain_Array
     {
-    
+
         public bool ValidMountainArray(int[] A)
         {
             int highestIndex = 0;
@@ -27,7 +27,7 @@ namespace LeetCode.EasyProblems
                 }
             }
 
-            if (highestIndex == 0 || highestIndex == A.Length -1)
+            if (highestIndex == 0 || highestIndex == A.Length - 1)
             {
                 return false;
             }
@@ -54,7 +54,7 @@ namespace LeetCode.EasyProblems
         public void Test1((bool Output, int[] Input) item)
         {
             var response = ValidMountainArray(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, int[] Input)> Input

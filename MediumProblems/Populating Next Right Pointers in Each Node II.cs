@@ -29,8 +29,8 @@ namespace LeetCode.MediumProblems
                 Read(node.right);
             }
         }
-        
-        
+
+
         private Dictionary<int, List<Node>> _dict;
 
         public Node Connect2(Node root)
@@ -52,7 +52,7 @@ namespace LeetCode.MediumProblems
                 }
                 else
                 {
-                    _dict.Add(level, new List<Node>() {node});
+                    _dict.Add(level, new List<Node>() { node });
                 }
 
                 Helper(node.left, level + 1);

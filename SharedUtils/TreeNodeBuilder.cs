@@ -8,7 +8,7 @@ public static class TreeNodeBuilder
     {
         return ArrayToTreeNode(arr);
     }
-    
+
     public static TreeNode ArrayToTreeNode(int?[] arr)
     {
         if (arr == null || arr.Length == 0 || !arr[0].HasValue)
@@ -37,7 +37,7 @@ public static class TreeNodeBuilder
 
         return root;
     }
-    
+
     public static void AssertTreeNodeAgainstArray(TreeNode root, int?[] array)
     {
         if (root == null && (array == null || array.Length == 0))
@@ -60,7 +60,7 @@ public static class TreeNodeBuilder
             else
             {
                 ClassicAssert.IsNotNull(array[index], $"Expected non-null value at index {index}");
-                ClassicAssert.AreEqual(array[index].Value, node.val, $"Mismatch at index {index}");
+                Assert.That(node.val, Is.EqualTo(array[index].Value), $"Mismatch at index {index}");
 
                 queue.Enqueue(node.left);
                 queue.Enqueue(node.right);
@@ -69,9 +69,9 @@ public static class TreeNodeBuilder
             index++;
         }
 
-        ClassicAssert.AreEqual(array.Length, index, "Array length does not match tree size");
+        Assert.That(index, Is.EqualTo(array.Length), "Array length does not match tree size");
     }
-    
+
     public static int?[] ToArray(this TreeNode root)
     {
         if (root == null)

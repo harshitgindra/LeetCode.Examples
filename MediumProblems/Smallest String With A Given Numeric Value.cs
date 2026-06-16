@@ -49,7 +49,7 @@ namespace LeetCode.MediumProblems
             {
                 result.Add(new string(val.ToArray()));
             }
-            else if (remainingBit == 0 || k<= 0)
+            else if (remainingBit == 0 || k <= 0)
             {
             }
             else if (remainingBit == 1)

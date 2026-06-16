@@ -36,6 +36,6 @@ public class KthSmallestElementInABst
     public static IEnumerable<(int Output, (int?[], int) Input)> Input =>
         new List<(int, (int?[], int))>()
         {
-            (3, ([5, 3, 6, 2, 4, null, null, 1], 3)), 
+            (3, ([5, 3, 6, 2, 4, null, null, 1], 3)),
         };
 }

@@ -7,7 +7,8 @@ namespace LeetCode.EasyProblems;
 /// </summary>
 public class SymmetricTree
 {
-    public bool IsSymmetric(TreeNode root) {
+    public bool IsSymmetric(TreeNode root)
+    {
         if (root == null)
         {
             return true;
@@ -27,7 +28,7 @@ public class SymmetricTree
         {
             return false;
         }
-        
+
         return (_Traverse(left?.left, right?.right) && _Traverse(left?.right, right?.left));
     }
 }

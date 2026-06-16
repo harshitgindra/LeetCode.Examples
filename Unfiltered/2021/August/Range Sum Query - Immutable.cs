@@ -20,11 +20,11 @@
         public int SumRange(int left, int right)
         {
             int total = 0;
-            for(int i = left; i<=right; i++)
+            for (int i = left; i <= right; i++)
             {
                 if (_nums.ContainsKey(i))
                 {
-                    total+= _nums[i];
+                    total += _nums[i];
                 }
             }
 

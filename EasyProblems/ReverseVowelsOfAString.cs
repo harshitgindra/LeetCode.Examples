@@ -35,7 +35,7 @@ public class ReverseVowelsOfAString
 
         return new string(chars);
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/reverse-vowels-of-a-string/")]
     [Category("Easy")]
     [Category("LeetCode")]
@@ -44,7 +44,7 @@ public class ReverseVowelsOfAString
     public void Test1((string Output, string Input) item)
     {
         var response = ReverseVowels(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
     public static IEnumerable<(string Output, string Input)> Input

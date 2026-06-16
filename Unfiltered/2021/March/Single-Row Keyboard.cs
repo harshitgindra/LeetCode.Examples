@@ -33,7 +33,7 @@ namespace LeetCode.Problems._2021.March
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = CalculateTime(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (string, string) Input)> Input

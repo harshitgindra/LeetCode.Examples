@@ -23,7 +23,7 @@
             //*** Return true if the number is not a whole number
             //***
             var mathValue = Math.Log(num) / Math.Log(4);
-            return  (int)mathValue == mathValue;
+            return (int)mathValue == mathValue;
         }
     }
 }

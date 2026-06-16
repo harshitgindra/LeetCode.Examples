@@ -23,7 +23,7 @@
                 for (int i = _lastQuery.Length - 2; i > 0; i--)
                 {
                     var newWord = _lastQuery.Substring(i);
-                    if (_words.Any(x=>x.EndsWith(newWord)))
+                    if (_words.Any(x => x.EndsWith(newWord)))
                     {
                         return true;
                     }

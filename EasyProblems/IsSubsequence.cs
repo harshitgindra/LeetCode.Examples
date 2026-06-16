@@ -20,7 +20,7 @@ public class IsSubsequenceSolution
 
         return i == s.Length;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/is-subsequence/")]
     [Category("Easy")]
     [Category("LeetCode")]

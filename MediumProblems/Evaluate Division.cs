@@ -80,7 +80,7 @@ namespace LeetCode.MediumProblems
         public void Test1((double[] Output, (IList<IList<string>>, double[], IList<IList<string>>) Input) item)
         {
             var response = CalcEquation(item.Input.Item1, item.Input.Item2, item.Input.Item3);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(double[] Output, (IList<IList<string>>, double[], IList<IList<string>>) Input)> Input

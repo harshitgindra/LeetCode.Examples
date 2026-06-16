@@ -66,7 +66,7 @@ namespace LeetCode.Mock.Microsoft
         public void Test1((List<int> Output, int[] Input) item)
         {
             var response = MajorityElement(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(List<int> Output, int[] Input)> Input

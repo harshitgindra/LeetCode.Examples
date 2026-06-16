@@ -48,7 +48,7 @@ namespace LeetCode.EasyProblems
         public void Test1((string Output, string Input) item)
         {
             var response = ReverseOnlyLetters(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(string Output, string Input)> Input

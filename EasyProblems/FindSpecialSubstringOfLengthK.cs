@@ -2,11 +2,13 @@ namespace LeetCode.EasyProblems;
 
 public class FindSpecialSubstringOfLengthK
 {
-    public bool HasSpecialSubstring(string s, int k) {
+    public bool HasSpecialSubstring(string s, int k)
+    {
         int n = s.Length;
         int i = 0;
 
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++)
+        {
             if (s[j] == s[i]) continue;
             if (j - i == k) return true;
             i = j;
@@ -14,7 +16,7 @@ public class FindSpecialSubstringOfLengthK
 
         return (n - i) == k;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/find-special-substring-of-length-k/")]
     [Category("Easy")]
     [Category("LeetCode")]

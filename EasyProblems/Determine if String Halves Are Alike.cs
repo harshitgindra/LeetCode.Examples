@@ -16,14 +16,14 @@ namespace LeetCode.EasyProblems
             };
 
             int count = 0;
-            
+
             while (sIndex < eIndex)
             {
                 if (vowels.Contains(s[sIndex]))
                 {
                     count++;
                 }
-                
+
                 if (vowels.Contains(s[eIndex]))
                 {
                     count--;

@@ -2,37 +2,43 @@ namespace LeetCode.MediumProblems;
 
 public class FindFirstAndLastElementInSortedArray
 {
-    public int[] SearchRange(int[] nums, int target) {
+    public int[] SearchRange(int[] nums, int target)
+    {
         return new int[] {
             FindPosition(nums, target, true),  // Find first occurrence
             FindPosition(nums, target, false)  // Find last occurrence
         };
     }
-    private int FindPosition(int[] nums, int target, bool isFirst) {
+    private int FindPosition(int[] nums, int target, bool isFirst)
+    {
         int result = -1;
         int left = 0, right = nums.Length - 1;
 
-        while (left <= right) {
+        while (left <= right)
+        {
             int mid = left + (right - left) / 2;
-            
-            if (nums[mid] == target) {
+
+            if (nums[mid] == target)
+            {
                 result = mid;  // Update potential result
-                
+
                 // Search left for first occurrence, right for last
                 if (isFirst) right = mid - 1;
                 else left = mid + 1;
             }
-            else if (nums[mid] < target) {
+            else if (nums[mid] < target)
+            {
                 left = mid + 1;  // Target in right half
             }
-            else {
+            else
+            {
                 right = mid - 1;  // Target in left half
             }
         }
-        
+
         return result;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/")]
     [Category("Medium")]
     [Category("LeetCode")]

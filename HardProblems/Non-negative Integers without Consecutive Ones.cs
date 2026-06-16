@@ -14,7 +14,7 @@
                 }
             }
 
-            return Enumerable.Range(0,num).Count(x=>!Convert.ToString(x, 2).Contains("11"));
+            return Enumerable.Range(0, num).Count(x => !Convert.ToString(x, 2).Contains("11"));
 
             return returnValue;
         }

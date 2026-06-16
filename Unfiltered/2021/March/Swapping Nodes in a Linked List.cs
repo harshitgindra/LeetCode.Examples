@@ -50,7 +50,7 @@ namespace LeetCode.SharedUtils
         public void Test1((ListNode Output, (ListNode, int) Input) item)
         {
             var response = SwapNodes(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output.val, response.val);
+            Assert.That(response.val, Is.EqualTo(item.Output.val));
         }
 
         public static IEnumerable<(ListNode Output, (ListNode, int) Input)> Input

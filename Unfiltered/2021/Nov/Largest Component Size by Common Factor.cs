@@ -11,13 +11,13 @@ namespace LeetCode.Problems._2021.Nov
 
             foreach (var num in nums)
             {
-                sets.Add(new List<int>(){num});
+                sets.Add(new List<int>() { num });
             }
 
             for (int i = 1; i < nums.Length; i++)
             {
                 var num = nums[i];
-                
+
                 for (int j = 0; j < i; j++)
                 {
                     bool factorFound = false;
@@ -38,10 +38,10 @@ namespace LeetCode.Problems._2021.Nov
                     }
                 }
             }
-            
+
             return returnValue;
         }
-        
+
         public bool CommonFactor(int x, int y)
         {
             int temp;
@@ -51,9 +51,9 @@ namespace LeetCode.Problems._2021.Nov
                 y = x;
                 x = temp;
             }
-            while(x > y && x!=1 && y!=1)
+            while (x > y && x != 1 && y != 1)
             {
-                x = x%y; 
+                x = x % y;
                 if (x == 0)
                     return true;
                 if (x == 1)
@@ -65,9 +65,9 @@ namespace LeetCode.Problems._2021.Nov
                     x = temp;
                 }
             }
-            return (y!=1);
+            return (y != 1);
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/largest-component-size-by-common-factor/")]
         [Category("Hard")]
         [Category("LeetCode")]
@@ -76,7 +76,7 @@ namespace LeetCode.Problems._2021.Nov
         public void Test1((int Output, int[] Input) item)
         {
             var response = LargestComponentSize(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input

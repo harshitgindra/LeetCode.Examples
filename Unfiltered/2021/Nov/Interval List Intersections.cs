@@ -24,7 +24,7 @@ namespace LeetCode.Problems._2021.Nov
                         Math.Min(first[1], second[1]),
                     });
                 }
-                else  if (second[0] <= first[1]
+                else if (second[0] <= first[1]
                           && second[1] >= first[0])
                 {
                     results.Add(new int[]
@@ -56,7 +56,7 @@ namespace LeetCode.Problems._2021.Nov
         public void Test1((int[][] Output, (int[][] firstList, int[][] secondList) Input) item)
         {
             var response = IntervalIntersection(item.Input.firstList, item.Input.secondList);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[][] Output, (int[][] firstList, int[][] secondList) Input)> Input

@@ -11,14 +11,14 @@ namespace LeetCode.EasyProblems
             GetNodes(root1, val1);
             GetNodes(root2, val2);
 
-            if(val1.Count != val2.Count)
+            if (val1.Count != val2.Count)
             {
                 return false;
             }
 
             for (int i = 0; i < val1.Count; i++)
             {
-                if(val1[i] != val2[i])
+                if (val1[i] != val2[i])
                 {
                     return false;
                 }

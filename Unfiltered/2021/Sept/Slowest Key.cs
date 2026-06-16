@@ -47,7 +47,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((char Output, (int[] releaseTimes, string keysPressed) Input) item)
         {
             var response = SlowestKey(item.Input.releaseTimes, item.Input.keysPressed);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(char Output, (int[] releaseTimes, string keysPressed) Input)> Input

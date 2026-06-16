@@ -2,18 +2,19 @@
 {
     class BestTimeToBuyAndSellStockIi
     {
-        public int MaxProfit(int[] prices) {
-        
+        public int MaxProfit(int[] prices)
+        {
+
             int profit = 0;
-        
-            for(int i = 1; i < prices.Length; i++)
+
+            for (int i = 1; i < prices.Length; i++)
             {
-                if(prices[i] > prices[i - 1])
+                if (prices[i] > prices[i - 1])
                     profit += prices[i] - prices[i - 1];
             }
-        
+
             return profit;
-        
+
         }
 
         [Test(Description = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/")]

@@ -36,9 +36,9 @@
         {
             foreach (var node in graph[root])
             {
-               //***
-               //*** Reading through all the subnodes 
-               //***
+                //***
+                //*** Reading through all the subnodes 
+                //***
                 if (node != prev)
                 {
                     SubnodeIteration(node, root);

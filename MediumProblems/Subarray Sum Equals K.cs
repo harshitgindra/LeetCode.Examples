@@ -9,7 +9,7 @@ namespace LeetCode.MediumProblems
         {
             var dict = new Dictionary<int, int>();
             dict.Add(0, 1);
-            
+
             int ret = 0, sum = 0;
             foreach (var n in nums)
             {
@@ -24,7 +24,7 @@ namespace LeetCode.MediumProblems
                     dict.Add(sum, 0);
 
                 }
-                
+
                 dict[sum]++;
             }
 

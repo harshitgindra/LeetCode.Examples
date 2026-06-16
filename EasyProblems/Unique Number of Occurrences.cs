@@ -42,7 +42,7 @@ namespace LeetCode.EasyProblems
         public void Test1((bool Output, int[] Input) item)
         {
             var response = UniqueOccurrences(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, int[] Input)> Input

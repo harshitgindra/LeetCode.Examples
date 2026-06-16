@@ -6,7 +6,7 @@ namespace LeetCode.EasyProblems
     {
         public void Merge(int[] nums1, int m, int[] nums2, int n)
         {
-            int returnArrayCounter = nums1.Length -1;
+            int returnArrayCounter = nums1.Length - 1;
             int num1Counter = m - 1;
             int num2Counter = n - 1;
 
@@ -24,11 +24,13 @@ namespace LeetCode.EasyProblems
                         nums1[returnArrayCounter] = nums2[num2Counter];
                         num2Counter--;
                     }
-                } else if (num1Counter >= 0)
+                }
+                else if (num1Counter >= 0)
                 {
                     nums1[returnArrayCounter] = nums1[num1Counter];
                     num1Counter--;
-                } else
+                }
+                else
                 {
                     nums1[returnArrayCounter] = nums2[num2Counter];
                     num2Counter--;

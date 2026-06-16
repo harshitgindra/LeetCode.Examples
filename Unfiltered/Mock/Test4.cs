@@ -230,7 +230,7 @@ namespace LeetCode.Mock
         [Category("LeetCode")]
         [Category("Mock Test")]
         [Category("Combination Sum")]
-        [TestCaseSource("Input2")]
+        [TestCaseSource(nameof(Input2))]
         [Ignore("")]
         public void Test2((int Output, (int, int) Input) item)
         {

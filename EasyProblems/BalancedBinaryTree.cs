@@ -20,7 +20,7 @@ public class BalancedBinaryTree
         {
             return 0;
         }
-        
+
         int leftHeight = _Dfs(node.left);
         if (leftHeight == -1)
         {
@@ -31,7 +31,7 @@ public class BalancedBinaryTree
         {
             return -1;
         }
-        
+
         int diff = Math.Abs(leftHeight - rightHeight);
         if (diff < 2)
         {
@@ -42,7 +42,7 @@ public class BalancedBinaryTree
             return -1;
         }
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/balanced-binary-tree/")]
     [Category("Easy")]
     [Category("LeetCode")]

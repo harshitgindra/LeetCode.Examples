@@ -2,21 +2,24 @@ namespace LeetCode.EasyProblems;
 
 public class CheckIfDigitsAreEqualInStringAfterOperationsI
 {
-    public bool HasSameDigits(string s) {
-        while (s.Length > 2) {
+    public bool HasSameDigits(string s)
+    {
+        while (s.Length > 2)
+        {
             System.Text.StringBuilder newbornString = new System.Text.StringBuilder();
-            for (int i = 0; i < s.Length - 1; i++) {
-                int firstDigit = s[i];                  
-                int secondDigit = s[i + 1];            
-                int newDigit = (firstDigit + secondDigit) % 10; 
-                newbornString.Append(newDigit);              
+            for (int i = 0; i < s.Length - 1; i++)
+            {
+                int firstDigit = s[i];
+                int secondDigit = s[i + 1];
+                int newDigit = (firstDigit + secondDigit) % 10;
+                newbornString.Append(newDigit);
             }
-            s = newbornString.ToString();                     
+            s = newbornString.ToString();
         }
-        
+
         return s[0] == s[1];
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/")]
     [Category("Easy")]
     [Category("LeetCode")]

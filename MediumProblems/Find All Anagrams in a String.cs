@@ -57,7 +57,7 @@ namespace LeetCode.MediumProblems
                     //***
                     if (_Compare(pDictionary, sDictionary))
                     {
-                        returnValue.Add(i-p.Length + 1);
+                        returnValue.Add(i - p.Length + 1);
                     }
 
                     firstPointer++;
@@ -128,7 +128,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, (string, string) Input) item)
         {
             var response = FindAnagrams(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (string, string) Input)> Input

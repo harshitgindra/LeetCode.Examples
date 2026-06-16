@@ -43,7 +43,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int[][] Output, int[][] Input) item)
         {
             Rotate(item.Input);
-            ClassicAssert.AreEqual(item.Output, item.Input);
+            Assert.That(item.Input, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[][] Output, int[][] Input)> Input

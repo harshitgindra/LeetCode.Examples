@@ -5,11 +5,12 @@ namespace LeetCode.Problems._2022.January
     /// </summary>
     public class Detect_Capital
     {
-        public bool DetectCapitalUse(string word) {
-        
-            if(word == "")
+        public bool DetectCapitalUse(string word)
+        {
+
+            if (word == "")
                 return false;
-        
+
             return word == word.ToUpper() || word.Substring(1) == word.Substring(1).ToLower();
         }
     }

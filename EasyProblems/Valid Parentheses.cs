@@ -5,7 +5,8 @@ namespace LeetCode.EasyProblems;
 public class Valid_Parentheses
 {
     private Dictionary<char, char> _dictionary;
-    public bool IsValid(string s) {
+    public bool IsValid(string s)
+    {
         _dictionary = new Dictionary<char, char>();
         _dictionary.Add('(', ')');
         _dictionary.Add('[', ']');
@@ -40,7 +41,7 @@ public class Valid_Parentheses
         }
         return true;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/valid-parentheses/")]
     [Category("Easy")]
     [Category("LeetCode")]

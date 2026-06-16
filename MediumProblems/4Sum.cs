@@ -41,7 +41,7 @@ namespace LeetCode.MediumProblems
             {
                 return;
             }
-            else if(record.Count < 4)
+            else if (record.Count < 4)
             {
                 for (int i = startIndex; i < nums.Length + record.Count - 3; i++)
                 {

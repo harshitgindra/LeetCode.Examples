@@ -48,7 +48,7 @@ namespace LeetCode.MediumProblems
             }
 
             stack.Add(str);
-            
+
             int j = 1;
 
             while (j < stack.Count)

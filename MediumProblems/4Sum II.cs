@@ -36,7 +36,7 @@ namespace LeetCode.MediumProblems
                     //***
                     if (dictionary.ContainsKey(-temp))
                     {
-                        count+= dictionary[-temp];
+                        count += dictionary[-temp];
                     }
                 }
             }

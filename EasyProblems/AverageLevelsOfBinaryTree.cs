@@ -3,8 +3,9 @@ namespace LeetCode.EasyProblems;
 
 public class AverageLevelsOfBinaryTree
 {
-    public IList<double> AverageOfLevels(TreeNode root) {
-        
+    public IList<double> AverageOfLevels(TreeNode root)
+    {
+
         Dictionary<int, Tuple<int, long>> map = new Dictionary<int, Tuple<int, long>>();
         _dfs(root, 0, map);
 
@@ -34,7 +35,7 @@ public class AverageLevelsOfBinaryTree
             _dfs(node.right, depth + 1, map);
         }
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/average-of-levels-in-binary-tree")]
     [Category("Easy")]
     [Category("LeetCode")]

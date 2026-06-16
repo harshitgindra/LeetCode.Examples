@@ -70,7 +70,7 @@ namespace LeetCode.MediumProblems
         public void Test1((string Output, (string, int) Input) item)
         {
             var response = RemoveKdigits(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(string Output, (string, int) Input)> Input

@@ -2,41 +2,52 @@ namespace LeetCode.MediumProblems;
 
 public class SearchInRotatedSortedArray
 {
-    public int Search(int[] nums, int target) {
+    public int Search(int[] nums, int target)
+    {
         int left = 0, right = nums.Length - 1;
 
-        while (left <= right) {
+        while (left <= right)
+        {
             int mid = left + (right - left) / 2;  // Prevent integer overflow
-            
+
             // Target found at mid index
-            if (nums[mid] == target) {
+            if (nums[mid] == target)
+            {
                 return mid;
             }
 
             // Case 1: Left half [left..mid] is sorted
-            if (nums[left] <= nums[mid]) {
+            if (nums[left] <= nums[mid])
+            {
                 // If target is in sorted left half's range
-                if (nums[left] <= target && target < nums[mid]) {
+                if (nums[left] <= target && target < nums[mid])
+                {
                     right = mid - 1;  // Search left half
-                } else {
+                }
+                else
+                {
                     left = mid + 1;   // Search right half
                 }
             }
             // Case 2: Right half [mid..right] is sorted
-            else {
+            else
+            {
                 // If target is in sorted right half's range
-                if (nums[mid] < target && target <= nums[right]) {
+                if (nums[mid] < target && target <= nums[right])
+                {
                     left = mid + 1;   // Search right half
-                } else {
+                }
+                else
+                {
                     right = mid - 1;  // Search left half
                 }
             }
         }
-        
+
         // Target not found in array
         return -1;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/search-in-rotated-sorted-array/")]
     [Category("Medium")]
     [Category("LeetCode")]

@@ -158,7 +158,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((int Output, (int n, int[][] mines) Input) item)
         {
             var response = OrderOfLargestPlusSign(item.Input.n, item.Input.mines);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int n, int[][] mines) Input)> Input

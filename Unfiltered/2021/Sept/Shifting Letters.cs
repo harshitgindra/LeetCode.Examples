@@ -34,7 +34,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((string Output, (string s, int[] shifts) Input) item)
         {
             var response = ShiftingLetters(item.Input.s, item.Input.shifts);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(string Output, (string s, int[] shifts) Input)> Input

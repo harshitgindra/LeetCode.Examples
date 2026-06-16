@@ -56,7 +56,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, string Input) item)
         {
             var response = LetterCasePermutation(item.Input);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, string Input)> Input

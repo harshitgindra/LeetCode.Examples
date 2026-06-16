@@ -12,7 +12,7 @@ namespace LeetCode.MediumProblems
 
             foreach (var node in nodes)
             {
-                
+
             }
 
             return null;

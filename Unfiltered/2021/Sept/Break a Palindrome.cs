@@ -34,7 +34,7 @@ namespace LeetCode.Problems._2021.Sept
                     //*** It means that we also have all 'a' in second half
                     //*** So we will update the last character to 'b' and return the result
                     //***
-                    arry[palindrome.Length -1] = 'b';
+                    arry[palindrome.Length - 1] = 'b';
                     returnValue = new string(arry);
                 }
             }
@@ -42,8 +42,8 @@ namespace LeetCode.Problems._2021.Sept
             return returnValue;
 
         }
-        
-        [Test(Description ="https://leetcode.com/problems/break-a-palindrome/")]
+
+        [Test(Description = "https://leetcode.com/problems/break-a-palindrome/")]
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Break a Palindrome")]
@@ -52,7 +52,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((string Output, string Input) item)
         {
             var response = BreakPalindrome(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(string Output, string Input)> Input

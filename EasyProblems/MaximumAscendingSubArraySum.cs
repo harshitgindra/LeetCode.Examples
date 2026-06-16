@@ -4,9 +4,10 @@ namespace EasyProblems;
 
 public class MaximumAscendingSubArraySum
 {
-    public int MaxAscendingSum(int[] nums) {
-        
-        if (nums.Length == 0) 
+    public int MaxAscendingSum(int[] nums)
+    {
+
+        if (nums.Length == 0)
         {
             return 0;
         }
@@ -14,7 +15,7 @@ public class MaximumAscendingSubArraySum
         {
             return nums[0];
         }
-        
+
         int tempSum = nums[0];
         int result = 0;
 
@@ -22,7 +23,7 @@ public class MaximumAscendingSubArraySum
         {
             if (nums[i] > nums[i - 1])
             {
-                tempSum+= nums[i];
+                tempSum += nums[i];
             }
             else
             {
@@ -30,12 +31,12 @@ public class MaximumAscendingSubArraySum
                 tempSum = nums[i];
             }
         }
-        
+
         result = Math.Max(tempSum, result);
-        
+
         return result;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/maximum-ascending-subarray-sum/")]
     [Category("Easy")]
     [Category("LeetCode")]
@@ -46,9 +47,9 @@ public class MaximumAscendingSubArraySum
         var response = MaxAscendingSum(item.Input);
         Assert.That(response, Is.EqualTo(item.Output));
     }
-    
-    public static IEnumerable<(int Output, int [] Input)> Input =>
-        new List<(int Output, int [] Input)>()
+
+    public static IEnumerable<(int Output, int[] Input)> Input =>
+        new List<(int Output, int[] Input)>()
         {
             (65, [10,20,30,5,10,50]),
             (150, [10,20,30,40,50]),

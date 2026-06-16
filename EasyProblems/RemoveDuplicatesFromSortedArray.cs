@@ -21,7 +21,7 @@ public class RemoveDuplicatesFromSortedArray
 
         return returnValue;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/remove-duplicates-from-sorted-array/")]
     [Category("Easy")]
     [Category("LeetCode")]

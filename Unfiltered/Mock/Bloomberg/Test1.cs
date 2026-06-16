@@ -47,7 +47,7 @@ namespace LeetCode.Mock.Bloomberg
         public void Test1((int Output, int[] Input) item)
         {
             var respone = MinCostClimbingStairs(item.Input);
-            ClassicAssert.AreEqual(item.Output, respone);
+            Assert.That(respone, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input

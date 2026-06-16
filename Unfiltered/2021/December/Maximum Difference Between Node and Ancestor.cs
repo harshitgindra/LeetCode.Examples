@@ -20,13 +20,13 @@ namespace LeetCode.Problems._2021.December
             {
                 max = Math.Max(max, node.val);
                 min = Math.Min(min, node.val);
-               
+
                 Helper(node.left, max, min);
                 Helper(node.right, max, min);
             }
             else
             {
-                _result = Math.Max(_result, Math.Abs(max - min)); 
+                _result = Math.Max(_result, Math.Abs(max - min));
             }
         }
     }

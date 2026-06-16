@@ -15,7 +15,7 @@ public class FindMinimumOperationsToMakeAllElementsDivisibleBy3
         }
         return count;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/")]
     [Category("Easy")]
     [Category("LeetCode")]

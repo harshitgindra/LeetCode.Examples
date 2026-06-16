@@ -15,7 +15,7 @@ namespace LeetCode.Problems._2022.January
             _Helper(root2);
 
             return _nums
-                .OrderBy(x=>x)
+                .OrderBy(x => x)
                 .ToList();
         }
 

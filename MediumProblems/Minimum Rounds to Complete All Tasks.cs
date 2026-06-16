@@ -61,10 +61,10 @@ public class Minimum_Rounds_to_Complete_All_Tasks_V1
     public void Test1((int Output, int[] Input) item)
     {
         var response = MinimumRounds(item.Input);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(int Output, int[] )> Input
+    public static IEnumerable<(int Output, int[])> Input
     {
         get
         {

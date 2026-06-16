@@ -16,7 +16,7 @@
         {
             List<int> secondList = arry.ToList();
             List<int> common = new List<int>();
-            
+
             foreach (var item in startLoop)
             {
                 if (secondList.Contains(item))

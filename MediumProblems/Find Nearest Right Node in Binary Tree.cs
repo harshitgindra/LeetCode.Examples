@@ -41,7 +41,7 @@ namespace LeetCode.MediumProblems
                 }
                 else
                 {
-                    result.Add(level, new List<TreeNode>() {node});
+                    result.Add(level, new List<TreeNode>() { node });
                 }
 
                 result = Read(node.left, u, level + 1, result);

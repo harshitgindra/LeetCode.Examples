@@ -83,7 +83,7 @@ namespace LeetCode.Problems._2021.August
         public void Test1((int Output, TreeNode Input) item)
         {
             var response = this.MaxProduct(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, TreeNode Input)> Input

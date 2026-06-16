@@ -38,12 +38,12 @@ public class MinimumDepthOfBinaryTree
     [Category("LeetCode")]
     [Category("Minimum Depth Of Binary Tree")]
     [TestCaseSource(nameof(Input))]
-    
+
     public void Test1((int Output, int?[] Input) item)
     {
         var treeNode = TreeNodeBuilder.ArrayToTreeNode(item.Input);
         var response = MinDepth(treeNode);
-        ClassicAssert.AreEqual(item.Output, response);
+        Assert.That(response, Is.EqualTo(item.Output));
     }
 
     public static IEnumerable<(int Output, int?[] Input)> Input

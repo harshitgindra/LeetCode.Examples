@@ -7,7 +7,8 @@ public class NQueensII
 {
     private int count = 0; // Total number of valid solutions
 
-    public int TotalNQueens(int n) {
+    public int TotalNQueens(int n)
+    {
         if (n == 0) return 0;
         bool[] columns = new bool[n];
         bool[] posDiag = new bool[2 * n - 1]; // Tracks positive slope diagonals (row - col + n - 1)
@@ -16,17 +17,21 @@ public class NQueensII
         return count;
     }
 
-    private void Backtrack(int row, bool[] columns, bool[] posDiag, bool[] negDiag, int n) {
-        if (row == n) {
+    private void Backtrack(int row, bool[] columns, bool[] posDiag, bool[] negDiag, int n)
+    {
+        if (row == n)
+        {
             count++;
             return;
         }
 
-        for (int col = 0; col < n; col++) {
+        for (int col = 0; col < n; col++)
+        {
             int posIndex = row - col + n - 1; // Shift to avoid negative indices
             int negIndex = row + col;
 
-            if (columns[col] || posDiag[posIndex] || negDiag[negIndex]) {
+            if (columns[col] || posDiag[posIndex] || negDiag[negIndex])
+            {
                 continue; // Skip attacked positions
             }
 
@@ -43,7 +48,7 @@ public class NQueensII
             negDiag[negIndex] = false;
         }
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/n-queens-ii/")]
     [Category("Hard")]
     [Category("LeetCode")]

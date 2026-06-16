@@ -8,7 +8,7 @@ namespace LeetCode
             Console.WriteLine("Longest Substring");
             Console.WriteLine("----------------------------------------------------------");
         }
-        
+
         public string LongestPalindrome(string s)
         {
             if (string.IsNullOrEmpty(s) || IsPalindrome(s))
@@ -20,7 +20,7 @@ namespace LeetCode
                 string returnValue = "";
 
                 int sLength = s.Length;
-                for (int i = 0; i < sLength-1; i++)
+                for (int i = 0; i < sLength - 1; i++)
                 {
                     int palindromeTextLength = returnValue.Length;
                     for (int j = sLength - i; j > palindromeTextLength; j--)
@@ -46,11 +46,11 @@ namespace LeetCode
             }
         }
 
-        
+
         bool IsPalindrome(string str)
         {
-            if(str.Length == 1 || str.Length == 0) return true;
-            return str[0] == str[^1] && IsPalindrome(str.Substring(1,str.Length-2));
+            if (str.Length == 1 || str.Length == 0) return true;
+            return str[0] == str[^1] && IsPalindrome(str.Substring(1, str.Length - 2));
         }
     }
 }

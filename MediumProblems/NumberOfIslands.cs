@@ -45,7 +45,7 @@ namespace LeetCode.MediumProblems
             ExploreIsland(grid, row, col + 1); // Right
             ExploreIsland(grid, row, col - 1); // Left
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/number-of-islands/")]
         [Category("Medium")]
         [Category("LeetCode")]

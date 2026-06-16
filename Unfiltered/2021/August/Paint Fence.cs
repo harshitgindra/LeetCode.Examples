@@ -51,7 +51,7 @@ namespace LeetCode.Problems._2021.August
         public void Test1((int Output, (int n, int k) Input) item)
         {
             var response = NumWays(item.Input.n, item.Input.k);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int n, int k) Input)> Input

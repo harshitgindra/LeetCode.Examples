@@ -42,7 +42,7 @@ namespace LeetCode.MediumProblems
         public void Test1((List<string> Output, string Input) item)
         {
             var response = FindRepeatedDnaSequences(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(List<string> Output, string Input)> Input

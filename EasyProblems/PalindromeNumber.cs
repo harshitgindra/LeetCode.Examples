@@ -20,7 +20,7 @@ namespace LeetCode.EasyProblems
             // For odd digits: x == reversedHalf/10 (middle digit is ignored)
             return x == reversedHalf || x == reversedHalf / 10;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/palindrome-number/")]
         [Category("Easy")]
         [Category("LeetCode")]

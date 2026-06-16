@@ -2,22 +2,28 @@ namespace LeetCode.MediumProblems;
 
 public class FindMinimumInRotatedSortedArray
 {
-    public int FindMin(int[] nums) {
+    public int FindMin(int[] nums)
+    {
         // If the array is not rotated (already sorted), return the first element
-        if (nums[0] <= nums[nums.Length - 1]) {
+        if (nums[0] <= nums[nums.Length - 1])
+        {
             return nums[0];
         }
 
         int left = 0, right = nums.Length - 1;
 
         // Binary search for the minimum element
-        while (left < right) {
+        while (left < right)
+        {
             int mid = left + (right - left) / 2;
 
-            if (nums[mid] > nums[right]) {
+            if (nums[mid] > nums[right])
+            {
                 // Minimum must be in the right half (excluding mid)
                 left = mid + 1;
-            } else {
+            }
+            else
+            {
                 // Minimum is in the left half (including mid)
                 right = mid;
             }
@@ -26,7 +32,7 @@ public class FindMinimumInRotatedSortedArray
         // When left == right, we've found the minimum
         return nums[left];
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/")]
     [Category("Medium")]
     [Category("LeetCode")]

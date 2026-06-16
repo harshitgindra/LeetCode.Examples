@@ -20,7 +20,7 @@ public class MinimumDeletionsToMakeStringBalanced
         }
 
         int returnValue = bCounter;
-        
+
         for (int i = 0; i < s.Length; i++)
         {
             if (s[i] == 'a')
@@ -34,11 +34,11 @@ public class MinimumDeletionsToMakeStringBalanced
 
             returnValue = Math.Min(aCounter + bCounter, returnValue);
         }
-        
+
 
         return returnValue;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/?envType=daily-question&envId=2024-07-30")]
     [Category("Medium")]
     [Category("LeetCode")]

@@ -14,14 +14,14 @@ namespace LeetCode.EasyProblems
 
             return 1;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/unique-email-addresses/")]
         [Category("Easy")]
         [Category("LeetCode")]
         [Category("Unique Email Addresses")]
         public void Test1()
         {
-            var response = UniqueMorseRepresentations(new string[]{"gin", "zen", "gig", "msg"});
+            var response = UniqueMorseRepresentations(new string[] { "gin", "zen", "gig", "msg" });
             //ClassicAssert.AreEqual(2, response);
         }
     }

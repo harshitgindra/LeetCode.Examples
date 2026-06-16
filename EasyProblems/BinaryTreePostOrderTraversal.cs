@@ -18,7 +18,7 @@ public class BinaryTreePostOrderTraversal
             Process(node.left, results);
 
             Process(node.right, results);
-                
+
             results.Add(node.val);
         }
     }

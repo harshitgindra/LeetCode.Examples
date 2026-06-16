@@ -66,7 +66,7 @@ namespace LeetCode.MediumProblems
         public void Test1((IList<int> Output, (int[], int, int) Input) item)
         {
             var response = FindClosestElements(item.Input.Item1, item.Input.Item2, item.Input.Item3);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(IList<int> Output, (int[], int, int) Input)> Input

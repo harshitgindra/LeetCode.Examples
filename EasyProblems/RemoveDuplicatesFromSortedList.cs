@@ -16,12 +16,12 @@ public class RemoveDuplicatesFromSortedList
             {
                 head.next = DeleteDuplicates(head.next);
             }
-        
+
         }
-        
+
         return head;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/remove-duplicates-from-sorted-list/")]
     [Category("Easy")]
     [Category("LeetCode")]
@@ -41,7 +41,7 @@ public class RemoveDuplicatesFromSortedList
             {
                 (new ListNode(1, new ListNode(3)),
                     new ListNode(1, new ListNode(1, new ListNode(1, new ListNode(3, new ListNode(3)))))),
-                
+
                 (new ListNode(1, new ListNode(2, new ListNode(3))),
                     new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3)))))),
             };

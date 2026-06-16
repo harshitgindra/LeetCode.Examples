@@ -66,7 +66,7 @@ namespace LeetCode.Hard
 
                     if (StartSearching(i - 1, j, iMax, jMax, current + 1, board, word))
                     {
-                        board[i][j] = word[current];   
+                        board[i][j] = word[current];
                         return true;
                     }
 

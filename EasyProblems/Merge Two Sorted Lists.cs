@@ -34,7 +34,7 @@ namespace LeetCode.EasyProblems
 
             return result;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/valid-parentheses/")]
         [Category("Easy")]
         [Category("LeetCode")]

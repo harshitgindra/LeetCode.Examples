@@ -19,7 +19,7 @@ public class CountCompleteTreeNode
             return CountNodes(root.left) + CountNodes(root.right) + 1;
         }
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/count-complete-tree-nodes/")]
     [Category("Easy")]
     [Category("LeetCode")]

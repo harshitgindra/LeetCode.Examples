@@ -45,7 +45,7 @@ namespace LeetCode.Mock.Microsoft
         public void Test1((int[] Output, (int[], int, int[], int) Input) item)
         {
             Merge(item.Input.Item1, item.Input.Item2, item.Input.Item3, item.Input.Item4);
-            ClassicAssert.AreEqual(item.Output, item.Input.Item1);
+            Assert.That(item.Input.Item1, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int[] Output, (int[], int, int[], int) Input)> Input

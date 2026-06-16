@@ -28,7 +28,7 @@
 
                     if (i < toBeRemovedEnd && j > toBeRemovedEnd)
                     {
-                        ret.Add(new List<int>() { toBeRemovedEnd, j,  });
+                        ret.Add(new List<int>() { toBeRemovedEnd, j, });
                     }
                 }
             }

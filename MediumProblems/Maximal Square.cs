@@ -9,7 +9,7 @@ namespace LeetCode.MediumProblems
             int ret = 0;
             if (matrix != null && matrix.Length > 0)
             {
-                
+
                 int iMax = matrix.Length;
                 int jMax = matrix[0].Length;
 
@@ -41,7 +41,7 @@ namespace LeetCode.MediumProblems
                     }
                 }
             }
-            
+
             return ret * ret;
         }
 
@@ -53,7 +53,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, char[][] Input) item)
         {
             var response = MaximalSquare(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, char[][] Input)> Input

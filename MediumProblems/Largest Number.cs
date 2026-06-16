@@ -25,7 +25,7 @@ namespace LeetCode.MediumProblems
         public void Test1((string Output, int[] Input) item)
         {
             var response = LargestNumber(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(string Output, int[] Input)> Input

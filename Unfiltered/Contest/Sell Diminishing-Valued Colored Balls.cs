@@ -41,7 +41,7 @@ namespace LeetCode.Contest
             // Assert.That(response, Is.EqualTo(item.Output));
         }
 
-        public static IEnumerable<(int Output, (int[], int) )> Input
+        public static IEnumerable<(int Output, (int[], int))> Input
         {
             get
             {

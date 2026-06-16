@@ -50,7 +50,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, (int[], int) Input) item)
         {
             var response = CombinationSum2(item.Input.Item1, item.Input.Item2);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int[], int) Input)> Input

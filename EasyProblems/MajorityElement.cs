@@ -39,7 +39,7 @@
             // Return the candidate as the majority element.
             return candidate;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/majority-element/")]
         [Category("Easy")]
         [Category("LeetCode")]

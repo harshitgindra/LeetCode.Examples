@@ -19,13 +19,13 @@ namespace LeetCode.MediumProblems
             {
                 var responseLeft = Check(node.left);
                 var responseRight = Check(node.right);
-                
+
                 //***
                 //*** Calc average
                 //***
                 var newTotal = (responseLeft.Total + responseRight.Total + node.val);
                 var newCount = (responseLeft.Count + responseRight.Count + 1.0);
-                var newAvg = Math.Max(Math.Max(responseLeft.Average, responseRight.Average), newTotal /newCount);
+                var newAvg = Math.Max(Math.Max(responseLeft.Average, responseRight.Average), newTotal / newCount);
 
                 return (newTotal, newCount, newAvg);
             }

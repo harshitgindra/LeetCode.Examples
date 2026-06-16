@@ -10,7 +10,7 @@
         public int MissingNumber(int[] nums)
         {
             var hSet = nums.ToHashSet();
-            for(int i = 0; i< Int32.MaxValue; i++)
+            for (int i = 0; i < Int32.MaxValue; i++)
             {
                 if (!hSet.Contains(i))
                 {

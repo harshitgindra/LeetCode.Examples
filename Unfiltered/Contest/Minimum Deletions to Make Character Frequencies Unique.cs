@@ -11,9 +11,9 @@ namespace LeetCode.Contest
                 return 0;
             }
             var arry = s.ToLower().ToCharArray();
-            
+
             Array.Sort(arry);
-            
+
             List<int> entries = new List<int>();
 
             var char1 = arry[0];
@@ -32,7 +32,7 @@ namespace LeetCode.Contest
                     count = 1;
                 }
             }
-            
+
             entries.Add(count);
 
             int ret = 0;
@@ -45,22 +45,22 @@ namespace LeetCode.Contest
             {
                 var ary = entries.OrderByDescending(x => x).ToList();
 
-                for(int i = 0; i< ary.Count; i++)
+                for (int i = 0; i < ary.Count; i++)
                 {
                     var t = ary[i];
                     ary.RemoveAt(i);
 
-                    while (t>=0)
+                    while (t >= 0)
                     {
                         if (t > 0 && ary.Contains(t))
                         {
-                            
+
                             t--;
                             ret++;
                         }
                         else
                         {
-                                ary.Insert(i, t);
+                            ary.Insert(i, t);
                             break;
                         }
                     }
@@ -70,7 +70,7 @@ namespace LeetCode.Contest
             return ret;
 
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/binary-watch/")]
         [Category("Easy")]
         [Category("LeetCode")]

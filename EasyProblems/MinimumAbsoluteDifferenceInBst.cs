@@ -2,22 +2,26 @@ namespace LeetCode.EasyProblems;
 
 public class MinimumAbsoluteDifferenceInBst
 {
-    public int GetMinimumDifference(TreeNode root) {
+    public int GetMinimumDifference(TreeNode root)
+    {
         return InorderTraversal(root, int.MaxValue, null).minDiff;
     }
-    
-    private (int minDiff, TreeNode prev) InorderTraversal(TreeNode root, int minDiff, TreeNode prev) {
-        if (root == null) {
+
+    private (int minDiff, TreeNode prev) InorderTraversal(TreeNode root, int minDiff, TreeNode prev)
+    {
+        if (root == null)
+        {
             return (minDiff, prev);
         }
-        
+
         (minDiff, prev) = InorderTraversal(root.left, minDiff, prev);
-        
-        if (prev != null) {
+
+        if (prev != null)
+        {
             minDiff = Math.Min(minDiff, root.val - prev.val);
         }
         prev = root;
-        
+
         return InorderTraversal(root.right, minDiff, prev);
     }
 
@@ -32,7 +36,7 @@ public class MinimumAbsoluteDifferenceInBst
         Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<( int Output, int?[] Input)> Input =>
+    public static IEnumerable<(int Output, int?[] Input)> Input =>
         new List<(int Output, int?[] Input)>()
         {
             (9, [236, 104, 701, null, 227, null, 911]),

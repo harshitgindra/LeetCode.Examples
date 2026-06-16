@@ -44,7 +44,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, int[] Input) item)
         {
             var response = FindDuplicateSol1(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int[] Input)> Input

@@ -82,7 +82,7 @@ namespace LeetCode.MediumProblems
         public void Test1((int Output, int Input) item)
         {
             var response = this.GenerateTrees(item.Input);
-            ClassicAssert.AreEqual(item.Output, response.Count);
+            Assert.That(response.Count, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, int Input)> Input

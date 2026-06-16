@@ -2,16 +2,18 @@ namespace LeetCode.EasyProblems;
 
 public class ReverseDegreeOfAString
 {
-    public int ReverseDegree(string s) {
+    public int ReverseDegree(string s)
+    {
         int returnValue = 0;
-        int i=1;
-        foreach(char ch in s){
-            returnValue += Math.Abs( (ch-'a')-26) * i;
+        int i = 1;
+        foreach (char ch in s)
+        {
+            returnValue += Math.Abs((ch - 'a') - 26) * i;
             i++;
         }
         return returnValue;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/reverse-degree-of-a-string/")]
     [Category("Easy")]
     [Category("LeetCode")]

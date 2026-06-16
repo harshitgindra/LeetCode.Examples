@@ -22,7 +22,7 @@
 
                 return result;
             }
-            else if(strs.Length == 1)
+            else if (strs.Length == 1)
             {
                 return strs[0];
             }
@@ -31,7 +31,7 @@
                 return null;
             }
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/longest-common-prefix/")]
         [Category("Easy")]
         [Category("LeetCode")]

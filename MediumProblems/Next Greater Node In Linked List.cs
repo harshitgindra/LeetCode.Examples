@@ -29,7 +29,7 @@ namespace LeetCode.MediumProblems
                 }
                 else
                 {
-                    
+
                     nums[i] = arry[maxIndex];
                 }
             }

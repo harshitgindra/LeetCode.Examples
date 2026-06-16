@@ -19,7 +19,8 @@ namespace LeetCode
                     if (!char.IsLetterOrDigit(s[sIndex]))
                     {
                         sIndex++;
-                    } else if (!char.IsLetterOrDigit(s[eIndex]))
+                    }
+                    else if (!char.IsLetterOrDigit(s[eIndex]))
                     {
                         eIndex--;
                     }

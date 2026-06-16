@@ -39,7 +39,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((double Output, TreeNode Input) item)
         {
             var response = MaximumAverageSubtree(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(double Output, TreeNode Input)> Input

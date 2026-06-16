@@ -13,7 +13,7 @@ namespace LeetCode.MediumProblems
             {
                 var dict = new Dictionary<int, int>();
                 dict = Check(root, dict, 1);
-                return dict.OrderByDescending(x=>x.Value)
+                return dict.OrderByDescending(x => x.Value)
                     .First()
                     .Key;
             }

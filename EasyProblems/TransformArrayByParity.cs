@@ -2,19 +2,23 @@ namespace LeetCode.EasyProblems;
 
 public class TransformArrayByParity
 {
-    public int[] TransformArray(int[] nums) {
+    public int[] TransformArray(int[] nums)
+    {
         int j = 0;
-        for (int i = 0; i < nums.Length; i++) {
-            if (nums[i] % 2 == 0) {
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] % 2 == 0)
+            {
                 nums[j++] = 0;
             }
         }
-        while (j < nums.Length) {
+        while (j < nums.Length)
+        {
             nums[j++] = 1;
         }
         return nums;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/transform-array-by-parity/")]
     [Category("Easy")]
     [Category("LeetCode")]

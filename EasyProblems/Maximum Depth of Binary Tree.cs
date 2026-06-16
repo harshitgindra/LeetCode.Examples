@@ -26,7 +26,7 @@ namespace LeetCode.EasyProblems
                 return maxLevel;
             }
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/maximum-depth-of-binary-tree/")]
         [Category("Easy")]
         [Category("LeetCode")]

@@ -10,7 +10,7 @@ namespace LeetCode.Problems._2022.January
         private bool?[] _dp;
         public bool WinnerSquareGame(int n)
         {
-            _dp = new bool?[n+1];
+            _dp = new bool?[n + 1];
             return Helper(n);
         }
 
@@ -30,7 +30,7 @@ namespace LeetCode.Problems._2022.January
             {
                 return _dp[n].Value;
             }
-            
+
             for (int i = 1; i * i <= n; i++)
             {
                 //***
@@ -49,7 +49,7 @@ namespace LeetCode.Problems._2022.January
             _dp[n] = false;
             return false;
         }
-        
+
         [Test(Description = "https://leetcode.com/problems/stone-game-iv/")]
         [Category("Hard")]
         [Category("LeetCode")]
@@ -58,7 +58,7 @@ namespace LeetCode.Problems._2022.January
         public void Test1((bool Output, int Input) item)
         {
             var response = WinnerSquareGame(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(bool Output, int Input)> Input

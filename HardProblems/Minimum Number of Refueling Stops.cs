@@ -56,7 +56,7 @@ namespace LeetCode.HardProblems
         public void Test1((int Output, (int target, int startFuel, int[][] stations) Input) item)
         {
             var response = MinRefuelStops(item.Input.target, item.Input.startFuel, item.Input.stations);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, (int target, int startFuel, int[][] stations) Input)> Input

@@ -28,7 +28,7 @@ public class ConvertSortedArrayToBinarySearchTree
 
         return node;
     }
-    
+
     [Test(Description = "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/")]
     [Category("Easy")]
     [Category("LeetCode")]

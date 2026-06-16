@@ -71,7 +71,7 @@ public class RegionsCutBySlashes
         Assert.That(response, Is.EqualTo(item.Output));
     }
 
-    public static IEnumerable<(int Output, string[] )> Input =>
+    public static IEnumerable<(int Output, string[])> Input =>
         new List<(int Output, string[] Input)>()
         {
             (2, [" /", "/ "]),

@@ -74,7 +74,7 @@ namespace LeetCode.Problems._2021.Sept
             return returnValue;
         }
 
-        [Test(Description ="https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/")]
+        [Test(Description = "https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/")]
         [Category("Medium")]
         [Category("LeetCode")]
         [Category("Maximum Length of a Concatenated String with Unique Characters")]
@@ -82,7 +82,7 @@ namespace LeetCode.Problems._2021.Sept
         public void Test1((int Output, IList<string> Input) item)
         {
             var response = MaxLength(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(int Output, IList<string> Input)> Input

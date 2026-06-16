@@ -6,20 +6,21 @@ namespace LeetCode.EasyProblems
 {
     class Intersection_of_Two_Linked_Lists
     {
-        public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {
+        public ListNode GetIntersectionNode(ListNode headA, ListNode headB)
+        {
             ListNode a = headA;
             ListNode b = headB;
-        
+
             // continue until a and b are equal.
-            while(a != b)
+            while (a != b)
             {
                 // If one reaches end first then move a|b to the head of b|a
                 // This handles case if both have different lengths. No need to
                 // count length of A and B. If there is no overlap both A and B ends with null.
-                a = a != null? a.next:headB;
-                b = b != null? b.next:headA;
+                a = a != null ? a.next : headB;
+                b = b != null ? b.next : headA;
             }
-        
+
             return a;
         }
 

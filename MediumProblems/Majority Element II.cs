@@ -49,7 +49,7 @@ namespace LeetCode.MediumProblems
         public void Test1((IList<int> Output, int[] Input) item)
         {
             var response = MajorityElement(item.Input);
-            ClassicAssert.AreEqual(item.Output, response);
+            Assert.That(response, Is.EqualTo(item.Output));
         }
 
         public static IEnumerable<(IList<int> Output, int[] Input)> Input

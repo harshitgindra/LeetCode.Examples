@@ -27,7 +27,7 @@ namespace LeetCode.MediumProblems
             return 0;
         }
 
-        private ( bool, int) Search(StringBuilder arry, HashSet<string> wordList, int jumps,
+        private (bool, int) Search(StringBuilder arry, HashSet<string> wordList, int jumps,
             StringBuilder finalWord,
             int mimJumps)
         {
